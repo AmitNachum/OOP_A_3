@@ -1,7 +1,5 @@
 import tkinter as tk
-from math import expm1
 from tkinter import messagebox
-import Book
 import BookFactroy
 
 
@@ -10,8 +8,7 @@ class LibraryApp:
         self.root = root
         self.root.title("Library Management System")
         self.root.geometry("500x500")
-        self.factory = BookFactroy
-
+        self.factory = BookFactroy.BookFactory()
 
         self.title_lable = tk.Label(root,text="Title:")
         self.title_lable.pack()
@@ -80,9 +77,9 @@ class LibraryApp:
             messagebox.showerror("Error","Please enter a valid year")
             return
 
-        book = self.factory.delete_book(title, author, year)
+        book = self.factory.create_book(title, author, year)
         if book in self.factory.get_table():
-            self.factory.delete_book(title, author, year)
+            self.factory.remove_book(book)
             messagebox.showinfo("Success",f"Removed the Book {book}")
 
         else:
@@ -112,7 +109,7 @@ class LibraryApp:
 
 
     def view_books(self):
-        books = self.factory.get_books()
+        books = self.factory.get_table()
         if not books:
             messagebox.showerror("Library","No books found")
         else:
