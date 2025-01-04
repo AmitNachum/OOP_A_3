@@ -7,13 +7,10 @@ class BookFactory:
     def create_book(self,title,author,year):
 
         key = Book(title,author,year)
-        #if key in self.book_table.keys():
-         #   key.copies += 1
-          #  return key
-        #else:
         current_count = self.book_table.get(key , 0) + 1
         self.book_table[key] = current_count
         return key
+
 
 
     def get_table(self):
@@ -31,23 +28,27 @@ class BookFactory:
         except KeyError:
             return "Error: This book doesn't exist in the table!"
 
+    def remove_book(self,book):
+        if book in self.book_table:
+            del self.book_table[book]
+
+    def search_book(self,book):
+        if book in self.book_table:
+            return self.book_table[book]
+        else:
+            return "Error: This book doesn't exist in the table"
 
 
 if __name__ == "__main__":
     factory = BookFactory()
     book1 = factory.create_book("The Great Gatsby", "F. Scott Fitzgerald" ,1990)
     book2 = factory.create_book("The Great Gatsby", "F. Scott Fitzgerald",1990)
-
-    print(factory.get_book_count(book1))
-    print("\n")
-    print(factory.get_book_count(None))
-    print("\n")
+    book3 = factory.create_book("The Big Whale" ,"Sir Alexander" , 1980)
 
     print(book1)
     print("\n")
 
-    print(book2)
-    print("\n")
+    print(book3)
 
 
     print(factory.get_table())
