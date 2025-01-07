@@ -1,6 +1,9 @@
 import tkinter as tk
-from tkinter import messagebox
 from BookFactroy import BookFactory
+from tkinter import messagebox
+import pandas as pd
+from tkinter import ttk
+from FileManagement import FileManagement
 
 
 class LibraryApp:
@@ -21,13 +24,31 @@ class LibraryApp:
         self.author_entrty = tk.Entry(root)
         self.author_entrty.pack()
 
+        self.genre_lable = tk.Label(root, text="Genre:")
+        self.genre_lable.pack()
+        self.genre_entrty = tk.Entry(root)
+        self.genre_entrty.pack()
+
 
         self.year_lable = tk.Label(root,text="Year:")
         self.year_lable.pack()
         self.year_entrty = tk.Entry(root)
         self.year_entrty.pack()
 
+        # Create a frame for the Treeview
+        frame = tk.Frame(self.root)
+        frame.pack(fill=tk.BOTH, expand=True)
 
+        # Add a Treeview widget
+        self.tree = ttk.Treeview(frame)
+        self.tree.pack(fill=tk.BOTH, expand=True, side=tk.LEFT)
+
+        # Add a scrollbar
+        scrollbar = ttk.Scrollbar(frame, orient="vertical", command=self.tree.yview)
+        scrollbar.pack(side=tk.RIGHT, fill=tk.Y)
+        self.tree.configure(yscroll=scrollbar.set)
+
+        self.load_csv("Files/books.csv")
 
 
         #Buttons
@@ -43,23 +64,52 @@ class LibraryApp:
 
         #Place Holder for Methods
 
+    def load_csv(self, file_path):
+        # Read the CSV file using pandas
+        df = pd.read_csv(file_path)
+
+        # Clear the treeview
+        self.tree["columns"] = list(df.columns)
+        self.tree["show"] = "headings"
+
+        # Set up the column headers
+        for col in df.columns:
+            self.tree.heading(col, text=col)
+            self.tree.column(col, width=100)
+
+        # Populate rows
+        for _, row in df.iterrows():
+            self.tree.insert("", tk.END, values=row.tolist())
+
     def add_book(self):
        title = self.title_entrty.get()
        author = self.author_entrty.get()
+       genre = self.genre_entrty.get()
        year = self.year_entrty.get()
 
-       if not title or not author or not year:
-           messagebox.showerror("Error","Please enter all fields")
+       if not title or not author or not genre or not year:
+           messagebox.showerror("Error", "Please enter all fields")
            return
 
        try:
            year = int(year)
        except ValueError:
-           messagebox.showerror("Error","Please enter a valid year")
+           messagebox.showerror("Error", "Please enter a valid year")
            return
 
-       book = self.factory.create_book(title, author, year)
-       messagebox.showinfo("Success",f"Added the Book {book}")
+       # Create a book object and add it to the CSV
+       book = self.factory.create_book(title, author, genre, year)
+       FileManagement.add_book(book, "Files/books.csv")
+
+       # Clear the current Treeview rows
+       for item in self.tree.get_children():
+           self.tree.delete(item)
+
+       # Reload the CSV into the Treeview
+       self.load_csv("Files/books.csv")
+
+       # Success message
+       messagebox.showinfo("Success", f"Added the Book {book}")
 
 
     def remove_book(self):

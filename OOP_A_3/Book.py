@@ -1,6 +1,6 @@
 class Book:
 
-    def __init__(self, title, author, genre, year, copies: int = 1, is_loaned = False):
+    def __init__(self, title, author, genre, year : int, copies: int = 1, is_loaned = "No"):
         self.title = title
         self.author = author
         self.genre = genre
@@ -30,6 +30,8 @@ class Book:
     def get_fields(self):
         return [self.title, self.author, self.is_loaned, self.copies, self.genre, self.year]
 
+
+
     def __str__(self):
         if self.copies == 0:
             return f"{self.title} by {self.author}, published at:{self.year}.\n"
@@ -44,7 +46,9 @@ class Book:
         return (isinstance(other, Book) and
         self.title == other.title and
         self.author == other.author and
-        self.year == other.year)
+        self.genre == other.genre and
+        self.year == other.year and
+        self.is_loaned == other.is_loaned)
 
     def __hash__(self):
         return hash((self.title, self.author, self.year))
