@@ -1,20 +1,22 @@
 from Book import Book
+from FileManagement import FileManagement
 
 
 class BookFactory:
-
-    def __init__(self):
-        self.book_table = {}
+    books_list = FileManagement.read_file2("Files/books.csv")
 
     def create_book(self, title, author, genre, year):
+        new_fields = [title, author, genre, year]
+        for book in BookFactory.books_list:
+            for field in book.get_fields():
+                if field in new_fields:
+                    book.copies = int(book.copies) + 1
+                    return book
 
-        key = Book(title, author, genre, year)
-        current_count = self.book_table.get(key,0) + 1
-        self.book_table[key] = current_count
-        return key
+        return Book(title, author, genre, year)
 
-    def get_table(self):
-        return self.book_table
+    def get_books_list(self):
+        return self.books_list
 
     def get_book_count(self, book):
 
@@ -23,31 +25,23 @@ class BookFactory:
 
             # 2) Now safely try to get the count from the dictionary
         try:
-            return f"Copies of {book.title} by {book.author}: {self.book_table[book]}"
+            return f"Copies of {book.title} by {book.author}: {self.books_list[book]}"
         except KeyError:
             return "Error: This book doesn't exist in the table!"
 
     def remove_book(self, book):
-        if book in self.book_table:
-            del self.book_table[book]
+        if book in self.books_list:
+            del self.books_list[book]
 
     def search_book(self, book):
-        if book in self.book_table:
-            return self.book_table[book]
+        if book in self.books_list:
+            return self.books_list[book]
         else:
             return "Error: This book doesn't exist in the table"
 
 
 if __name__ == "__main__":
+    print(FileManagement.read_file("Files/books.csv"))
     factory = BookFactory()
-    book1 = factory.create_book("The Great Gatsby", "F. Scott Fitzgerald", "Romance", 1980)
-    book2 = factory.create_book("The Great Gatsby", "F. Scott Fitzgerald", "Romance",1980)
-    book3 = factory.create_book("The Big Whale", "Sir Alexander", "Action" , 1992)
-    book4 = factory.create_book("The Big Whale", "Sir Alexander", "Action" , 1992)
-
-    print(book1)
-
-
-    print(book3)
-
-    print(factory.get_table())
+    book2 = factory.create_book("mkalsdnfkj", "askjdfn", "akfna", 2012)
+    FileManagement.add_book(book2, "Files/books.csv")

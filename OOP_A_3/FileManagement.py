@@ -2,7 +2,6 @@ import csv
 from typing import List
 from Book import Book
 
-
 class FileManagement:
 
     @staticmethod
@@ -23,7 +22,7 @@ class FileManagement:
             with open(file_path , 'r') as f:
                 reader = list(csv.reader(f))
                 for line in reader:
-                    new_book = Book(line[0],line[1],line[4],line[5],line[3],line[2])
+                    new_book = Book(line[0],line[1],line[4],line[5],int(line[3]),line[2])
                     books.append(new_book)
 
         except FileNotFoundError:
@@ -36,14 +35,7 @@ class FileManagement:
 
     @staticmethod
     def add_book(book : Book, books_path: str):
-        books = FileManagement.read_file(books_path)
-        if book in books:
-          for b in books:
-              if b == books:
-
-        else:
-
-         with open(books_path, 'a') as file:
+        with open(books_path, 'a') as file:
             writer = csv.writer(file)
             writer.writerow(book.get_fields())
 
@@ -72,10 +64,6 @@ class FileManagement:
     def search_book(self):
         pass
 
-if __name__ == '__main__':
-    print(FileManagement.read_file("Files/books.csv"))
-    book2 = Book("mkalsdnfkj","askjdfn","akfna",2012)
-    FileManagement.add_book(book2 ,"Files/books.csv")
 
 
 
