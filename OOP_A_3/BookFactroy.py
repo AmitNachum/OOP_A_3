@@ -1,23 +1,22 @@
 from Book import Book
+
+
 class BookFactory:
 
     def __init__(self):
         self.book_table = {}
 
-    def create_book(self,title,author,year):
+    def create_book(self, title, author, genre, year):
 
-        key = Book(title,author,year)
-        current_count = self.book_table.get(key , 0) + 1
+        key = Book(title, author, genre, year)
+        current_count = self.book_table.get(key,0) + 1
         self.book_table[key] = current_count
         return key
-
-
 
     def get_table(self):
         return self.book_table
 
-
-    def get_book_count(self,book):
+    def get_book_count(self, book):
 
         if not isinstance(book, Book):
             return "Error: This is not a valid Book object."
@@ -28,11 +27,11 @@ class BookFactory:
         except KeyError:
             return "Error: This book doesn't exist in the table!"
 
-    def remove_book(self,book):
+    def remove_book(self, book):
         if book in self.book_table:
             del self.book_table[book]
 
-    def search_book(self,book):
+    def search_book(self, book):
         if book in self.book_table:
             return self.book_table[book]
         else:
@@ -41,15 +40,14 @@ class BookFactory:
 
 if __name__ == "__main__":
     factory = BookFactory()
-    book1 = factory.create_book("The Great Gatsby", "F. Scott Fitzgerald" ,1990)
-    book2 = factory.create_book("The Great Gatsby", "F. Scott Fitzgerald",1990)
-    book3 = factory.create_book("The Big Whale" ,"Sir Alexander" , 1980)
+    book1 = factory.create_book("The Great Gatsby", "F. Scott Fitzgerald", "Romance", 1980)
+    book2 = factory.create_book("The Great Gatsby", "F. Scott Fitzgerald", "Romance",1980)
+    book3 = factory.create_book("The Big Whale", "Sir Alexander", "Action" , 1992)
+    book4 = factory.create_book("The Big Whale", "Sir Alexander", "Action" , 1992)
 
     print(book1)
-    print("\n")
+
 
     print(book3)
 
-
     print(factory.get_table())
-    print("\n")

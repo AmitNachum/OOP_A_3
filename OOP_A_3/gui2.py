@@ -1,6 +1,8 @@
 import tkinter as tk
-from tkinter import messagebox
 from BookFactroy import BookFactory
+from tkinter import filedialog, messagebox
+import pandas as pd
+from tkinter import ttk
 
 
 class LibraryApp:
@@ -27,7 +29,8 @@ class LibraryApp:
         self.year_entrty = tk.Entry(root)
         self.year_entrty.pack()
 
-
+        # Add a button to load CSV
+        self.load_csv("Files/books.csv")
 
 
         #Buttons
@@ -42,6 +45,38 @@ class LibraryApp:
    #     tk.Button(root,text="Register",command=self.register).pack(pady=5)
 
         #Place Holder for Methods
+
+    def load_csv(self, file_path):
+        # Create a frame for the Treeview
+        frame = tk.Frame(root)
+        frame.pack(fill=tk.BOTH, expand=True)
+
+        # Add a Treeview widget
+        tree = ttk.Treeview(frame)
+        tree.pack(fill=tk.BOTH, expand=True, side=tk.LEFT)
+
+        # Add a scrollbar
+        scrollbar = ttk.Scrollbar(frame, orient="vertical", command=tree.yview)
+        scrollbar.pack(side=tk.RIGHT, fill=tk.Y)
+        tree.configure(yscroll=scrollbar.set)
+
+        #Read the CSV file using pandas
+        df = pd.read_csv(file_path)
+
+        # Clear the treeview
+        for item in tree.get_children():
+            tree.delete(item)
+        tree["columns"] = list(df.columns)
+        tree["show"] = "headings"
+
+        # Set up the column headers
+        for col in df.columns:
+            tree.heading(col, text=col)
+            tree.column(col, width=100)
+
+        # Populate rows
+        for _, row in df.iterrows():
+            tree.insert("", tk.END, values=row.tolist())
 
     def add_book(self):
        title = self.title_entrty.get()
