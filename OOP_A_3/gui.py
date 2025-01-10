@@ -4,6 +4,7 @@ from tkinter import messagebox
 import pandas as pd
 from tkinter import ttk
 from FileManagement import FileManagement
+from SearchStrategy import *
 
 
 class LibraryApp:
@@ -72,21 +73,31 @@ class LibraryApp:
         #Place Holder for Methods
 
     def load_csv(self, file_path):
-        # Read the CSV file using pandas
-        df = pd.read_csv(file_path)
+        try:
+            # Read the CSV file using pandas
+            df = pd.read_csv(file_path)
 
-        # Clear the treeview
-        self.tree["columns"] = list(df.columns)
-        self.tree["show"] = "headings"
+            # Clear the Treeview
+            self.tree.delete(*self.tree.get_children())
 
-        # Set up the column headers
-        for col in df.columns:
-            self.tree.heading(col, text=col)
-            self.tree.column(col, width=100)
+            # Set up Treeview columns and headings
+            self.tree["columns"] = list(df.columns)
+            self.tree["show"] = "headings"
 
-        # Populate rows
-        for _, row in df.iterrows():
-            self.tree.insert("", tk.END, values=row.tolist())
+            for col in df.columns:
+                self.tree.heading(col, text=col)
+                self.tree.column(col, width=100, anchor="center")
+
+            # Populate the Treeview with rows from the CSV
+            for _, row in df.iterrows():
+                self.tree.insert("", "end", values=row.tolist())
+
+        except FileNotFoundError:
+            messagebox.showerror("Error", f"File not found: {file_path}")
+        except pd.errors.EmptyDataError:
+            messagebox.showinfo("Info", "The CSV file is empty.")
+        except Exception as e:
+            messagebox.showerror("Error", f"An unexpected error occurred: {e}")
 
     def add_book(self):
        title = self.title_entrty.get()
@@ -153,20 +164,39 @@ class LibraryApp:
         title = self.title_entrty.get()
         author = self.author_entrty.get()
         is_loaned = self.is_loaned_entrty.get()
-        copies = self.author_entrty.get()
+        copies = self.copies_entrty.get()
         genre = self.genre_entrty.get()
         year = self.year_entrty.get()
 
         try:
-            year = int(year)
-            copies = int(copies)
+            year = int(year) if year else None
+            copies = int(copies) if copies else None
         except ValueError:
             messagebox.showerror("Error", "Please enter a valid year or copies number")
             return
 
-        search_vals = [val for val in [title, author, is_loaned, copies, genre, year] if val]
+        # Map inputs to corresponding search strategies and values
+        strategies_and_values = [
+            (SearchByTitle(), title) if title else None,
+            (SearchByAuthor(), author) if author else None,
+            (SearchByIsLoaned(), is_loaned) if is_loaned else None,
+            (SearchByCopies(), copies) if copies is not None else None,
+            (SearchByGenre(), genre) if genre else None,
+            (SearchByYear(), year) if year is not None else None,
+        ]
 
+        # Filter out None values (i.e., unused strategies)
+        active_strategies = list(filter(None, strategies_and_values))
 
+        if not active_strategies:
+            messagebox.showinfo("Info", "Please enter at least one search criteria")
+            return
+
+        strategies = (pair[0] for pair in active_strategies)
+        search_vals = {strategy.__class__.__name__: value for strategy, value in active_strategies}
+
+        FileManagement.search_book("Files/books.csv", *strategies, **search_vals)
+        self.load_csv("Files/search.csv")
 
     def lend_book(self):
         pass

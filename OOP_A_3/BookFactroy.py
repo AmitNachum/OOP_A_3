@@ -17,12 +17,3 @@ class BookFactory:
         new_book = Book(title, author, genre, year, copies, is_loaned)
         BookFactory.books_list.append(new_book)
         return new_book
-
-
-if __name__ == "__main__":
-    print(FileManagement.read_file("Files/books.csv"))
-    factory = BookFactory()
-    book2 = factory.create_book("mkalsdnfk", "askjdfn", "akfna", 2013)
-    #FileManagement.add_book(book2, "Files/books.csv")
-    print(FileManagement.read_file("Files/books.csv"))
-    FileManagement.remove_book(book2, "Files/books.csv")

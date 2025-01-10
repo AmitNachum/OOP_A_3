@@ -32,8 +32,6 @@ class FileManagement:
 
         return books
 
-
-
     @staticmethod
     def add_book(book : Book, books_path: str):
         # Read the file
@@ -95,16 +93,9 @@ class FileManagement:
         searcher = Searcher(*search_strategies)
         result = searcher.search(data, **search_vals)
 
-        print(result)
-
-        with open("Files/exe.csv", 'w', newline='') as file:
+        with open("Files/search.csv", 'w', newline='') as file:
             writer = csv.writer(file)
             writer.writerow(['title', 'author', 'is_loaned', 'copies', 'genre', 'year'])  # Write header
             for row in result:  # Write data rows
                 writer.writerow(row.get_fields())  # Convert Book to iterable
         print("Data updated successfully.")
-
-if __name__ == '__main__':
-    s = (SearchByIsLoaned(), SearchByGenre(), SearchByAuthor())
-    FileManagement.search_book("Files/books.csv", *s, SearchByIsLoaned="No", SearchByGenre="Fiction", SearchByAuthor="Leo Tolstoy")
-
