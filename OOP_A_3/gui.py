@@ -55,7 +55,6 @@ class LibraryApp:
         tk.Button(root , text="Add Book",command=self.add_book).pack(pady=5)
         tk.Button(root , text="Remove Book",command=self.remove_book).pack(pady=5)
         tk.Button(root , text="Search Book",command=self.search_book).pack(pady=5)
-        tk.Button(root , text="View Book",command=self.view_books).pack(pady=5)
         tk.Button(root , text="Lend Book",command=self.lend_book).pack(pady=5)
 #        tk.Button(root , text="Return Book",command=self.return_book).pack(pady=5)
  #       tk.Button(root,text="Logout",command=self.logout).pack(pady=5)
@@ -113,87 +112,14 @@ class LibraryApp:
 
 
     def remove_book(self):
-        title = self.title_entrty.get()
-        author = self.author_entrty.get()
-        year = self.year_entrty.get()
-
-        if not title or not author or not year:
-            messagebox.showerror("Error","Please enter all fields")
-            return
-
-        try:
-            year = int(year)
-        except ValueError:
-            messagebox.showerror("Error","Please enter a valid year")
-            return
-
-        book = self.factory.create_book(title, author, year)
-        if book in self.factory.get_table():
-            self.factory.remove_book(book)
-            messagebox.showinfo("Success",f"Removed the Book {book}")
-
-        else:
-            messagebox.showerror("Error","Book not found")
-            return
-
+        pass
 
     def search_book(self):
-         title = self.title_entrty.get()
-         author = self.author_entrty.get()
-         year = self.year_entrty.get()
+         pass
 
-         if not title or not author or not year:
-             messagebox.showerror("Error","Please enter all fields")
-
-         books = self.factory.get_table()
-         matching_books = []
-         for book in books:
-             if (title and title.lower() in book.title.lower()) or (author and author.lower() in book.author.lower()) or (year and year.lower() in book.year.lower()):
-                 matching_books.append(str(book))
-
-         if matching_books:
-            result_message = "\n".join(matching_books)
-            messagebox.showinfo("Search Results",result_message)
-         else:
-             messagebox.showerror("Search Results","Book not found")
-
-
-    def view_books(self):
-        books = self.factory.get_table()
-        if not books:
-            messagebox.showerror("Library","No books found")
-        else:
-            book_list = "\n".join([str(books) for books in books])
-            messagebox.showinfo("Library Books",book_list)
 
     def lend_book(self):
-
-        title = self.title_entrty.get()
-        author = self.author_entrty.get()
-        year = self.year_entrty.get()
-
-        book = self.factory.create_book(title,author,year)
-
-        if not title or not author or not year:
-            messagebox.showerror("Error","Please enter all fields")
-
-        try:
-            year = int(year)
-        except ValueError:
-            messagebox.showerror("Error","Please enter a valid year")
-            return
-
-        if book not in self.factory.get_table():
-            messagebox.showerror("Error","Book not found")
-            return
-
-        count = self.factory.get_count(book)
-        if count == 0:
-            messagebox.showerror("Library",f"No available copies of {book}")
-            return
-
-        self.factory.get_table()[book] -= 1
-        messagebox.showinfo("Success",f"Successfully borrowed the Book {book}")
+        pass
 
 
 if __name__ == '__main__':

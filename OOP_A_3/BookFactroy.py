@@ -3,7 +3,7 @@ from FileManagement import FileManagement
 
 
 class BookFactory:
-    books_list = FileManagement.read_file2("Files/books.csv")
+    books_list = FileManagement.read_file_to_books("Files/books.csv")
 
     @staticmethod
     def create_book(title, author, genre, year, copies: int = 1, is_loaned = "No"):
@@ -23,5 +23,6 @@ if __name__ == "__main__":
     print(FileManagement.read_file("Files/books.csv"))
     factory = BookFactory()
     book2 = factory.create_book("mkalsdnfk", "askjdfn", "akfna", 2013)
-    FileManagement.add_book(book2, "Files/books.csv")
+    #FileManagement.add_book(book2, "Files/books.csv")
     print(FileManagement.read_file("Files/books.csv"))
+    FileManagement.remove_book(book2, "Files/books.csv")

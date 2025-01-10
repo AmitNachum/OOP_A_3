@@ -1,7 +1,7 @@
 import csv
-from typing import List, Optional
+from typing import List
 from Book import Book
-
+from SearchStrategy import *
 
 class FileManagement:
 
@@ -17,7 +17,7 @@ class FileManagement:
             return []
 
     @staticmethod
-    def read_file2(file_path: str) -> List[Book]:
+    def read_file_to_books(file_path: str) -> List[Book]:
         books = []
         try:
             with open(file_path, 'r') as f:
@@ -37,7 +37,7 @@ class FileManagement:
     @staticmethod
     def add_book(book : Book, books_path: str):
         # Read the file
-        data = [['title', 'author', 'is_loaned', 'copies', 'genre', 'year']] + FileManagement.read_file2(books_path)
+        data = [['title', 'author', 'is_loaned', 'copies', 'genre', 'year']] + FileManagement.read_file_to_books(books_path)
 
         # Check if the book exists
         for b in data:
@@ -61,22 +61,50 @@ class FileManagement:
 
     @staticmethod
     def remove_book(book: Book, books_path: str):
+        # Read the file
+        data = [['title', 'author', 'is_loaned', 'copies', 'genre', 'year']] + FileManagement.read_file_to_books(books_path)
+        found = False
 
-        # Step 1: Read all rows and filter out the book to be removed
-        try:
-            with open(books_path, 'r') as file:
-                reader = csv.reader(file)
-                rows = [row for row in reader if row != book.get_fields()]  # Keep rows not matching the book
+        # Check if the book exists
+        for i in range(1, len(data)):  # Skip the header row
+            b = data[i]
+            if b == book:  # Use __eq__ to compare books
+                found = True
+                if b.copies > 1:
+                    b.copies -= 1
+                    data[i] = b
+                else:
+                    del data[i]  # Remove the book completely
+                    break  # Stop after finding and handling the book
 
-            # Step 2: Write the filtered rows back to the file
+        if found:
+        # Overwrite the file with updated data
             with open(books_path, 'w', newline='') as file:
                 writer = csv.writer(file)
-                writer.writerows(rows)
-            print("Book removed successfully from books.csv.")
+                writer.writerow(data[0])  # Write header
+                for row in data[1:]:  # Write data rows
+                    writer.writerow(row.get_fields())  # Convert Book to iterable
+            print("Data updated successfully.")
+        else:
+            print(f"Book '{book.title}' doesn't exist and cannot be removed!")
 
-        except FileNotFoundError:
-            print(f"File {books_path} was not found.")
 
     @staticmethod
-    def search_book(self):
-        pass
+    def search_book(books_path: str, *search_strategies, **search_vals):
+        data = FileManagement.read_file_to_books(books_path)
+        searcher = Searcher(*search_strategies)
+        result = searcher.search(data, **search_vals)
+
+        print(result)
+
+        with open("Files/exe.csv", 'w', newline='') as file:
+            writer = csv.writer(file)
+            writer.writerow(['title', 'author', 'is_loaned', 'copies', 'genre', 'year'])  # Write header
+            for row in result:  # Write data rows
+                writer.writerow(row.get_fields())  # Convert Book to iterable
+        print("Data updated successfully.")
+
+if __name__ == '__main__':
+    s = (SearchByIsLoaned(), SearchByGenre(), SearchByAuthor())
+    FileManagement.search_book("Files/books.csv", *s, search_by_is_loaned="no", SearchByGenre="Fantasy", SearchByAuthor="Leo Tolstoy")
+
