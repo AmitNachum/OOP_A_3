@@ -106,5 +106,5 @@ class FileManagement:
 
 if __name__ == '__main__':
     s = (SearchByIsLoaned(), SearchByGenre(), SearchByAuthor())
-    FileManagement.search_book("Files/books.csv", *s, search_by_is_loaned="no", SearchByGenre="Fantasy", SearchByAuthor="Leo Tolstoy")
+    FileManagement.search_book("Files/books.csv", *s, SearchByIsLoaned="No", SearchByGenre="Fiction", SearchByAuthor="Leo Tolstoy")
 

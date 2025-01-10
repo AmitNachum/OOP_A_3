@@ -7,7 +7,7 @@ from FileManagement import FileManagement
 
 
 class LibraryApp:
-    def __init__(self,root):
+    def __init__(self, root):
         self.root = root
         self.root.title("Library Management System")
         self.root.geometry("500x500")
@@ -18,17 +18,25 @@ class LibraryApp:
         self.title_entrty = tk.Entry(root)
         self.title_entrty.pack()
 
-
         self.author_lable = tk.Label(root,text="Author:")
         self.author_lable.pack()
         self.author_entrty = tk.Entry(root)
         self.author_entrty.pack()
 
+        self.is_loaned_lable = tk.Label(root, text="Is Loaned?:")
+        self.is_loaned_lable.pack()
+        self.is_loaned_entrty = tk.Entry(root)
+        self.is_loaned_entrty.pack()
+
+        self.copies_lable = tk.Label(root, text="Copies:")
+        self.copies_lable.pack()
+        self.copies_entrty = tk.Entry(root)
+        self.copies_entrty.pack()
+
         self.genre_lable = tk.Label(root, text="Genre:")
         self.genre_lable.pack()
         self.genre_entrty = tk.Entry(root)
         self.genre_entrty.pack()
-
 
         self.year_lable = tk.Label(root,text="Year:")
         self.year_lable.pack()
@@ -112,10 +120,52 @@ class LibraryApp:
 
 
     def remove_book(self):
-        pass
+        title = self.title_entrty.get()
+        author = self.author_entrty.get()
+        genre = self.genre_entrty.get()
+        year = self.year_entrty.get()
+
+        if not title or not author or not genre or not year:
+            messagebox.showerror("Error", "Please enter all fields")
+            return
+
+        try:
+            year = int(year)
+        except ValueError:
+            messagebox.showerror("Error", "Please enter a valid year")
+            return
+
+        # Create a book object and add it to the CSV
+        book = self.factory.create_book(title, author, genre, year)
+        FileManagement.remove_book(book, "Files/books.csv")
+
+        # Clear the current Treeview rows
+        for item in self.tree.get_children():
+            self.tree.delete(item)
+
+        # Reload the CSV into the Treeview
+        self.load_csv("Files/books.csv")
+
+        # Success message
+        messagebox.showinfo("Success", f"Removed the Book {book}")
 
     def search_book(self):
-         pass
+        title = self.title_entrty.get()
+        author = self.author_entrty.get()
+        is_loaned = self.is_loaned_entrty.get()
+        copies = self.author_entrty.get()
+        genre = self.genre_entrty.get()
+        year = self.year_entrty.get()
+
+        try:
+            year = int(year)
+            copies = int(copies)
+        except ValueError:
+            messagebox.showerror("Error", "Please enter a valid year or copies number")
+            return
+
+        search_vals = [val for val in [title, author, is_loaned, copies, genre, year] if val]
+
 
 
     def lend_book(self):

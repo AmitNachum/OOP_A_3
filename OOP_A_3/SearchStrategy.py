@@ -1,8 +1,5 @@
-from FileManagement import FileManagement
 from abc import ABC, abstractmethod
 from Iterators import *
-
-books = FileManagement.read_file_to_books("Files/books.csv")
 
 class SearchStrategy(ABC):
     @abstractmethod
@@ -52,31 +49,3 @@ class Searcher:
             if search_val is not None:
                 result = strategy.search(result, search_val)
         return result
-
-
-if __name__ == '__main__':
-    # searcher = SearchByIsLoaned()
-    # author_filter = searcher.search(books, "yes")
-    # print(author_filter)
-    # searcher = SearchByGenre()
-    # genre_and_author_filter = searcher.search(author_filter, "Fiction")
-    # print(genre_and_author_filter)
-
-    # Initialize individual search strategies
-    search_by_is_loaned = SearchByIsLoaned()
-    search_by_genre = SearchByGenre()
-    search_by_author = SearchByAuthor()
-
-    # Create a Searcher object with multiple strategies
-    searcher = Searcher(search_by_is_loaned, search_by_genre, search_by_author)
-
-    # Perform a chained search
-    search_results = searcher.search(
-        books,
-        SearchByIsLoaned="no",  # Search by loaned status
-        SearchByGenre="Fantasy",  # Then filter by genre
-        SearchByAuthor="J.K. Rowling"  # Then filter by author
-    )
-
-    # Print the final results
-    print(search_results)
