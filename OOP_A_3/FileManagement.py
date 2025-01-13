@@ -1,7 +1,6 @@
 import csv
 from typing import List
 from Book import Book
-from BookFactroy import BookFactory
 from SearchStrategy import *
 
 class FileManagement:
@@ -24,7 +23,7 @@ class FileManagement:
             with open(file_path, 'r') as f:
                 reader = list(csv.reader(f))
                 for line in reader[1:]:  # Skip the first row (header)
-                    new_book = BookFactory.create_book(line[0], line[1], line[4], int(line[5]), int(line[3]), line[2])
+                    new_book = Book(line[0], line[1], line[4], int(line[5]), int(line[3]), line[2])
                     books.append(new_book)
 
 
@@ -37,7 +36,8 @@ class FileManagement:
     def add_book(book : Book, books_path: str):
         header = FileManagement.read_file(books_path)[0]
         # Read the file
-        data = [[header]] + FileManagement.read_file_to_books(books_path)
+        data = [header] + FileManagement.read_file_to_books(books_path)
+        print(data)
 
         # Check if the book exists
         for b in data:
@@ -63,7 +63,7 @@ class FileManagement:
     def remove_book(book: Book, books_path: str):
         header = FileManagement.read_file(books_path)[0]
         # Read the file
-        data = [[header]] + FileManagement.read_file_to_books(books_path)
+        data = [header] + FileManagement.read_file_to_books(books_path)
         found = False
 
         # Check if the book exists
@@ -79,7 +79,7 @@ class FileManagement:
                     break  # Stop after finding and handling the book
 
         if found:
-        # Overwrite the file with updated data
+            # Overwrite the file with updated data
             with open(books_path, 'w', newline='') as file:
                 writer = csv.writer(file)
                 writer.writerow(data[0])  # Write header
@@ -98,7 +98,7 @@ class FileManagement:
 
         with open("Files/search.csv", 'w', newline='') as file:
             writer = csv.writer(file)
-            writer.writerow([header])  # Write header
+            writer.writerow(header)  # Write header
             for row in result:  # Write data rows
                 writer.writerow(row.get_fields())  # Convert Book to iterable
         print("Data updated successfully.")

@@ -6,31 +6,25 @@ class SearchStrategy(ABC):
     def search(self,data, search_val):
         pass
 
-
 class SearchByTitle(SearchStrategy):
     def search(self, data, search_val: str):
         return [b for t, b in zip(TitleIterator(data), data) if t.lower() == search_val.lower()]
-
 
 class SearchByAuthor(SearchStrategy):
     def search(self, data, search_val: str):
         return [b for a, b in zip(AuthorIterator(data), data) if a.lower() == search_val.lower()]
 
-
 class SearchByIsLoaned(SearchStrategy):
     def search(self, data, search_val: str):
         return [b for il, b in zip(IsLoanedIterator(data), data) if il.lower() == search_val.lower()]
-
 
 class SearchByCopies(SearchStrategy):
     def search(self, data, search_val: int):
         return [b for c, b in zip(CopiesIterator(data), data) if c == search_val]
 
-
 class SearchByGenre(SearchStrategy):
     def search(self, data, search_val: str):
         return [b for g, b in zip(GenreIterator(data), data) if g.lower() == search_val.lower()]
-
 
 class SearchByYear(SearchStrategy):
     def search(self, data, search_val: int):
