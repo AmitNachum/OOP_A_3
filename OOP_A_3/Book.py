@@ -6,8 +6,9 @@ class Book:
         self.genre = genre
         self.year = year
         self.copies = copies
+        self.available_copies = self.copies if is_loaned.lower() == "no" else 0
+        self.loaned_copies = self.copies if is_loaned.lower() == "yes" else 0
         self.is_loaned = is_loaned
-
 
     def get_title(self):
         return self.title
@@ -30,7 +31,11 @@ class Book:
     def get_fields(self):
         return [self.title, self.author, self.is_loaned, self.copies, self.genre, self.year]
 
+    def get_available_fields(self):
+        return [self.title, self.author, self.is_loaned, self.available_copies, self.genre, self.year]
 
+    def get_loaned_fields(self):
+        return [self.title, self.author, self.is_loaned, self.loaned_copies, self.genre, self.year]
 
     def __str__(self):
         if self.copies == 0:

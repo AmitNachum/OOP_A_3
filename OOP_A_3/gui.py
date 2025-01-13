@@ -129,7 +129,6 @@ class LibraryApp:
        # Success message
        messagebox.showinfo("Success", f"Added the Book {book}")
 
-
     def remove_book(self):
         title = self.title_entrty.get()
         author = self.author_entrty.get()

@@ -14,7 +14,6 @@ class TitleIterator:
         else:
             raise StopIteration
 
-
 class AuthorIterator:
     def __init__(self, data):
         self.data = data
@@ -31,7 +30,6 @@ class AuthorIterator:
         else:
             raise StopIteration
 
-
 class IsLoanedIterator:
     def __init__(self, data):
         self.data = data
@@ -47,7 +45,6 @@ class IsLoanedIterator:
             return result
         else:
             raise StopIteration
-
 
 class CopiesIterator:
     def __init__(self, data):

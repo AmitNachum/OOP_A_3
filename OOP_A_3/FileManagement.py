@@ -1,6 +1,7 @@
 import csv
 from typing import List
 from Book import Book
+from BookFactroy import BookFactory
 from SearchStrategy import *
 
 class FileManagement:
@@ -23,7 +24,7 @@ class FileManagement:
             with open(file_path, 'r') as f:
                 reader = list(csv.reader(f))
                 for line in reader[1:]:  # Skip the first row (header)
-                    new_book = Book(line[0], line[1], line[4], int(line[5]), int(line[3]), line[2])
+                    new_book = BookFactory.create_book(line[0], line[1], line[4], int(line[5]), int(line[3]), line[2])
                     books.append(new_book)
 
 
@@ -34,8 +35,9 @@ class FileManagement:
 
     @staticmethod
     def add_book(book : Book, books_path: str):
+        header = FileManagement.read_file(books_path)[0]
         # Read the file
-        data = [['title', 'author', 'is_loaned', 'copies', 'genre', 'year']] + FileManagement.read_file_to_books(books_path)
+        data = [[header]] + FileManagement.read_file_to_books(books_path)
 
         # Check if the book exists
         for b in data:
@@ -59,8 +61,9 @@ class FileManagement:
 
     @staticmethod
     def remove_book(book: Book, books_path: str):
+        header = FileManagement.read_file(books_path)[0]
         # Read the file
-        data = [['title', 'author', 'is_loaned', 'copies', 'genre', 'year']] + FileManagement.read_file_to_books(books_path)
+        data = [[header]] + FileManagement.read_file_to_books(books_path)
         found = False
 
         # Check if the book exists
@@ -86,16 +89,59 @@ class FileManagement:
         else:
             print(f"Book '{book.title}' doesn't exist and cannot be removed!")
 
-
     @staticmethod
     def search_book(books_path: str, *search_strategies, **search_vals):
+        header = FileManagement.read_file(books_path)[0]
         data = FileManagement.read_file_to_books(books_path)
         searcher = Searcher(*search_strategies)
         result = searcher.search(data, **search_vals)
 
         with open("Files/search.csv", 'w', newline='') as file:
             writer = csv.writer(file)
-            writer.writerow(['title', 'author', 'is_loaned', 'copies', 'genre', 'year'])  # Write header
+            writer.writerow([header])  # Write header
             for row in result:  # Write data rows
                 writer.writerow(row.get_fields())  # Convert Book to iterable
         print("Data updated successfully.")
+
+    @staticmethod
+    def load_available_books():
+        data = FileManagement.read_file_to_books("Files/books.csv")
+        available = [b for il, b in zip(IsLoanedIterator(data), data) if il.lower() == "no"]
+
+        with open("Files/available_books.csv", 'w', newline='') as file:
+            writer = csv.writer(file)
+            writer.writerow(['title', 'author', 'is_loaned', 'copies_available', 'genre', 'year'])  # Write header
+            for row in available:  # Write data rows
+                writer.writerow(row.get_available_fields())  # Convert Book to iterable
+        print("Data updated successfully.")
+
+    @staticmethod
+    def load_loaned_books():
+        data = FileManagement.read_file_to_books("Files/books.csv")
+        loaned = [b for il, b in zip(IsLoanedIterator(data), data) if il.lower() == "yes"]
+
+        with open("Files/loaned_books.csv", 'w', newline='') as file:
+            writer = csv.writer(file)
+            writer.writerow(['title', 'author', 'is_loaned', 'copies_loaned', 'genre', 'year'])  # Write header
+            for row in loaned:  # Write data rows
+                writer.writerow(row.get_loaned_fields())  # Convert Book to iterable
+        print("Data updated successfully.")
+
+    @staticmethod
+    def lend_book(book : Book, books_path: str):
+        available = FileManagement.read_file_to_books("Files/available_books.csv")
+        found = False
+
+        # Check if the book exists
+        for i in range(1, len(available)):  # Skip the header row
+            b = available[i]
+            if b == book:  # Use __eq__ to compare books
+                found = True
+
+        if found:
+            FileManagement.remove_book(book, "Files/available_books.csv")
+            FileManagement.add_book(book, "Files/loaned_books.csv")
+
+if __name__ == '__main__':
+    FileManagement.load_available_books()
+    FileManagement.load_loaned_books()
