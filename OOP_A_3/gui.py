@@ -4,46 +4,115 @@ from tkinter import messagebox
 import pandas as pd
 from tkinter import ttk
 from FileManagement import FileManagement
+from User import User
 from SearchStrategy import *
 
 class LoginWindow(tk.Toplevel):
-    pass
+    def __init__(self, app):
+        super().__init__()
+        self.app = app  # Reference to the parent LibraryApp instance
+        self.title("Login Window")
+        self.geometry("400x400")
+
+        self.username_label = tk.Label(self, text="Enter Username:")
+        self.username_label.pack()
+        self.username_entry = tk.Entry(self)
+        self.username_entry.pack()
+
+        self.password_label = tk.Label(self, text="Enter Password:")
+        self.password_label.pack()
+        self.password_entry = tk.Entry(self)
+        self.password_entry.pack()
+
+        tk.Button(self, text="Sign Up", command=self.sign_up).pack(pady=5)
+        tk.Button(self, text="Log In", command=self.log_in).pack(pady=5)
+
+
+    def sign_up(self):
+        user_name = self.username_entry.get()
+        password = self.password_entry.get()
+        user = User(user_name, password)
+
+        if not FileManagement.sign_up_user(user):
+            messagebox.showerror("Error", f"User {user.user_name} already signed up")
+        else:
+            messagebox.showinfo("Success", f"Signed up as {user.user_name}")
+
+    def log_in(self):
+        user_name = self.username_entry.get()
+        password = self.password_entry.get()
+        users = FileManagement.read_users()
+
+        user_row = users[users['user_name'] == user_name]
+
+        if not user_row.empty:
+            # User found, retrieve the stored hashed password from the CSV
+            stored_hashed_password = user_row.iloc[0]['password']
+
+            # Verify the entered password by hashing it and comparing with the stored hash
+            user = User(user_name, password)  # The entered password gets hashed here
+            if user.password == stored_hashed_password:  # Compare the hashed password
+                messagebox.showinfo("Success", f"Welcome {user_name}!")
+                self.app.logged_in = True  # Mark the app as logged in
+                self.app.setup_ui()  # Call setup_ui to initialize the main app
+                self.destroy()  # Close the login window
+                return True
+            else:
+                messagebox.showerror("Error", "Incorrect password")
+        else:
+            messagebox.showerror("Error", "User not found")
+
 
 class LibraryApp:
     def __init__(self, root):
+        self.logged_in = False  # Flag to track login status
         self.root = root
         self.root.title("Library Management System")
         self.root.geometry("1000x800")
+
+        # Show login window initially
+        self.login_window = LoginWindow(self)
+        self.root.wait_window(self.login_window)  # Wait for login window to close
+
+        # Proceed with the rest of the app if logged in
+        if self.logged_in:
+            self.setup_ui()
+
+    def setup_ui(self):
+        # Check if UI has already been set up to avoid multiple setups
+        if hasattr(self, 'tree'):
+            return
+
         self.factory = BookFactory()
 
-        self.title_lable = tk.Label(root,text="Title:")
+        self.title_lable = tk.Label(self.root, text="Title:")
         self.title_lable.pack()
-        self.title_entrty = tk.Entry(root)
+        self.title_entrty = tk.Entry(self.root)
         self.title_entrty.pack()
 
-        self.author_lable = tk.Label(root,text="Author:")
+        self.author_lable = tk.Label(self.root, text="Author:")
         self.author_lable.pack()
-        self.author_entrty = tk.Entry(root)
+        self.author_entrty = tk.Entry(self.root)
         self.author_entrty.pack()
 
-        self.is_loaned_lable = tk.Label(root, text="Is Loaned?:")
+        self.is_loaned_lable = tk.Label(self.root, text="Is Loaned?:")
         self.is_loaned_lable.pack()
-        self.is_loaned_entrty = tk.Entry(root)
+        self.is_loaned_entrty = tk.Entry(self.root)
         self.is_loaned_entrty.pack()
 
-        self.copies_lable = tk.Label(root, text="Copies:")
+        self.copies_lable = tk.Label(self.root, text="Copies:")
         self.copies_lable.pack()
-        self.copies_entrty = tk.Entry(root)
+        self.copies_entrty = tk.Entry(self.root)
         self.copies_entrty.pack()
 
-        self.genre_lable = tk.Label(root, text="Genre:")
+        self.genre_lable = tk.Label(self.root, text="Genre:")
         self.genre_lable.pack()
-        self.genre_entrty = tk.Entry(root)
+        self.genre_entrty = tk.Entry(self.root)
         self.genre_entrty.pack()
 
-        self.year_lable = tk.Label(root,text="Year:")
+        self.year_lable = tk.Label(self.root, text="Year:")
         self.year_lable.pack()
-        self.year_entrty = tk.Entry(root)
+        self.year_entrty = tk.Entry(self.root)
         self.year_entrty.pack()
 
         # Create a frame for the Treeview
@@ -64,11 +133,11 @@ class LibraryApp:
         FileManagement.load_available_books()
         FileManagement.load_loaned_books()
 
-        #Buttons
-        tk.Button(root , text="Add Book",command=self.add_book).pack(pady=5)
-        tk.Button(root , text="Remove Book",command=self.remove_book).pack(pady=5)
-        tk.Button(root , text="Search Book",command=self.search_book).pack(pady=5)
-        tk.Button(root , text="Lend Book",command=self.lend_book).pack(pady=5)
+        # Buttons for library operations
+        tk.Button(self.root, text="Add Book", command=self.add_book).pack(pady=5)
+        tk.Button(self.root, text="Remove Book", command=self.remove_book).pack(pady=5)
+        tk.Button(self.root, text="Search Book", command=self.search_book).pack(pady=5)
+        tk.Button(self.root, text="Lend Book", command=self.lend_book).pack(pady=5)
 #        tk.Button(root , text="Return Book",command=self.return_book).pack(pady=5)
  #       tk.Button(root,text="Logout",command=self.logout).pack(pady=5)
   #      tk.Button(root,text="Login",command=self.login).pack(pady=5)

@@ -1,9 +1,43 @@
 import csv
 from typing import List
 from Book import Book
+from User import User
 from SearchStrategy import *
+import pandas as pd
 
 class FileManagement:
+
+    @staticmethod
+    def read_users():
+        try:
+            # Try reading the CSV file
+            users = pd.read_csv("Files/users.csv")
+        except (FileNotFoundError, pd.errors.EmptyDataError):
+            # If the file is missing or empty, return an empty DataFrame
+            users = pd.DataFrame(columns=['user_name', 'password'])
+        return users
+
+    @staticmethod
+    def sign_up_user(user: User):
+        users = FileManagement.read_users()
+
+        # Check if the user_name already exists in the DataFrame
+        if user.user_name in users['user_name'].values:
+            return False
+        else:
+            # Convert the user object to a DataFrame row
+            new_user = pd.DataFrame([{
+                'user_name': user.user_name,
+                'password': user.password,  # Assuming the user has these attributes
+            }])
+
+            # Use concat to add the new row to the DataFrame
+            users = pd.concat([users, new_user], ignore_index=True)
+
+            # Save the updated DataFrame back to the CSV file
+            users.to_csv("Files/users.csv", index=False)
+
+            return True
 
     @staticmethod
     def read_file(file_path: str) -> List:
@@ -32,180 +66,6 @@ class FileManagement:
             print(f"Error while reading file: {e}")
 
         return books
-
-    # @staticmethod
-    # def add_book(book : Book, books_path: str):
-    #     header = FileManagement.read_file(books_path)[0]
-    #     # Read the file
-    #     data = [header] + FileManagement.read_file_to_books(books_path)
-    #     copies_type = header[3]
-    #
-    #     # Check if the book exists
-    #     for i in range(1, len(data)):
-    #         b = data[i]
-    #         if b == book:
-    #             match copies_type:
-    #
-    #                 case "copies":
-    #                     b.copies += 1
-    #                     data[i] = b
-    #
-    #                     # Overwrite the file with updated data
-    #                     with open(books_path, 'w', newline='') as file:
-    #                         writer = csv.writer(file)
-    #                         writer.writerow(data[0])
-    #                         for row in data[1:]:
-    #                             writer.writerow(row.get_fields())  # Convert Book to iterable
-    #
-    #                     FileManagement.load_available_books()
-    #                     FileManagement.load_loaned_books()
-    #                     print("Data updated successfully.")
-    #                     return
-    #
-    #                 case "copies_available":
-    #                     b.available_copies += 1
-    #                     data[i] = b
-    #
-    #                     # Overwrite the file with updated data
-    #                     with open(books_path, 'w', newline='') as file:
-    #                         writer = csv.writer(file)
-    #                         writer.writerow(data[0])
-    #                         for row in data[1:]:
-    #                             writer.writerow(row.get_available_fields())  # Convert Book to iterable
-    #
-    #                     FileManagement.load_available_books()
-    #                     FileManagement.load_loaned_books()
-    #                     print("Data updated successfully.")
-    #                     return
-    #
-    #
-    #                 case "copies_loaned":
-    #                     b.loaned_copies += 1
-    #                     data[i] = b
-    #
-    #                     # Overwrite the file with updated data
-    #                     with open(books_path, 'w', newline='') as file:
-    #                         writer = csv.writer(file)
-    #                         writer.writerow(data[0])
-    #                         for row in data[1:]:
-    #                             writer.writerow(row.get_loaned_fields())  # Convert Book to iterable
-    #
-    #                     FileManagement.load_available_books()
-    #                     FileManagement.load_loaned_books()
-    #                     print("Data updated successfully.")
-    #                     return
-    #
-    #
-    #     match copies_type:
-    #
-    #         case "copies":
-    #             with open(books_path, 'a') as file:
-    #                 writer = csv.writer(file)
-    #                 writer.writerow(book.get_fields())
-    #
-    #             FileManagement.load_available_books()
-    #             FileManagement.load_loaned_books()
-    #             print("Data written successfully")
-    #
-    #         case "copies_available":
-    #             with open(books_path, 'a') as file:
-    #                 writer = csv.writer(file)
-    #                 writer.writerow(book.get_available_fields())
-    #
-    #             FileManagement.load_available_books()
-    #             FileManagement.load_loaned_books()
-    #             print("Data written successfully")
-    #
-    #         case "copies_loaned":
-    #             with open(books_path, 'a') as file:
-    #                 writer = csv.writer(file)
-    #                 writer.writerow(book.get_loaned_fields())
-    #
-    #             FileManagement.load_available_books()
-    #             FileManagement.load_loaned_books()
-    #             print("Data written successfully")
-    #
-    # @staticmethod
-    # def remove_book(book: Book, books_path: str):
-    #     header = FileManagement.read_file(books_path)[0]
-    #     # Read the file
-    #     data = [header] + FileManagement.read_file_to_books(books_path)
-    #     copies_type = header[3]
-    #
-    #     # Check if the book exists
-    #     for i in range(1, len(data)):  # Skip the header row
-    #         b = data[i]
-    #         if b == book:  # Use __eq__ to compare books
-    #             match copies_type:
-    #
-    #                 case "copies":
-    #                     if b.copies > 1:
-    #                         b.copies -= 1
-    #                         data[i] = b
-    #                     else:
-    #                         del data[i]
-    #                     # Remove the book completely
-    #
-    #                      # Overwrite the file with updated data
-    #                     with open(books_path, 'w', newline='') as file:
-    #                         writer = csv.writer(file)
-    #                         writer.writerow(data[0])  # Write header
-    #                         for row in data[1:]:  # Write data rows
-    #                             writer.writerow(row.get_fields())  # Convert Book to iterable
-    #
-    #                     FileManagement.load_available_books()
-    #                     FileManagement.load_loaned_books()
-    #                     print("Data updated successfully.")
-    #                     return
-    #
-    #                 case "copies_available":
-    #                     print("entered the start of the if")
-    #                     if b.available_copies > 1:
-    #                         print("execute the if statement!!!!!")
-    #                         b.available_copies -= 1
-    #                         data[i] = b
-    #                         print(f"entered if {data[i].available_copies}")
-    #
-    #                     else:
-    #                         print(f"entered else {data[i].available_copies}!!!")
-    #                         data[i].is_loaned = "Yes"
-    #                         del data[i]
-    #                        # Remove the book completely
-    #
-    #                     # Overwrite the file with updated data
-    #                     with open(books_path, 'w', newline='') as file:
-    #                         writer = csv.writer(file)
-    #                         writer.writerow(data[0])  # Write header
-    #                         for row in data[1:]:  # Write data rows
-    #                             writer.writerow(row.get_available_fields())  # Convert Book to iterable
-    #
-    #                     FileManagement.load_available_books()
-    #                     FileManagement.load_loaned_books()
-    #                     print("Data updated successfully.")
-    #                     return
-    #
-    #                 case "copies_loaned":
-    #                     if b.loaned_copies > 1:
-    #                         b.loaned_copies -= 1
-    #                         data[i] = b
-    #                     else:
-    #                         data[i].is_loaned = "No"
-    #                         del data[i]  # Remove the book completely
-    #
-    #                     # Overwrite the file with updated data
-    #                     with open(books_path, 'w', newline='') as file:
-    #                         writer = csv.writer(file)
-    #                         writer.writerow(data[0])  # Write header
-    #                         for row in data[1:]:  # Write data rows
-    #                             writer.writerow(row.get_loaned_fields())  # Convert Book to iterable
-    #
-    #                     FileManagement.load_available_books()
-    #                     FileManagement.load_loaned_books()
-    #                     print("Data updated successfully.")
-    #                     return
-    #
-    #
-    #     print(f"Book '{book.title}' doesn't exist and cannot be removed!")
 
     @staticmethod
     def write_books(file_path: str, header: List[str], books: List[Book], field_method: str = "get_fields"):
