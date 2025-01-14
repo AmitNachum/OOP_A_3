@@ -37,18 +37,35 @@ class FileManagement:
         header = FileManagement.read_file(books_path)[0]
         # Read the file
         data = [header] + FileManagement.read_file_to_books(books_path)
+        copies_type = header[3]
 
         # Check if the book exists
-        for b in data:
+        for i in range(1, len(data)):
+            b = data[i]
             if b == book:
-                index = data.index(b)
-                data[index] = book
+                match copies_type:
+
+                    case "copies":
+                        b.copies += 1
+
+                    case "copies_available":
+                        b.available_copies += 1
+
+
+                    case "copies_loaned":
+                        b.loaned_copies += 1
+
+                data[i] = b
+
                 # Overwrite the file with updated data
                 with open(books_path, 'w', newline='') as file:
                     writer = csv.writer(file)
                     writer.writerow(data[0])
                     for row in data[1:]:
                         writer.writerow(row.get_fields())  # Convert Book to iterable
+
+                FileManagement.load_available_books()
+                FileManagement.load_loaned_books()
                 print("Data updated successfully.")
                 return
 
@@ -56,6 +73,8 @@ class FileManagement:
             writer = csv.writer(file)
             writer.writerow(book.get_fields())
 
+        FileManagement.load_available_books()
+        FileManagement.load_loaned_books()
         print("Data written to books.csv successfully")
 
     @staticmethod
@@ -105,10 +124,16 @@ class FileManagement:
                 writer = csv.writer(file)
                 writer.writerow(data[0])  # Write header
                 for row in data[1:]:  # Write data rows
-                    writer.writerow(row.get_fields())  # Convert Book to iterable
+                    writer.writerow(row.get_fields()) # Convert Book to iterable
+
+                FileManagement.load_available_books()
+                FileManagement.load_loaned_books()
             print("Data updated successfully.")
         else:
             print(f"Book '{book.title}' doesn't exist and cannot be removed!")
+
+        FileManagement.load_available_books()
+        FileManagement.load_loaned_books()
 
     @staticmethod
     def search_book(books_path: str, *search_strategies, **search_vals):
