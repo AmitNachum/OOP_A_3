@@ -6,12 +6,14 @@ from tkinter import ttk
 from FileManagement import FileManagement
 from SearchStrategy import *
 
+class LoginWindow(tk.Toplevel):
+    pass
 
 class LibraryApp:
     def __init__(self, root):
         self.root = root
         self.root.title("Library Management System")
-        self.root.geometry("500x500")
+        self.root.geometry("1000x800")
         self.factory = BookFactory()
 
         self.title_lable = tk.Label(root,text="Title:")
