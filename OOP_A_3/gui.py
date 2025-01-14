@@ -59,6 +59,8 @@ class LibraryApp:
 
         self.load_csv("Files/books.csv")
 
+        FileManagement.load_available_books()
+        FileManagement.load_loaned_books()
 
         #Buttons
         tk.Button(root , text="Add Book",command=self.add_book).pack(pady=5)
@@ -198,8 +200,27 @@ class LibraryApp:
         self.load_csv("Files/search.csv")
 
     def lend_book(self):
-        pass
+        title = self.title_entrty.get()
+        author = self.author_entrty.get()
+        genre = self.genre_entrty.get()
+        year = self.year_entrty.get()
 
+        if not title or not author or not genre or not year:
+            messagebox.showerror("Error", "Please enter all fields")
+            return
+
+        try:
+            year = int(year)
+        except ValueError:
+            messagebox.showerror("Error", "Please enter a valid year")
+            return
+
+        # Create a book object and add it to the CSV
+        book = self.factory.create_book(title, author, genre, year)
+        FileManagement.lend_book(book)
+
+        # Success message
+        messagebox.showinfo("Success", f"loaned the Book {book}")
 
 if __name__ == '__main__':
     root = tk.Tk()

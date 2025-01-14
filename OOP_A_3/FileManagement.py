@@ -37,7 +37,6 @@ class FileManagement:
         header = FileManagement.read_file(books_path)[0]
         # Read the file
         data = [header] + FileManagement.read_file_to_books(books_path)
-        print(data)
 
         # Check if the book exists
         for b in data:
@@ -65,18 +64,40 @@ class FileManagement:
         # Read the file
         data = [header] + FileManagement.read_file_to_books(books_path)
         found = False
+        copies_type = header[3]
 
         # Check if the book exists
         for i in range(1, len(data)):  # Skip the header row
             b = data[i]
             if b == book:  # Use __eq__ to compare books
                 found = True
-                if b.copies > 1:
-                    b.copies -= 1
-                    data[i] = b
-                else:
-                    del data[i]  # Remove the book completely
-                    break  # Stop after finding and handling the book
+                match copies_type:
+
+                    case "copies":
+                        if b.copies > 1:
+                            b.copies -= 1
+                            data[i] = b
+                        else:
+                            del data[i]  # Remove the book completely
+                            break  # Stop after finding and handling the book
+
+                    case "copies_available":
+                        if b.available_copies > 1:
+                            b.available_copies -= 1
+                            data[i] = b
+                        else:
+                            data[i].is_loaned = "Yes"
+                            del data[i]  # Remove the book completely
+                            break  # Stop after finding and handling the book
+
+                    case "copies_loaned":
+                        if b.loaned_copies > 1:
+                            b.loaned_copies -= 1
+                            data[i] = b
+                        else:
+                            data[i].is_loaned = "No"
+                            del data[i]  # Remove the book completely
+                            break  # Stop after finding and handling the book
 
         if found:
             # Overwrite the file with updated data
@@ -128,7 +149,7 @@ class FileManagement:
         print("Data updated successfully.")
 
     @staticmethod
-    def lend_book(book : Book, books_path: str):
+    def lend_book(book : Book):
         available = FileManagement.read_file_to_books("Files/available_books.csv")
         found = False
 
@@ -141,6 +162,8 @@ class FileManagement:
         if found:
             FileManagement.remove_book(book, "Files/available_books.csv")
             FileManagement.add_book(book, "Files/loaned_books.csv")
+        else:
+            print(f"Book '{book.title}' doesn't have any available copies and cannot be loaned!")
 
 if __name__ == '__main__':
     FileManagement.load_available_books()

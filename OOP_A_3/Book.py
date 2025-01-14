@@ -49,11 +49,11 @@ class Book:
 
     def __eq__(self, other):
         return (isinstance(other, Book) and
-        self.title == other.title and
-        self.author == other.author and
-        self.genre == other.genre and
+        self.title.lower() == other.title.lower() and
+        self.author.lower() == other.author.lower() and
+        self.genre.lower() == other.genre.lower() and
         self.year == other.year and
-        self.is_loaned == other.is_loaned)
+        self.is_loaned.lower() == other.is_loaned.lower())
 
     def __hash__(self):
         return hash((self.title, self.author, self.year))
