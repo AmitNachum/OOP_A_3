@@ -130,8 +130,11 @@ class LibraryApp:
 
         self.load_csv("Files/books.csv")
 
-        FileManagement.load_available_books()
-        FileManagement.load_loaned_books()
+        try:
+            pd.read_csv("Files/books_available.csv")
+        except pd.errors.EmptyDataError:
+            FileManagement.load_available_books()
+            FileManagement.load_loaned_books()
 
         # Buttons for library operations
         tk.Button(self.root, text="Add Book", command=self.add_book).pack(pady=5)

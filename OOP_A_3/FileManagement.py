@@ -51,13 +51,14 @@ class FileManagement:
             return []
 
     @staticmethod
-    def read_file_to_books(file_path: str) -> List[Book]:
+    def read_file_to_books(file_path: str, copies_type: str = "copies") -> List[Book]:
         books = []
         try:
             with open(file_path, 'r') as f:
                 reader = list(csv.reader(f))
                 for line in reader[1:]:  # Skip the header row
-                    new_book = Book(line[0], line[1], line[4], int(line[5]), int(line[3]), line[2])
+                    dynamic_args = {copies_type: int(line[3])}
+                    new_book = Book(title= line[0], author= line[1], genre= line[4], year= int(line[5]), is_loaned=line[2], **dynamic_args)
                     books.append(new_book)
         except FileNotFoundError:
             print(f"File {file_path} was not found.")
@@ -79,26 +80,36 @@ class FileManagement:
     @staticmethod
     def add_book(book: Book, books_path: str):
         header = FileManagement.read_file(books_path)[0]
-        books = FileManagement.read_file_to_books(books_path)
+        books = []
+
+        if books_path.endswith("books_available.csv"):
+            books = FileManagement.read_file_to_books(books_path, "available_copies")
+        elif books_path.endswith("books_loaned.csv"):
+            books = FileManagement.read_file_to_books(books_path, "loaned_copies")
+        elif books_path.endswith("books.csv"):
+            books = FileManagement.read_file_to_books(books_path)
+
         found = False
 
         # Update the specific file
         for b in books:
             if b == book:
-                if books_path.endswith("available_books.csv"):
+                if books_path.endswith("books_available.csv"):
                     b.available_copies += 1
-                elif books_path.endswith("loaned_books.csv"):
+                elif books_path.endswith("books_loaned.csv"):
                     b.loaned_copies += 1
                 elif books_path.endswith("books.csv"):
                     b.copies += 1
+                    b.available_copies = b.copies - b.loaned_copies
+                    b.loaned_copies = b.copies - b.available_copies
                 found = True
                 break
 
         if not found:  # If the book doesn't exist in the file
-            if books_path.endswith("available_books.csv"):
-                book.available_copies = 1
-            elif books_path.endswith("loaned_books.csv"):
-                book.loaned_copies = 1
+            if books_path.endswith("books_available.csv"):
+                book.available_copies = book.copies - book.loaned_copies
+            elif books_path.endswith("books_loaned.csv"):
+                book.loaned_copies = book.copies - book.available_copies
             elif books_path.endswith("books.csv"):
                 book.copies = 1
             books.append(book)
@@ -113,36 +124,50 @@ class FileManagement:
             "get_fields"
         )
 
-        FileManagement.load_available_books()
-        FileManagement.load_loaned_books()
+        if not found and books_path.endswith("books.csv"):
+            FileManagement.load_available_books()
+            FileManagement.load_loaned_books()
+
         print("Book added successfully.")
 
     @staticmethod
     def remove_book(book: Book, books_path: str):
         header = FileManagement.read_file(books_path)[0]
-        books = FileManagement.read_file_to_books(books_path)
+        books = []
+
+        if books_path.endswith("books_available.csv"):
+            books = FileManagement.read_file_to_books(books_path, "available_copies")
+        elif books_path.endswith("books_loaned.csv"):
+            books = FileManagement.read_file_to_books(books_path, "loaned_copies")
+        elif books_path.endswith("books.csv"):
+            books = FileManagement.read_file_to_books(books_path)
+
         updated_books = []  # To store updated data
         found = False
 
         for b in books:
             if b == book:
-                if books_path.endswith("available_books.csv"):  # Update available_books.csv
+                if books_path.endswith("books_available.csv"):  # Update books_available.csv
                     if b.available_copies > 1:
                         b.available_copies -= 1
                         found = True
                     else:
+                        b.is_loaned = "yes"
                         found = True
                         continue  # Skip this book (remove it)
-                elif books_path.endswith("loaned_books.csv"):  # Update loaned_books.csv
+                elif books_path.endswith("books_loaned.csv"):  # Update books_loaned.csv
                     if b.loaned_copies > 1:
                         b.loaned_copies -= 1
                         found = True
                     else:
+                        b.is_loaned = "no"
                         found = True
                         continue  # Skip this book (remove it)
                 elif books_path.endswith("books.csv"):  # Update books.csv
                     if b.copies > 1:
                         b.copies -= 1
+                        b.available_copies = b.copies - b.loaned_copies
+                        b.loaned_copies = b.copies - b.available_copies
                         found = True
                     else:
                         found = True
@@ -152,6 +177,7 @@ class FileManagement:
         if not found:
             print(f"Book '{book.title}' not found in {books_path}.")
         else:
+            print(updated_books)
             # Write updated books back to the file
             FileManagement.write_books(
                 books_path,
@@ -162,8 +188,10 @@ class FileManagement:
                 "get_fields"
             )
 
-            FileManagement.load_available_books()
-            FileManagement.load_loaned_books()
+            if books_path.endswith("books.csv"):
+                FileManagement.load_available_books()
+                FileManagement.load_loaned_books()
+
             print("Book removed successfully.")
 
     @staticmethod
@@ -185,7 +213,7 @@ class FileManagement:
         data = FileManagement.read_file_to_books("Files/books.csv")
         available = [b for il, b in zip(IsLoanedIterator(data), data) if il.lower() == "no"]
 
-        with open("Files/available_books.csv", 'w', newline='') as file:
+        with open("Files/books_available.csv", 'w', newline='') as file:
             writer = csv.writer(file)
             writer.writerow(['title', 'author', 'is_loaned', 'copies_available', 'genre', 'year'])  # Write header
             for row in available:  # Write data rows
@@ -197,7 +225,7 @@ class FileManagement:
         data = FileManagement.read_file_to_books("Files/books.csv")
         loaned = [b for il, b in zip(IsLoanedIterator(data), data) if il.lower() == "yes"]
 
-        with open("Files/loaned_books.csv", 'w', newline='') as file:
+        with open("Files/books_loaned.csv", 'w', newline='') as file:
             writer = csv.writer(file)
             writer.writerow(['title', 'author', 'is_loaned', 'copies_loaned', 'genre', 'year'])  # Write header
             for row in loaned:  # Write data rows
@@ -206,17 +234,16 @@ class FileManagement:
 
     @staticmethod
     def lend_book(book: Book):
-        available = FileManagement.read_file_to_books("Files/available_books.csv")
+        available = FileManagement.read_file_to_books("Files/books_available.csv")
         found = False
         for b in available:
             if b == book:  # Use __eq__ to compare books
                 found = True
-                print(f"Book found: {b}")
                 break
 
         if found:
-            FileManagement.remove_book(book, "Files/available_books.csv")
-            FileManagement.add_book(book, "Files/loaned_books.csv")
+            FileManagement.remove_book(book, "Files/books_available.csv")
+            FileManagement.add_book(book, "Files/books_loaned.csv")
             print("Lending process completed successfully.")
         else:
             print(f"Book '{book.title}' doesn't have any available copies and cannot be loaned!")

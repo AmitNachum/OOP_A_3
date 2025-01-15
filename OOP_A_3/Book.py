@@ -6,8 +6,8 @@ class Book:
         self.genre = genre
         self.year = year
         self.copies = copies
-        self.available_copies = self.copies if is_loaned.lower() == "no" else 0
-        self.loaned_copies = self.copies if is_loaned.lower() == "yes" else 0
+        self.available_copies = available_copies
+        self.loaned_copies = loaned_copies
         self.is_loaned = is_loaned
 
     def get_title(self):
