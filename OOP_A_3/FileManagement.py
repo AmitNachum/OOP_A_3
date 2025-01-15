@@ -57,7 +57,6 @@ class FileManagement:
             with open(file_path, 'r') as f:
                 reader = list(csv.reader(f))
                 for line in reader[1:]:  # Skip the header row
-                    print(f"Reading line: {line}")
                     new_book = Book(line[0], line[1], line[4], int(line[5]), int(line[3]), line[2])
                     books.append(new_book)
         except FileNotFoundError:
@@ -130,19 +129,24 @@ class FileManagement:
                 if books_path.endswith("available_books.csv"):  # Update available_books.csv
                     if b.available_copies > 1:
                         b.available_copies -= 1
+                        found = True
                     else:
+                        found = True
                         continue  # Skip this book (remove it)
                 elif books_path.endswith("loaned_books.csv"):  # Update loaned_books.csv
                     if b.loaned_copies > 1:
                         b.loaned_copies -= 1
+                        found = True
                     else:
+                        found = True
                         continue  # Skip this book (remove it)
                 elif books_path.endswith("books.csv"):  # Update books.csv
                     if b.copies > 1:
                         b.copies -= 1
+                        found = True
                     else:
+                        found = True
                         continue  # Skip this book (remove it)
-                found = True
             updated_books.append(b)
 
         if not found:
@@ -202,10 +206,7 @@ class FileManagement:
 
     @staticmethod
     def lend_book(book: Book):
-        print(f"Lending book: {book}")
         available = FileManagement.read_file_to_books("Files/available_books.csv")
-        print(f"Available books: {available}")
-
         found = False
         for b in available:
             if b == book:  # Use __eq__ to compare books
