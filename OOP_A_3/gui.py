@@ -24,8 +24,8 @@ class LoginWindow(tk.Toplevel):
         self.password_entry = tk.Entry(self)
         self.password_entry.pack()
 
-        tk.Button(self, text="Sign Up", command=self.sign_up).pack(pady=5)
-        tk.Button(self, text="Log In", command=self.log_in).pack(pady=5)
+        tk.Button(self, text="Register", command=self.sign_up).pack(pady=5)
+        tk.Button(self, text="Login", command=self.log_in).pack(pady=5)
 
 
     def sign_up(self):
@@ -62,6 +62,39 @@ class LoginWindow(tk.Toplevel):
         else:
             messagebox.showerror("Error", "User not found")
 
+class AskInfoWindow(tk.Toplevel):
+    def __init__(self, parent, book, callback):
+        super().__init__(parent)
+        self.title("Enter User Information")
+        self.geometry("300x200")
+        self.book = book
+        self.callback = callback  # A callback function to handle the info data
+
+        # Labels and entry fields
+        tk.Label(self, text="Name:").pack(pady=5)
+        self.name_entry = tk.Entry(self)
+        self.name_entry.pack(pady=5)
+
+        tk.Label(self, text="Email:").pack(pady=5)
+        self.email_entry = tk.Entry(self)
+        self.email_entry.pack(pady=5)
+
+        # Submit button
+        tk.Button(self, text="Submit", command=self.submit_info).pack(pady=10)
+
+    def submit_info(self):
+        name = self.name_entry.get()
+        email = self.email_entry.get()
+
+        if not name or not email:
+            messagebox.showerror("Error", "Please fill in all fields")
+            return
+
+        # Call the callback function with the entered info
+        self.callback({"name": name, "email": email}, self.book)
+
+        # Close the window
+        self.destroy()
 
 class LibraryApp:
     def __init__(self, root):
@@ -130,23 +163,15 @@ class LibraryApp:
 
         self.load_csv("Files/books.csv")
 
-        try:
-            pd.read_csv("Files/books_available.csv")
-        except pd.errors.EmptyDataError:
-            FileManagement.load_available_books()
-            FileManagement.load_loaned_books()
-
         # Buttons for library operations
         tk.Button(self.root, text="Add Book", command=self.add_book).pack(pady=5)
         tk.Button(self.root, text="Remove Book", command=self.remove_book).pack(pady=5)
         tk.Button(self.root, text="Search Book", command=self.search_book).pack(pady=5)
+        tk.Button(self.root, text="View Books", command=self.view_books).pack(pady=5)
         tk.Button(self.root, text="Lend Book", command=self.lend_book).pack(pady=5)
-#        tk.Button(root , text="Return Book",command=self.return_book).pack(pady=5)
- #       tk.Button(root,text="Logout",command=self.logout).pack(pady=5)
-  #      tk.Button(root,text="Login",command=self.login).pack(pady=5)
-   #     tk.Button(root,text="Register",command=self.register).pack(pady=5)
-
-        #Place Holder for Methods
+        tk.Button(self.root, text="Return Book",command=self.return_book).pack(pady=5)
+        #tk.Button(root, text="Logout", command=self.logout).pack(pady=5)
+        tk.Button(self.root, text="Popular Books", command=self.view_populars).pack(pady=5)
 
     def load_csv(self, file_path):
         try:
@@ -193,7 +218,7 @@ class LibraryApp:
 
        # Create a book object and add it to the CSV
        book = self.factory.create_book(title, author, genre, year)
-       FileManagement.add_book(book, "Files/books.csv")
+       FileManagement.add_book(book)
 
        # Clear the current Treeview rows
        for item in self.tree.get_children():
@@ -223,7 +248,7 @@ class LibraryApp:
 
         # Create a book object and add it to the CSV
         book = self.factory.create_book(title, author, genre, year)
-        FileManagement.remove_book(book, "Files/books.csv")
+        FileManagement.remove_book(book)
 
         # Clear the current Treeview rows
         for item in self.tree.get_children():
@@ -273,7 +298,50 @@ class LibraryApp:
         FileManagement.search_book("Files/books.csv", *strategies, **search_vals)
         self.load_csv("Files/search.csv")
 
+    def view_books(self):
+        # Reload the CSV into the Treeview
+        self.load_csv("Files/books.csv")
+
     def lend_book(self):
+        title = self.title_entrty.get()
+        author = self.author_entrty.get()
+        genre = self.genre_entrty.get()
+        year = self.year_entrty.get()
+
+        if not title or not author or not genre or not year:
+            messagebox.showerror("Error", "Please enter all fields")
+            return
+
+        try:
+            year = int(year)
+        except ValueError:
+            messagebox.showerror("Error", "Please enter a valid year")
+            return
+
+        # Create a book object and try to lend it
+        book = self.factory.create_book(title, author, genre, year)
+        success = FileManagement.lend_book(book)
+
+        if not success:
+            # Show the AskInfoWindow to collect user info
+            AskInfoWindow(self.root, book, self.handle_info_submission)
+
+        # Reload the CSV into the Treeview
+        self.load_csv("Files/books.csv")
+
+        if success:
+            # Success message
+            messagebox.showinfo("Success", f"Loaned the Book {book}")
+
+    def handle_info_submission(self, info, book):
+        """
+        Callback function to handle user info submission.
+        This is called after the user enters their info in the AskInfoWindow.
+        """
+        FileManagement.ask_info(book, info)
+        messagebox.showinfo("Info", "Your details have been added to the waiting list.")
+
+    def return_book(self):
         title = self.title_entrty.get()
         author = self.author_entrty.get()
         genre = self.genre_entrty.get()
@@ -291,10 +359,18 @@ class LibraryApp:
 
         # Create a book object and add it to the CSV
         book = self.factory.create_book(title, author, genre, year)
-        FileManagement.lend_book(book)
+        FileManagement.return_book(book)
+
+        # Reload the CSV into the Treeview
+        self.load_csv("Files/books.csv")
 
         # Success message
-        messagebox.showinfo("Success", f"loaned the Book {book}")
+        messagebox.showinfo("Success", f"Returned the Book {book}")
+
+    def view_populars(self):
+        FileManagement.load_populars_to_csv()
+        # Reload the CSV into the Treeview
+        self.load_csv("Files/popular_books.csv")
 
 if __name__ == '__main__':
     root = tk.Tk()

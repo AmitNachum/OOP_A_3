@@ -1,41 +1,22 @@
 class Book:
 
-    def __init__(self, title, author, genre, year : int, copies: int = 1, available_copies: int = 1, loaned_copies: int = 1, is_loaned = "No"):
+    def __init__(self, title, author, genre, year : int, copies: int = 1, is_loaned = "No"):
         self.title = title
         self.author = author
         self.genre = genre
         self.year = year
         self.copies = copies
-        self.available_copies = available_copies
-        self.loaned_copies = loaned_copies
         self.is_loaned = is_loaned
 
-    def get_title(self):
-        return self.title
-
-    def get_year(self):
-        return self.year
-
-    def get_author(self):
-        return self.author
-
-    def get_genre(self):
-        return self.genre
-
-    def get_copies(self):
-        return self.copies
-
-    def get_is_loaned(self):
-        return self.is_loaned
 
     def get_fields(self):
-        return [self.title, self.author, self.is_loaned, self.copies, self.genre, self.year]
-
-    def get_available_fields(self):
-        return [self.title, self.author, self.is_loaned, self.available_copies, self.genre, self.year]
-
-    def get_loaned_fields(self):
-        return [self.title, self.author, self.is_loaned, self.loaned_copies, self.genre, self.year]
+        return [self.title,
+        self.author,
+        self.is_loaned,
+        self.copies,
+        self.genre,
+        self.year,
+        ]
 
     def __str__(self):
         if self.copies == 0:
