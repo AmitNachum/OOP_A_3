@@ -1,6 +1,6 @@
 class Book:
 
-    def __init__(self, title, author, genre, year : int, copies: int = 1, is_loaned = "No"):
+    def __init__(self, title, author, genre, year : int, copies: int = 1, available_copies: int = 1, loaned_copies: int = 1, is_loaned = "No"):
         self.title = title
         self.author = author
         self.genre = genre
