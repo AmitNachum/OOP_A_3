@@ -102,6 +102,7 @@ class LoginWindow(tk.Toplevel):
         user_name = self.username_entry.get()
         password = self.password_entry.get()
         user = User(user_name, password)
+        User.USERS.append(User)
 
         if not FileManagement.sign_up_user(user):
             messagebox.showerror("Error", f"User {user.user_name} already signed up")
@@ -133,6 +134,7 @@ class LoginWindow(tk.Toplevel):
 
 class LibraryApp:
     def __init__(self, root):
+        self.logged_in_user = None
         self.logged_in = False
         self.root = root
         self.root.title("Library Management System")
@@ -307,6 +309,8 @@ class LibraryApp:
         book = self.factory.create_book(title, author, genre, year)
         FileManagement.add_book(book)
 
+        self.notify(f"Added the Book {book}")
+
         self.load_csv("Files/books.csv")
         messagebox.showinfo("Success", f"Added the Book {book}")
 
@@ -328,6 +332,8 @@ class LibraryApp:
 
         book = self.factory.create_book(title, author, genre, year)
         FileManagement.remove_book(book)
+
+        self.notify(f"Removed the Book {book}")
 
         self.load_csv("Files/books.csv")
         messagebox.showinfo("Success", f"Removed the Book {book}")
@@ -402,12 +408,16 @@ class LibraryApp:
         self.load_csv("Files/books.csv")
 
         if success:
+            self.notify(f"Loaned the Book {book}")
             # Success message
             messagebox.showinfo("Success", f"Loaned the Book {book}")
 
-    @staticmethod
-    def handle_info_submission(info, book):
+    def handle_info_submission(self, info, book):
         FileManagement.ask_info(book, info)
+        name = info.get("name")
+        self.notify(f"Added {name} to the Book {book} waiting list")
+        print(f"{self.logged_in_user} Added {name} to the Book {book} waiting list")
+
         messagebox.showinfo("Info", "Your details have been added to the waiting list.")
 
     def return_book(self):
@@ -458,6 +468,10 @@ class LibraryApp:
 
         if self.logged_in:
             self.setup_ui()
+
+    def notify(self, message):
+        for user in User.USERS:
+            user.update(self.logged_in_user,message)
 
 if __name__ == "__main__":
     root = tk.Tk()

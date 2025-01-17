@@ -20,10 +20,10 @@ class Book:
 
     def __str__(self):
         if self.copies == 0:
-            return f"{self.title} by {self.author}, published at:{self.year}.\n"
+            return f"{self.title} by {self.author}, published at:{self.year}"
 
         else:
-            return f"{self.title} by {self.author}, published at:{self.year}. has {self.copies} copies\n"
+            return f"{self.title} by {self.author}, published at:{self.year}. has {self.copies} copies"
 
     def __repr__(self):
         return f"Book({self.title!r}, {self.author!r},{self.genre!r},{self.year!r})"
