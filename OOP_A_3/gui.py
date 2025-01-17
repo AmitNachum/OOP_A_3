@@ -122,6 +122,7 @@ class LoginWindow(tk.Toplevel):
             if user.password == stored_hashed_password:
                 messagebox.showinfo("Success", f"Welcome {user_name}!")
                 self.app.logged_in = True
+                self.app.logged_in_user = user_name  # Store the logged-in username
                 self.app.setup_ui()
                 self.destroy()
                 return True
@@ -150,8 +151,41 @@ class LibraryApp:
 
         self.factory = BookFactory()
 
-        tk.Label(self.root, text="Library Management System", font=("Arial", 24, "bold"), bg="#f7f7f7", fg="#333333").pack(pady=20)
+        # Top Frame for the Title and Logout Button
+        top_frame = tk.Frame(self.root, bg="#f7f7f7")
+        top_frame.pack(fill=tk.X, pady=(0, 20))
 
+        # Title Label
+        tk.Label(
+            top_frame,
+            text="Library Management System",
+            font=("Arial", 24, "bold"),
+            bg="#f7f7f7",
+            fg="#333333"
+        ).pack(padx=20)
+
+        # Logged-in User Label
+        if hasattr(self, 'logged_in_user') and self.logged_in_user:
+            tk.Label(
+                top_frame,
+                text=f"Logged in as: {self.logged_in_user}",
+                font=("Arial", 16, "bold"),
+                bg="#f7f7f7",
+                fg="#333333"
+            ).pack(padx=20, side=tk.LEFT)
+
+        # Logout Button
+        tk.Button(
+            top_frame,
+            text="Logout",
+            command=self.logout,
+            bg="#ff0000",
+            fg="black",
+            font=("Arial", 10, "bold"),
+            width=10
+        ).pack(side=tk.RIGHT, padx=20)
+
+        # Main UI Elements
         form_frame = tk.Frame(self.root, bg="#f7f7f7")
         form_frame.pack(pady=10)
 
@@ -406,6 +440,24 @@ class LibraryApp:
         FileManagement.load_populars_to_csv()
         # Reload the CSV into the Treeview
         self.load_csv("Files/popular_books.csv")
+
+    def logout(self):
+        self.logged_in = False
+
+        # Clear the main window
+        for widget in self.root.winfo_children():
+            widget.destroy()
+
+        # Reset any attributes that might interfere with reinitialization
+        if hasattr(self, 'tree'):
+            del self.tree
+
+        # Show the login window again
+        self.login_window = LoginWindow(self)
+        self.root.wait_window(self.login_window)
+
+        if self.logged_in:
+            self.setup_ui()
 
 if __name__ == "__main__":
     root = tk.Tk()
