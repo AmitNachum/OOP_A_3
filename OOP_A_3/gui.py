@@ -102,11 +102,11 @@ class LoginWindow(tk.Toplevel):
         user_name = self.username_entry.get()
         password = self.password_entry.get()
         user = User(user_name, password)
-        User.USERS.append(User)
 
         if not FileManagement.sign_up_user(user):
             messagebox.showerror("Error", f"User {user.user_name} already signed up")
         else:
+            User.USERS.append(User)
             messagebox.showinfo("Success", f"Signed up as {user.user_name}")
 
     def log_in(self):
@@ -202,6 +202,9 @@ class LibraryApp:
         table_frame.pack(fill=tk.BOTH, expand=True)
 
         self.create_table(table_frame)
+
+        FileManagement.load_populars_to_csv()
+        FileManagement.load_waiting_list()
         self.load_csv("Files/books.csv")
 
     def create_form(self, frame):
@@ -242,7 +245,8 @@ class LibraryApp:
             ("View Books", self.view_books, "#5f88a8"),
             ("Lend Book", self.lend_book, "#5f88a8"),
             ("Return Book", self.return_book, "#5d8884"),
-            ("Popular Books", self.view_populars, "#85725c")
+            ("Popular Books", self.view_populars, "#85725c"),
+            ("Waiting List", self.view_waiting_list, "#85725c")
         ]
 
         # Set the maximum number of buttons per row
@@ -472,6 +476,12 @@ class LibraryApp:
     def notify(self, message):
         for user in User.USERS:
             user.update(self.logged_in_user,message)
+
+    def view_waiting_list(self):
+        FileManagement.load_waiting_list()
+        # Reload the CSV into the Treeview
+        self.load_csv("Files/waiting_list.csv")
+
 
 if __name__ == "__main__":
     root = tk.Tk()
