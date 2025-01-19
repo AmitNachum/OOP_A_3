@@ -137,8 +137,7 @@ class FileManagement:
     @staticmethod
     @log_action("Get Popular Books")
     @handle_exceptions
-    # @ensure_csv_columns(["title", "author", "is_loaned", "copies", "genre", "year", "available_copies", "loaned_copies", "lend_count"])
-    def get_popular_books(file_path="Files/popular_books.csv", df=None):
+    def get_popular_books():
         books_df = pd.read_csv("Files/books.csv")
         books_df = books_df.sort_values(by="lend_count", ascending=False)
         top_books = books_df.head(10)

@@ -1402,3 +1402,17 @@
 2025-01-19 17:34:21,382 - INFO - Get Popular Books performed successfully.
 2025-01-19 17:34:21,386 - INFO - Popular books saved to Files/popular_books.csv.
 2025-01-19 17:34:21,386 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 17:35:46,307 - INFO - User file read performed successfully.
+2025-01-19 17:35:47,313 - INFO - logged in successfully
+2025-01-19 17:35:47,325 - INFO - Successfully loaded 34 books from the file.
+2025-01-19 17:35:47,325 - INFO - Load books to list performed successfully.
+2025-01-19 17:35:47,326 - INFO - Get Popular Books performed successfully.
+2025-01-19 17:35:47,331 - INFO - Popular books saved to Files/popular_books.csv.
+2025-01-19 17:35:47,331 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 17:35:47,332 - INFO - Waiting list saved successfully to Files/waiting_list.csv.
+2025-01-19 17:35:47,332 - INFO - Load waiting list performed successfully.
+2025-01-19 17:35:49,139 - INFO - Successfully loaded 34 books from the file.
+2025-01-19 17:35:49,140 - INFO - Load books to list performed successfully.
+2025-01-19 17:35:49,140 - INFO - Get Popular Books performed successfully.
+2025-01-19 17:35:49,143 - INFO - Popular books saved to Files/popular_books.csv.
+2025-01-19 17:35:49,143 - INFO - Load popular books to CSV performed successfully.
