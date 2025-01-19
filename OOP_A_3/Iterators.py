@@ -1,6 +1,6 @@
 class TitleIterator:
     def __init__(self, data):
-        self.data = data
+        self.data = [book for book, _ in data]
         self.index = 0
 
     def __iter__(self):
@@ -16,7 +16,7 @@ class TitleIterator:
 
 class AuthorIterator:
     def __init__(self, data):
-        self.data = data
+        self.data = [book for book, _ in data]
         self.index = 0
 
     def __iter__(self):
@@ -32,7 +32,7 @@ class AuthorIterator:
 
 class IsLoanedIterator:
     def __init__(self, data):
-        self.data = data
+        self.data = [book for book, _ in data]
         self.index = 0
 
     def __iter__(self):
@@ -48,7 +48,7 @@ class IsLoanedIterator:
 
 class CopiesIterator:
     def __init__(self, data):
-        self.data = data
+        self.data = [book for book, _ in data]
         self.index = 0
 
     def __iter__(self):
@@ -64,7 +64,7 @@ class CopiesIterator:
 
 class GenreIterator:
     def __init__(self, data):
-        self.data = data
+        self.data = [book for book, _ in data]
         self.index = 0
 
     def __iter__(self):
@@ -80,7 +80,7 @@ class GenreIterator:
 
 class YearIterator:
     def __init__(self, data):
-        self.data = data
+        self.data = [book for book, _ in data]
         self.index = 0
 
     def __iter__(self):
@@ -89,6 +89,57 @@ class YearIterator:
     def __next__(self):
         if self.index < len(self.data):
             result = self.data[self.index].year
+            self.index += 1
+            return result
+        else:
+            raise StopIteration
+
+class AvailableCopiesIterator:
+    def __init__(self, data):
+        self.data = [additional_data for _, additional_data in data]
+        self.index = 0
+
+    def __iter__(self):
+        return self
+
+    def __next__(self):
+        if self.index < len(self.data):
+            # Access the "available_copies" field in each additional_data dictionary
+            result = self.data[self.index]["available_copies"]
+            self.index += 1
+            return result
+        else:
+            raise StopIteration
+
+class LoanedCopiesIterator:
+    def __init__(self, data):
+        self.data = [additional_data for _, additional_data in data]
+        self.index = 0
+
+    def __iter__(self):
+        return self
+
+    def __next__(self):
+        if self.index < len(self.data):
+            # Access the "loaned_copies" field in each additional_data dictionary
+            result = self.data[self.index]["loaned_copies"]
+            self.index += 1
+            return result
+        else:
+            raise StopIteration
+
+class LendCountIterator:
+    def __init__(self, data):
+        self.data = [additional_data for _, additional_data in data]
+        self.index = 0
+
+    def __iter__(self):
+        return self
+
+    def __next__(self):
+        if self.index < len(self.data):
+            # Access the "lend_count" field in each additional_data dictionary
+            result = self.data[self.index]["lend_count"]
             self.index += 1
             return result
         else:

@@ -1,4 +1,6 @@
 import logging
+import threading
+import time
 import tkinter as tk
 from tkinter import ttk, messagebox
 import pandas as pd
@@ -21,12 +23,13 @@ class AskInfoWindow(tk.Toplevel):
     def __init__(self, parent, book, callback):
         super().__init__(parent)
         self.title("Enter User Information")
-        self.geometry("300x200")
-        self.configure(bg="#f7f7f7")  # Match the light gray background of the system
-        self.book = book
-        self.callback = callback  # A callback function to handle the info data
+        self.geometry("300x250")
+        self.configure(bg="#f7f7f7")
 
-        # Title Label
+        self.book = book
+        self.callback = callback
+
+        # Title Label with improved font size
         tk.Label(
             self,
             text="Enter User Information",
@@ -35,31 +38,33 @@ class AskInfoWindow(tk.Toplevel):
             fg="#333333"
         ).pack(pady=10)
 
-        # Labels and Entry Fields
+        # Form Frame
         form_frame = tk.Frame(self, bg="#f7f7f7")
         form_frame.pack(pady=5)
 
+        # User Info Labels and Entries
         tk.Label(
             form_frame,
             text="Name:",
-            font=("Arial", 12),
+            font=("Arial", 14),
             bg="#f7f7f7",
             fg="#333333"
         ).grid(row=0, column=0, padx=10, pady=5, sticky="w")
-
-        self.name_entry = tk.Entry(form_frame, font=("Arial", 10), width=25)
+        self.name_entry = tk.Entry(form_frame, font=("Arial", 14), width=25)
         self.name_entry.grid(row=0, column=1, padx=10, pady=5)
 
         tk.Label(
             form_frame,
             text="Email:",
-            font=("Arial", 12),
+            font=("Arial", 14),
             bg="#f7f7f7",
             fg="#333333"
         ).grid(row=1, column=0, padx=10, pady=5, sticky="w")
-
-        self.email_entry = tk.Entry(form_frame, font=("Arial", 10), width=25)
+        self.email_entry = tk.Entry(form_frame, font=("Arial", 14), width=25)
         self.email_entry.grid(row=1, column=1, padx=10, pady=5)
+
+        # Set focus to the first entry
+        self.name_entry.focus()
 
         # Submit Button
         tk.Button(
@@ -68,7 +73,7 @@ class AskInfoWindow(tk.Toplevel):
             command=self.submit_info,
             bg="#5d7f71",
             fg="black",
-            font=("Arial", 10, "bold"),
+            font=("Arial", 14, "bold"),
             width=15
         ).pack(pady=20)
 
@@ -80,10 +85,7 @@ class AskInfoWindow(tk.Toplevel):
             messagebox.showerror("Error", "Please fill in all fields", parent=self)
             return
 
-        # Call the callback function with the entered info
         self.callback({"name": name, "email": email}, self.book)
-
-        # Close the window
         self.destroy()
 
 class LoginWindow(tk.Toplevel):
@@ -92,50 +94,60 @@ class LoginWindow(tk.Toplevel):
         self.app = app
         self.title("Login Window")
         self.geometry("400x400")
-        self.configure(bg="#ececec")  # Light gray background
+        self.configure(bg="#ececec")
 
+        # Title Label
         tk.Label(self, text="Library Management Login", font=("Arial", 18, "bold"), bg="#ececec", fg="#333333").pack(pady=20)
 
-        self.username_label = tk.Label(self, text="Enter Username:", bg="#ececec", fg="#333333")
+        # Username and Password Entry Fields
+        self.username_label = tk.Label(self, text="Enter Username:", bg="#ececec", fg="#333333", font=("Ariel", 14))
         self.username_label.pack()
         self.username_entry = tk.Entry(self, width=30)
         self.username_entry.pack(pady=5)
 
-        self.password_label = tk.Label(self, text="Enter Password:", bg="#ececec", fg="#333333")
+        self.password_label = tk.Label(self, text="Enter Password:", bg="#ececec", fg="#333333", font=("Ariel", 14))
         self.password_label.pack()
         self.password_entry = tk.Entry(self, show="*", width=30)
         self.password_entry.pack(pady=5)
 
-        tk.Button(self, text="Register", command=self.sign_up, bg="#6d9e69", fg="black", font=("Arial", 10, "bold"), width=15).pack(pady=10)
-        tk.Button(self, text="Login", command=self.log_in, bg="#5a7dab", fg="black", font=("Arial", 10, "bold"), width=15).pack(pady=5)
+        # Buttons
+        tk.Button(self, text="Register", command=self.sign_up, bg="#6d9e69", fg="black", font=("Arial", 14, "bold"), width=15).pack(pady=10)
+        tk.Button(self, text="Login", command=self.log_in, bg="#5a7dab", fg="black", font=("Arial", 14, "bold"), width=15).pack(pady=5)
 
     def sign_up(self):
         user_name = self.username_entry.get()
         password = self.password_entry.get()
-        user = User(user_name, password)
 
+        if not user_name or not password:
+            messagebox.showerror("Error", "Both username and password are required!")
+            return
+
+        user = User(user_name, password)
         if not FileManagement.sign_up_user(user):
             messagebox.showerror("Error", f"User {user.user_name} already signed up")
         else:
-            User.USERS.append(User)
+            User.USERS.append(user)
             messagebox.showinfo("Success", f"Signed up as {user.user_name}")
 
     def log_in(self):
         user_name = self.username_entry.get()
         password = self.password_entry.get()
-        users = FileManagement.read_users()
 
+        if not user_name or not password:
+            messagebox.showerror("Error", "Both username and password are required!")
+            return
+
+        users = FileManagement.read_users()
         user_row = users[users['user_name'] == user_name]
 
         if not user_row.empty:
             stored_hashed_password = user_row.iloc[0]['password']
-
             user = User(user_name, password)
             if user.password == stored_hashed_password:
                 messagebox.showinfo("Success", f"Welcome {user_name}!")
                 logging.info("logged in successfully")
                 self.app.logged_in = True
-                self.app.logged_in_user = user_name  # Store the logged-in username
+                self.app.logged_in_user = user_name
                 self.app.setup_ui()
                 self.destroy()
                 return True
@@ -197,7 +209,7 @@ class LibraryApp:
             command=self.logout,
             bg="#ff0000",
             fg="black",
-            font=("Arial", 10, "bold"),
+            font=("Arial", 14, "bold"),
             width=10
         ).pack(side=tk.RIGHT, padx=20)
 
@@ -222,34 +234,41 @@ class LibraryApp:
         self.load_csv("Files/books.csv")
 
     def create_form(self, frame):
-        labels = ["Title", "Author", "Is Loaned?", "Copies", "Genre", "Year"]
+        labels = ["Title", "Author", "Is Loaned?", "Copies", "Genre", "Year", "Available Copies", "Loaned Copies", "Lend Count"]
         self.entries = {}
 
         # Create a frame for the form layout
         form_frame = tk.Frame(frame, bg="#f7f7f7")
-        form_frame.grid(row=0, column=0, padx=10, pady=10, sticky="w")
+        form_frame.grid(row=0, column=0, padx=15, pady=10, sticky="w")  # Increase outer padding further
 
-        # Adjust layout for better fitting
+        # Adjust layout for better fitting with two rows per label-entry pair
         for i, label_text in enumerate(labels):
-            # Add the label with the input field
+            row = i // 5  # Split into two rows: one for labels, one for entries
+            col = i % 5  # 5 columns per row
+
+            # Add the label
             label = tk.Label(
                 form_frame,
                 text=label_text + ":",
-                font=("Arial", 12),
+                font=("Arial", 14),
                 bg="#f7f7f7",
                 fg="#333333",
                 anchor="w"
             )
-            label.grid(row=0, column=2 * i + 1, padx=(5, 2), pady=5, sticky="w")
+            label.grid(row=row * 2, column=col, padx=(15, 5), pady=5, sticky="w")  # More space before entry
 
-            # Make the entry fields smaller and fit better
-            entry = tk.Entry(form_frame, width=12, font=("Arial", 12))
-            entry.grid(row=1, column=2 * i + 1, padx=(10, 15), pady=5, sticky="w")
+            # Make the entry fields even wider
+            entry = tk.Entry(form_frame, width=16, font=("Arial", 14))  # Increase width more for better fitting
+            entry.grid(row=row * 2 + 1, column=col, padx=(5, 15), pady=5, sticky="w")  # Increase space after entry
             self.entries[label_text.lower().replace(" ", "_")] = entry
 
         # Adjust column weights to make sure everything scales well
-        form_frame.grid_columnconfigure(0, weight=1, minsize=80)
-        form_frame.grid_columnconfigure(1, weight=3, minsize=100)
+        for i in range(5):  # Max of 5 columns in each row
+            form_frame.grid_columnconfigure(i, weight=1, minsize=120)  # Increase column width for more space
+
+        # Adjust row configuration for two rows of fields with more vertical spacing
+        for i in range(2 * len(labels) // 5):  # Number of label-entry rows
+            form_frame.grid_rowconfigure(i, weight=1, minsize=50)  # Increase vertical spacing between rows
 
     def create_buttons(self, frame):
         buttons = [
@@ -274,7 +293,7 @@ class LibraryApp:
                 command=command,
                 bg=color,
                 fg="black",
-                font=("Arial", 10, "bold"),
+                font=("Arial", 14, "bold"),
                 width=15
             ).grid(row=row, column=col, padx=10, pady=5)
 
@@ -363,12 +382,19 @@ class LibraryApp:
         year = self.entries["year"].get()
         is_loaned = self.entries["is_loaned?"].get()
         copies = self.entries["copies"].get()
+        available_copies = self.entries["available_copies"].get()
+        loaned_copies = self.entries["loaned_copies"].get()
+        lend_count = self.entries["lend_count"].get()
+
 
         try:
             year = int(year) if year else None
             copies = int(copies) if copies else None
+            available_copies = int(available_copies) if available_copies else None
+            loaned_copies = int(loaned_copies) if loaned_copies else None
+            lend_count = int(lend_count) if lend_count else None
         except ValueError:
-            messagebox.showerror("Error", "Please enter a valid year or copies number")
+            messagebox.showerror("Error", "Please enter a valid number")
             return
 
         # Map inputs to corresponding search strategies and values
@@ -379,6 +405,9 @@ class LibraryApp:
             (SearchByCopies(), copies) if copies is not None else None,
             (SearchByGenre(), genre) if genre else None,
             (SearchByYear(), year) if year is not None else None,
+            (SearchByAvailableCopies(), available_copies) if available_copies is not None else None,
+            (SearchByLoanedCopies(), loaned_copies) if loaned_copies is not None else None,
+            (SearchByLendCount(), lend_count) if lend_count is not None else None
         ]
 
         # Filter out None values (i.e., unused strategies)

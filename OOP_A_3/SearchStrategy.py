@@ -30,6 +30,18 @@ class SearchByYear(SearchStrategy):
     def search(self, data, search_val: int):
         return [b for y, b in zip(YearIterator(data), data) if y == search_val]
 
+class SearchByAvailableCopies(SearchStrategy):
+    def search(self, data, search_val: int):
+        return [b for ac, b in zip(AvailableCopiesIterator(data), data) if ac == search_val]
+
+class SearchByLoanedCopies(SearchStrategy):
+    def search(self, data, search_val: int):
+        return [b for lc, b in zip(LoanedCopiesIterator(data), data) if lc == search_val]
+
+class SearchByLendCount(SearchStrategy):
+    def search(self, data, search_val: int):
+        return [b for lc, b in zip(LendCountIterator(data), data) if lc == search_val]
+
 class Searcher:
     def __init__(self, *search_strategies):
         self.search_strategies = search_strategies

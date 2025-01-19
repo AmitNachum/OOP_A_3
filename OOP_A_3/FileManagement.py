@@ -144,7 +144,7 @@ class FileManagement:
 
         all_books = FileManagement.load_books_to_list()
         popular_books = [
-            book for book in all_books if (book.title, book.author) in zip(top_books["title"], top_books["author"])
+            book for book, additional_data in all_books if (book.title, book.author) in zip(top_books["title"], top_books["author"])
         ]
         return popular_books
 
@@ -321,7 +321,12 @@ class FileManagement:
                     genre=row["genre"],
                     year=row["year"]
                 )
-                books.append(book)
+                additional_data = {
+                    "available_copies": row["available_copies"],
+                    "loaned_copies": row["loaned_copies"],
+                    "lend_count": row["lend_count"]
+                }
+                books.append((book, additional_data))
             except KeyError as e:
                 logging.error(f"Missing expected column in book data: {e}")
 
@@ -352,6 +357,7 @@ class FileManagement:
         # Use Searcher to apply search strategies
         searcher = Searcher(*search_strategies)
         results = searcher.search(books, **search_vals)
+        results = [book for book, _ in results]
         logging.info(f"Search completed with {len(results)} results.")
 
         # Map found books to their `available_copies` and `loaned_copies`
@@ -368,7 +374,8 @@ class FileManagement:
             if not matching_row.empty:
                 available_copies = matching_row["available_copies"].iloc[0]
                 loaned_copies = matching_row["loaned_copies"].iloc[0]
-                book_data = book.get_fields() + [available_copies, loaned_copies]
+                lend_count = matching_row["lend_count"].iloc[0]
+                book_data = book.get_fields() + [available_copies, loaned_copies, lend_count]
                 found_books.append(book_data)
 
         # Write the results to the CSV file
