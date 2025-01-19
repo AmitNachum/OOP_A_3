@@ -544,3 +544,861 @@
 2025-01-19 03:45:51,039 - INFO - Get Popular Books performed successfully.
 2025-01-19 03:45:51,039 - INFO - No popular books found.
 2025-01-19 03:45:51,039 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 04:03:06,359 - INFO - User file read performed successfully.
+2025-01-19 04:03:07,408 - INFO - logged in successfully
+2025-01-19 04:03:07,415 - INFO - Get Popular Books performed successfully.
+2025-01-19 04:03:07,416 - INFO - No popular books found.
+2025-01-19 04:03:07,416 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 04:03:07,416 - WARNING - Created new DataFrame with columns: ['title', 'name', 'email']
+2025-01-19 04:03:07,417 - INFO - Waiting list saved successfully to Files/waiting_list.csv.
+2025-01-19 04:03:07,417 - INFO - Load waiting list performed successfully.
+2025-01-19 04:03:14,331 - INFO - Get Popular Books performed successfully.
+2025-01-19 04:03:14,331 - INFO - No popular books found.
+2025-01-19 04:03:14,331 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 15:32:13,403 - INFO - User file read performed successfully.
+2025-01-19 15:32:14,644 - INFO - logged in successfully
+2025-01-19 15:32:14,653 - INFO - Get Popular Books performed successfully.
+2025-01-19 15:32:14,653 - INFO - No popular books found.
+2025-01-19 15:32:14,653 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 15:32:14,655 - INFO - Waiting list saved successfully to Files/waiting_list.csv.
+2025-01-19 15:32:14,655 - INFO - Load waiting list performed successfully.
+2025-01-19 15:32:25,270 - INFO - Waiting list saved successfully to Files/waiting_list.csv.
+2025-01-19 15:32:25,270 - INFO - Load waiting list performed successfully.
+2025-01-19 15:32:26,557 - INFO - Get Popular Books performed successfully.
+2025-01-19 15:32:26,557 - INFO - No popular books found.
+2025-01-19 15:32:26,557 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 15:32:33,261 - INFO - Get Popular Books performed successfully.
+2025-01-19 15:32:33,261 - INFO - No popular books found.
+2025-01-19 15:32:33,262 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 15:32:41,274 - INFO - Get Popular Books performed successfully.
+2025-01-19 15:32:41,274 - INFO - No popular books found.
+2025-01-19 15:32:41,274 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 15:33:13,217 - INFO - User file read performed successfully.
+2025-01-19 15:33:14,273 - INFO - logged in successfully
+2025-01-19 15:33:14,278 - INFO - Get Popular Books performed successfully.
+2025-01-19 15:33:14,278 - INFO - No popular books found.
+2025-01-19 15:33:14,278 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 15:33:14,279 - INFO - Waiting list saved successfully to Files/waiting_list.csv.
+2025-01-19 15:33:14,279 - INFO - Load waiting list performed successfully.
+2025-01-19 15:33:19,346 - INFO - Get Popular Books performed successfully.
+2025-01-19 15:33:19,346 - INFO - No popular books found.
+2025-01-19 15:33:19,346 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 15:33:56,700 - INFO - User file read performed successfully.
+2025-01-19 15:33:58,036 - INFO - logged in successfully
+2025-01-19 15:33:58,044 - INFO - Get Popular Books performed successfully.
+2025-01-19 15:33:58,044 - INFO - No popular books found.
+2025-01-19 15:33:58,044 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 15:33:58,045 - INFO - Waiting list saved successfully to Files/waiting_list.csv.
+2025-01-19 15:33:58,045 - INFO - Load waiting list performed successfully.
+2025-01-19 15:34:00,445 - INFO - Get Popular Books performed successfully.
+2025-01-19 15:34:00,445 - INFO - No popular books found.
+2025-01-19 15:34:00,445 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 15:34:23,569 - INFO - Get Popular Books performed successfully.
+2025-01-19 15:34:23,569 - INFO - No popular books found.
+2025-01-19 15:34:23,569 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 15:34:36,421 - INFO - Book 'asas' by sdsd added successfully.
+2025-01-19 15:34:36,422 - INFO - Book added performed successfully.
+2025-01-19 15:34:53,961 - INFO - Get Popular Books performed successfully.
+2025-01-19 15:34:53,961 - INFO - No popular books found.
+2025-01-19 15:34:53,961 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 15:34:53,962 - INFO - Book 'asas' by sdsd has been successfully loaned.
+2025-01-19 15:34:53,962 - INFO - Book lent performed successfully.
+2025-01-19 15:34:58,268 - INFO - Get Popular Books performed successfully.
+2025-01-19 15:34:58,268 - INFO - No popular books found.
+2025-01-19 15:34:58,268 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 15:35:22,003 - INFO - Get Popular Books performed successfully.
+2025-01-19 15:35:22,003 - INFO - No popular books found.
+2025-01-19 15:35:22,003 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 15:36:27,779 - INFO - User file read performed successfully.
+2025-01-19 15:36:29,238 - INFO - logged in successfully
+2025-01-19 15:36:29,245 - WARNING - Created new DataFrame with columns: ['title', 'author', 'is_loaned', 'copies', 'genre', 'year', 'available_copies', 'loaned_copies', 'lend_count']
+2025-01-19 15:36:29,246 - WARNING - Created new DataFrame with columns: ['title', 'author', 'is_loaned', 'copies', 'genre', 'year', 'available_copies', 'loaned_copies', 'lend_count']
+2025-01-19 15:36:29,246 - INFO - Get Popular Books performed successfully.
+2025-01-19 15:36:29,246 - INFO - No popular books found.
+2025-01-19 15:36:29,246 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 15:36:29,247 - INFO - Waiting list saved successfully to Files/waiting_list.csv.
+2025-01-19 15:36:29,247 - INFO - Load waiting list performed successfully.
+2025-01-19 15:36:32,264 - WARNING - Created new DataFrame with columns: ['title', 'author', 'is_loaned', 'copies', 'genre', 'year', 'available_copies', 'loaned_copies', 'lend_count']
+2025-01-19 15:36:32,265 - WARNING - Created new DataFrame with columns: ['title', 'author', 'is_loaned', 'copies', 'genre', 'year', 'available_copies', 'loaned_copies', 'lend_count']
+2025-01-19 15:36:32,265 - INFO - Get Popular Books performed successfully.
+2025-01-19 15:36:32,265 - INFO - No popular books found.
+2025-01-19 15:36:32,265 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 15:36:49,831 - WARNING - Created new DataFrame with columns: ['title', 'author', 'is_loaned', 'copies', 'genre', 'year', 'available_copies', 'loaned_copies', 'lend_count']
+2025-01-19 15:36:49,832 - WARNING - Created new DataFrame with columns: ['title', 'author', 'is_loaned', 'copies', 'genre', 'year', 'available_copies', 'loaned_copies', 'lend_count']
+2025-01-19 15:36:49,832 - INFO - Get Popular Books performed successfully.
+2025-01-19 15:36:49,832 - INFO - No popular books found.
+2025-01-19 15:36:49,832 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 15:38:21,854 - INFO - User file read performed successfully.
+2025-01-19 15:38:23,179 - INFO - logged in successfully
+2025-01-19 15:38:23,185 - WARNING - Created new DataFrame with columns: ['title', 'author', 'is_loaned', 'copies', 'genre', 'year', 'available_copies', 'loaned_copies', 'lend_count']
+2025-01-19 15:38:23,186 - INFO - Get Popular Books performed successfully.
+2025-01-19 15:38:23,186 - INFO - No popular books found.
+2025-01-19 15:38:23,186 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 15:38:23,188 - INFO - Waiting list saved successfully to Files/waiting_list.csv.
+2025-01-19 15:38:23,188 - INFO - Load waiting list performed successfully.
+2025-01-19 15:38:35,582 - INFO - Get Popular Books performed successfully.
+2025-01-19 15:38:35,582 - INFO - No popular books found.
+2025-01-19 15:38:35,582 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 15:38:43,038 - INFO - Get Popular Books performed successfully.
+2025-01-19 15:38:43,039 - INFO - No popular books found.
+2025-01-19 15:38:43,039 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 15:38:44,591 - INFO - Waiting list saved successfully to Files/waiting_list.csv.
+2025-01-19 15:38:44,591 - INFO - Load waiting list performed successfully.
+2025-01-19 15:38:48,573 - INFO - Get Popular Books performed successfully.
+2025-01-19 15:38:48,573 - INFO - No popular books found.
+2025-01-19 15:38:48,573 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 15:38:58,050 - INFO - Waiting list saved successfully to Files/waiting_list.csv.
+2025-01-19 15:38:58,050 - INFO - Load waiting list performed successfully.
+2025-01-19 15:38:59,094 - INFO - Get Popular Books performed successfully.
+2025-01-19 15:38:59,094 - INFO - No popular books found.
+2025-01-19 15:38:59,094 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 15:39:19,516 - INFO - User file read performed successfully.
+2025-01-19 15:39:20,745 - INFO - logged in successfully
+2025-01-19 15:39:20,751 - INFO - Get Popular Books performed successfully.
+2025-01-19 15:39:20,752 - INFO - No popular books found.
+2025-01-19 15:39:20,752 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 15:39:20,753 - INFO - Waiting list saved successfully to Files/waiting_list.csv.
+2025-01-19 15:39:20,753 - INFO - Load waiting list performed successfully.
+2025-01-19 15:39:24,766 - INFO - Get Popular Books performed successfully.
+2025-01-19 15:39:24,766 - INFO - No popular books found.
+2025-01-19 15:39:24,766 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 15:39:37,876 - INFO - User file read performed successfully.
+2025-01-19 15:39:38,997 - INFO - logged in successfully
+2025-01-19 15:39:39,003 - WARNING - Created new DataFrame with columns: ['title', 'author', 'is_loaned', 'copies', 'genre', 'year', 'available_copies', 'loaned_copies', 'lend_count']
+2025-01-19 15:39:39,004 - INFO - Get Popular Books performed successfully.
+2025-01-19 15:39:39,004 - INFO - No popular books found.
+2025-01-19 15:39:39,004 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 15:39:39,005 - INFO - Waiting list saved successfully to Files/waiting_list.csv.
+2025-01-19 15:39:39,005 - INFO - Load waiting list performed successfully.
+2025-01-19 15:39:41,012 - INFO - Get Popular Books performed successfully.
+2025-01-19 15:39:41,012 - INFO - No popular books found.
+2025-01-19 15:39:41,012 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 15:39:56,686 - INFO - Book 'wwew' by ssd added successfully.
+2025-01-19 15:39:56,687 - INFO - Book added performed successfully.
+2025-01-19 15:40:02,676 - INFO - Updated copies for 'wwew' by ssd.
+2025-01-19 15:40:02,677 - INFO - Book added performed successfully.
+2025-01-19 15:40:04,384 - INFO - Get Popular Books performed successfully.
+2025-01-19 15:40:04,384 - INFO - No popular books found.
+2025-01-19 15:40:04,384 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 15:40:04,384 - INFO - Book 'wwew' by ssd has been successfully loaned.
+2025-01-19 15:40:04,384 - INFO - Book lent performed successfully.
+2025-01-19 15:40:06,251 - INFO - Get Popular Books performed successfully.
+2025-01-19 15:40:06,251 - INFO - No popular books found.
+2025-01-19 15:40:06,251 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 15:40:06,251 - INFO - Book 'wwew' by ssd has been successfully loaned.
+2025-01-19 15:40:06,251 - INFO - Book lent performed successfully.
+2025-01-19 15:40:08,012 - INFO - Updated copies for 'wwew' by ssd.
+2025-01-19 15:40:08,014 - INFO - Book added performed successfully.
+2025-01-19 15:40:10,261 - INFO - Updated copies for 'wwew' by ssd.
+2025-01-19 15:40:10,262 - INFO - Book added performed successfully.
+2025-01-19 15:40:11,976 - INFO - Updated copies for 'wwew' by ssd.
+2025-01-19 15:40:11,976 - INFO - Book added performed successfully.
+2025-01-19 15:40:13,642 - INFO - Get Popular Books performed successfully.
+2025-01-19 15:40:13,642 - INFO - No popular books found.
+2025-01-19 15:40:13,642 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 15:40:13,642 - INFO - Book 'wwew' by ssd has been successfully loaned.
+2025-01-19 15:40:13,642 - INFO - Book lent performed successfully.
+2025-01-19 15:40:15,402 - INFO - Get Popular Books performed successfully.
+2025-01-19 15:40:15,402 - INFO - No popular books found.
+2025-01-19 15:40:15,402 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 15:40:15,402 - INFO - Book 'wwew' by ssd has been successfully loaned.
+2025-01-19 15:40:15,402 - INFO - Book lent performed successfully.
+2025-01-19 15:40:17,457 - INFO - Get Popular Books performed successfully.
+2025-01-19 15:40:17,457 - INFO - No popular books found.
+2025-01-19 15:40:17,457 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 15:40:17,457 - INFO - Book 'wwew' by ssd has been successfully loaned.
+2025-01-19 15:40:17,457 - INFO - Book lent performed successfully.
+2025-01-19 15:40:19,607 - INFO - Get Popular Books performed successfully.
+2025-01-19 15:40:19,607 - INFO - No popular books found.
+2025-01-19 15:40:19,607 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 15:40:22,300 - INFO - Updated copies for 'wwew' by ssd.
+2025-01-19 15:40:22,300 - INFO - Book added performed successfully.
+2025-01-19 15:40:24,668 - INFO - Updated copies for 'wwew' by ssd.
+2025-01-19 15:40:24,669 - INFO - Book added performed successfully.
+2025-01-19 15:40:27,168 - INFO - Get Popular Books performed successfully.
+2025-01-19 15:40:27,168 - INFO - No popular books found.
+2025-01-19 15:40:27,168 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 15:40:27,168 - INFO - Book 'wwew' by ssd has been successfully loaned.
+2025-01-19 15:40:27,168 - INFO - Book lent performed successfully.
+2025-01-19 15:40:28,741 - INFO - Get Popular Books performed successfully.
+2025-01-19 15:40:28,741 - INFO - No popular books found.
+2025-01-19 15:40:28,741 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 15:40:28,741 - INFO - Book 'wwew' by ssd has been successfully loaned.
+2025-01-19 15:40:28,741 - INFO - Book lent performed successfully.
+2025-01-19 15:40:31,021 - INFO - Get Popular Books performed successfully.
+2025-01-19 15:40:31,021 - INFO - No popular books found.
+2025-01-19 15:40:31,021 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 15:40:34,049 - INFO - Waiting list saved successfully to Files/waiting_list.csv.
+2025-01-19 15:40:34,049 - INFO - Load waiting list performed successfully.
+2025-01-19 15:40:36,891 - INFO - Updated copies for 'wwew' by ssd.
+2025-01-19 15:40:36,892 - INFO - Book added performed successfully.
+2025-01-19 15:40:38,393 - INFO - Updated copies for 'wwew' by ssd.
+2025-01-19 15:40:38,394 - INFO - Book added performed successfully.
+2025-01-19 15:40:40,144 - INFO - Get Popular Books performed successfully.
+2025-01-19 15:40:40,144 - INFO - No popular books found.
+2025-01-19 15:40:40,144 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 15:40:40,144 - INFO - Book 'wwew' by ssd has been successfully loaned.
+2025-01-19 15:40:40,144 - INFO - Book lent performed successfully.
+2025-01-19 15:40:47,792 - INFO - Get Popular Books performed successfully.
+2025-01-19 15:40:47,792 - INFO - No popular books found.
+2025-01-19 15:40:47,792 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 15:40:49,798 - INFO - Waiting list saved successfully to Files/waiting_list.csv.
+2025-01-19 15:40:49,799 - INFO - Load waiting list performed successfully.
+2025-01-19 15:40:56,757 - INFO - Get Popular Books performed successfully.
+2025-01-19 15:40:56,757 - INFO - No popular books found.
+2025-01-19 15:40:56,757 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 15:43:08,325 - INFO - User file read performed successfully.
+2025-01-19 15:43:09,510 - INFO - logged in successfully
+2025-01-19 15:43:09,519 - INFO - Get Popular Books performed successfully.
+2025-01-19 15:43:09,519 - INFO - No popular books found.
+2025-01-19 15:43:09,519 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 15:43:09,520 - INFO - Waiting list saved successfully to Files/waiting_list.csv.
+2025-01-19 15:43:09,520 - INFO - Load waiting list performed successfully.
+2025-01-19 15:43:19,602 - INFO - Get Popular Books performed successfully.
+2025-01-19 15:43:19,603 - INFO - No popular books found.
+2025-01-19 15:43:19,603 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 15:43:32,256 - INFO - Book 'sdds' by dfdf added successfully.
+2025-01-19 15:43:32,257 - INFO - Book added performed successfully.
+2025-01-19 15:43:34,108 - INFO - Updated copies for 'sdds' by dfdf.
+2025-01-19 15:43:34,109 - INFO - Book added performed successfully.
+2025-01-19 15:43:36,235 - INFO - Get Popular Books performed successfully.
+2025-01-19 15:43:36,235 - INFO - No popular books found.
+2025-01-19 15:43:36,235 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 15:43:36,235 - INFO - Book 'sdds' by dfdf has been successfully loaned.
+2025-01-19 15:43:36,235 - INFO - Book lent performed successfully.
+2025-01-19 15:43:41,512 - INFO - Get Popular Books performed successfully.
+2025-01-19 15:43:41,512 - INFO - No popular books found.
+2025-01-19 15:43:41,512 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 15:43:41,512 - INFO - Book 'sdds' by dfdf has been successfully loaned.
+2025-01-19 15:43:41,512 - INFO - Book lent performed successfully.
+2025-01-19 15:43:48,341 - INFO - Updated copies for 'sdds' by dfdf.
+2025-01-19 15:43:48,341 - INFO - Book added performed successfully.
+2025-01-19 15:43:50,191 - INFO - Updated copies for 'sdds' by dfdf.
+2025-01-19 15:43:50,192 - INFO - Book added performed successfully.
+2025-01-19 15:43:53,656 - INFO - Get Popular Books performed successfully.
+2025-01-19 15:43:53,656 - INFO - No popular books found.
+2025-01-19 15:43:53,656 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 15:43:53,656 - INFO - Book 'sdds' by dfdf has been successfully loaned.
+2025-01-19 15:43:53,656 - INFO - Book lent performed successfully.
+2025-01-19 15:43:59,459 - INFO - Get Popular Books performed successfully.
+2025-01-19 15:43:59,459 - INFO - No popular books found.
+2025-01-19 15:43:59,459 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 15:43:59,459 - INFO - Book 'sdds' by dfdf has been successfully loaned.
+2025-01-19 15:43:59,459 - INFO - Book lent performed successfully.
+2025-01-19 15:44:07,216 - INFO - Get Popular Books performed successfully.
+2025-01-19 15:44:07,216 - INFO - No popular books found.
+2025-01-19 15:44:07,216 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 15:50:25,158 - INFO - User file read performed successfully.
+2025-01-19 15:50:28,204 - INFO - logged in successfully
+2025-01-19 15:50:28,212 - INFO - Get Popular Books performed successfully.
+2025-01-19 15:50:28,212 - INFO - No popular books found.
+2025-01-19 15:50:28,212 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 15:50:28,214 - INFO - Waiting list saved successfully to Files/waiting_list.csv.
+2025-01-19 15:50:28,214 - INFO - Load waiting list performed successfully.
+2025-01-19 15:51:04,220 - INFO - Book 'dfdf' by ffg added successfully.
+2025-01-19 15:51:04,221 - INFO - Book added performed successfully.
+2025-01-19 15:51:08,005 - INFO - Updated copies for 'dfdf' by ffg.
+2025-01-19 15:51:08,005 - INFO - Book added performed successfully.
+2025-01-19 15:51:11,112 - INFO - Get Popular Books performed successfully.
+2025-01-19 15:51:11,112 - INFO - No popular books found.
+2025-01-19 15:51:11,112 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 15:51:11,112 - INFO - Book 'dfdf' by ffg has been successfully loaned.
+2025-01-19 15:51:11,112 - INFO - Book lent performed successfully.
+2025-01-19 15:51:14,224 - INFO - Get Popular Books performed successfully.
+2025-01-19 15:51:14,224 - INFO - No popular books found.
+2025-01-19 15:51:14,224 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 15:51:14,224 - INFO - Book 'dfdf' by ffg has been successfully loaned.
+2025-01-19 15:51:14,224 - INFO - Book lent performed successfully.
+2025-01-19 15:51:19,930 - INFO - Updated copies for 'dfdf' by ffg.
+2025-01-19 15:51:19,931 - INFO - Book added performed successfully.
+2025-01-19 15:51:22,048 - INFO - Get Popular Books performed successfully.
+2025-01-19 15:51:22,048 - INFO - No popular books found.
+2025-01-19 15:51:22,048 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 15:51:22,048 - INFO - Book 'dfdf' by ffg has been successfully loaned.
+2025-01-19 15:51:22,048 - INFO - Book lent performed successfully.
+2025-01-19 15:51:25,562 - INFO - Updated copies for 'dfdf' by ffg.
+2025-01-19 15:51:25,563 - INFO - Book added performed successfully.
+2025-01-19 15:51:27,728 - INFO - Get Popular Books performed successfully.
+2025-01-19 15:51:27,728 - INFO - No popular books found.
+2025-01-19 15:51:27,728 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 15:51:27,728 - INFO - Book 'dfdf' by ffg has been successfully loaned.
+2025-01-19 15:51:27,728 - INFO - Book lent performed successfully.
+2025-01-19 15:54:49,542 - INFO - User file read performed successfully.
+2025-01-19 15:54:50,846 - INFO - logged in successfully
+2025-01-19 15:54:50,857 - INFO - Get Popular Books performed successfully.
+2025-01-19 15:54:50,857 - INFO - No popular books found.
+2025-01-19 15:54:50,857 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 15:54:50,859 - INFO - Waiting list saved successfully to Files/waiting_list.csv.
+2025-01-19 15:54:50,859 - INFO - Load waiting list performed successfully.
+2025-01-19 15:54:57,770 - INFO - Get Popular Books performed successfully.
+2025-01-19 15:54:57,770 - INFO - No popular books found.
+2025-01-19 15:54:57,770 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 15:55:05,924 - INFO - Book 'sdsd' by sdsd added successfully.
+2025-01-19 15:55:05,925 - INFO - Book added performed successfully.
+2025-01-19 15:55:09,353 - INFO - Updated copies for 'sdsd' by sdsd.
+2025-01-19 15:55:09,354 - INFO - Book added performed successfully.
+2025-01-19 15:55:11,456 - INFO - Get Popular Books performed successfully.
+2025-01-19 15:55:11,456 - INFO - No popular books found.
+2025-01-19 15:55:11,457 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 15:55:11,457 - INFO - Book 'sdsd' by sdsd has been successfully loaned.
+2025-01-19 15:55:11,457 - INFO - Book lent performed successfully.
+2025-01-19 15:55:14,099 - INFO - Get Popular Books performed successfully.
+2025-01-19 15:55:14,100 - INFO - No popular books found.
+2025-01-19 15:55:14,100 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 15:55:14,100 - INFO - Book 'sdsd' by sdsd has been successfully loaned.
+2025-01-19 15:55:14,100 - INFO - Book lent performed successfully.
+2025-01-19 15:55:16,976 - INFO - Updated copies for 'sdsd' by sdsd.
+2025-01-19 15:55:16,977 - INFO - Book added performed successfully.
+2025-01-19 15:55:18,943 - INFO - Get Popular Books performed successfully.
+2025-01-19 15:55:18,943 - INFO - No popular books found.
+2025-01-19 15:55:18,943 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 15:55:18,943 - INFO - Book 'sdsd' by sdsd has been successfully loaned.
+2025-01-19 15:55:18,943 - INFO - Book lent performed successfully.
+2025-01-19 15:55:21,061 - INFO - Updated copies for 'sdsd' by sdsd.
+2025-01-19 15:55:21,062 - INFO - Book added performed successfully.
+2025-01-19 15:55:22,530 - INFO - Get Popular Books performed successfully.
+2025-01-19 15:55:22,530 - INFO - No popular books found.
+2025-01-19 15:55:22,530 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 15:55:22,530 - INFO - Book 'sdsd' by sdsd has been successfully loaned.
+2025-01-19 15:55:22,530 - INFO - Book lent performed successfully.
+2025-01-19 15:55:26,125 - INFO - Updated copies for 'sdsd' by sdsd.
+2025-01-19 15:55:26,126 - INFO - Book added performed successfully.
+2025-01-19 15:55:29,019 - INFO - Updated copies for 'sdsd' by sdsd.
+2025-01-19 15:55:29,020 - INFO - Book added performed successfully.
+2025-01-19 15:55:30,348 - INFO - Get Popular Books performed successfully.
+2025-01-19 15:55:30,348 - INFO - No popular books found.
+2025-01-19 15:55:30,348 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 15:55:30,348 - INFO - Book 'sdsd' by sdsd has been successfully loaned.
+2025-01-19 15:55:30,348 - INFO - Book lent performed successfully.
+2025-01-19 15:55:45,047 - INFO - Get Popular Books performed successfully.
+2025-01-19 15:55:45,047 - INFO - No popular books found.
+2025-01-19 15:55:45,047 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 15:55:48,771 - INFO - Get Popular Books performed successfully.
+2025-01-19 15:55:48,772 - INFO - No popular books found.
+2025-01-19 15:55:48,772 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 15:55:48,772 - INFO - Book 'sdsd' by sdsd has been successfully loaned.
+2025-01-19 15:55:48,772 - INFO - Book lent performed successfully.
+2025-01-19 15:55:51,377 - INFO - Get Popular Books performed successfully.
+2025-01-19 15:55:51,378 - INFO - No popular books found.
+2025-01-19 15:55:51,378 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 15:56:39,171 - INFO - User file read performed successfully.
+2025-01-19 15:56:40,413 - INFO - logged in successfully
+2025-01-19 15:56:40,420 - INFO - Get Popular Books performed successfully.
+2025-01-19 15:56:40,420 - INFO - No popular books found.
+2025-01-19 15:56:40,420 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 15:56:40,421 - INFO - Waiting list saved successfully to Files/waiting_list.csv.
+2025-01-19 15:56:40,421 - INFO - Load waiting list performed successfully.
+2025-01-19 15:56:55,443 - INFO - Book 'ssd' by sdsd added successfully.
+2025-01-19 15:56:55,444 - INFO - Book added performed successfully.
+2025-01-19 15:56:57,087 - INFO - Updated copies for 'ssd' by sdsd.
+2025-01-19 15:56:57,087 - INFO - Book added performed successfully.
+2025-01-19 15:56:59,083 - INFO - Get Popular Books performed successfully.
+2025-01-19 15:56:59,083 - INFO - No popular books found.
+2025-01-19 15:56:59,083 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 15:56:59,083 - INFO - Book 'ssd' by sdsd has been successfully loaned.
+2025-01-19 15:56:59,083 - INFO - Book lent performed successfully.
+2025-01-19 16:19:34,922 - INFO - User file read performed successfully.
+2025-01-19 16:19:36,796 - INFO - logged in successfully
+2025-01-19 16:19:36,806 - INFO - Get Popular Books performed successfully.
+2025-01-19 16:19:36,807 - INFO - No popular books found.
+2025-01-19 16:19:36,807 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 16:19:36,808 - INFO - Waiting list saved successfully to Files/waiting_list.csv.
+2025-01-19 16:19:36,808 - INFO - Load waiting list performed successfully.
+2025-01-19 16:19:58,037 - INFO - Book 'wwe' by wewe added successfully.
+2025-01-19 16:19:58,038 - INFO - Book added performed successfully.
+2025-01-19 16:20:01,183 - INFO - Updated copies for 'wwe' by wewe.
+2025-01-19 16:20:01,184 - INFO - Book added performed successfully.
+2025-01-19 16:20:03,691 - INFO - Get Popular Books performed successfully.
+2025-01-19 16:20:03,691 - INFO - No popular books found.
+2025-01-19 16:20:03,691 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 16:20:03,691 - INFO - Book 'wwe' by wewe has been successfully loaned.
+2025-01-19 16:20:03,692 - INFO - Book lent performed successfully.
+2025-01-19 16:21:36,339 - INFO - User file read performed successfully.
+2025-01-19 16:21:37,663 - INFO - logged in successfully
+2025-01-19 16:21:37,672 - INFO - Get Popular Books performed successfully.
+2025-01-19 16:21:37,672 - INFO - No popular books found.
+2025-01-19 16:21:37,672 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 16:21:37,673 - INFO - Waiting list saved successfully to Files/waiting_list.csv.
+2025-01-19 16:21:37,673 - INFO - Load waiting list performed successfully.
+2025-01-19 16:21:49,763 - INFO - Book 'ssd' by dsds added successfully.
+2025-01-19 16:21:49,764 - INFO - Book added performed successfully.
+2025-01-19 16:21:52,336 - INFO - Get Popular Books performed successfully.
+2025-01-19 16:21:52,336 - INFO - No popular books found.
+2025-01-19 16:21:52,336 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 16:21:52,336 - INFO - Book 'ssd' by dsds has been successfully loaned.
+2025-01-19 16:21:52,336 - INFO - Book lent performed successfully.
+2025-01-19 16:22:00,486 - INFO - Get Popular Books performed successfully.
+2025-01-19 16:22:00,486 - INFO - No popular books found.
+2025-01-19 16:22:00,486 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 16:22:07,344 - INFO - Get Popular Books performed successfully.
+2025-01-19 16:22:07,344 - INFO - No popular books found.
+2025-01-19 16:22:07,344 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 16:22:11,814 - INFO - Updated copies for 'ssd' by dsds.
+2025-01-19 16:22:11,814 - INFO - Book added performed successfully.
+2025-01-19 16:22:13,357 - INFO - Get Popular Books performed successfully.
+2025-01-19 16:22:13,357 - INFO - No popular books found.
+2025-01-19 16:22:13,357 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 16:22:13,357 - INFO - Book 'ssd' by dsds has been successfully loaned.
+2025-01-19 16:22:13,357 - INFO - Book lent performed successfully.
+2025-01-19 16:23:38,288 - INFO - User file read performed successfully.
+2025-01-19 16:23:39,532 - INFO - logged in successfully
+2025-01-19 16:23:39,539 - INFO - Get Popular Books performed successfully.
+2025-01-19 16:23:39,539 - INFO - No popular books found.
+2025-01-19 16:23:39,539 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 16:23:39,540 - INFO - Waiting list saved successfully to Files/waiting_list.csv.
+2025-01-19 16:23:39,540 - INFO - Load waiting list performed successfully.
+2025-01-19 16:23:54,981 - INFO - Book 'edsd' by dsd added successfully.
+2025-01-19 16:23:54,982 - INFO - Book added performed successfully.
+2025-01-19 16:23:59,224 - INFO - Successfully loaded 43 books from the file.
+2025-01-19 16:23:59,224 - INFO - Load books to list performed successfully.
+2025-01-19 16:23:59,224 - INFO - Get Popular Books performed successfully.
+2025-01-19 16:23:59,226 - INFO - Popular books saved to Files/popular_books.csv.
+2025-01-19 16:23:59,226 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 16:23:59,226 - INFO - Book 'edsd' by dsd has been successfully loaned.
+2025-01-19 16:23:59,226 - INFO - Book lent performed successfully.
+2025-01-19 16:24:16,609 - INFO - Updated copies for 'edsd' by dsd.
+2025-01-19 16:24:16,610 - INFO - Book added performed successfully.
+2025-01-19 16:24:18,488 - WARNING - Created new DataFrame with columns: ['title', 'author', 'is_loaned', 'copies', 'genre', 'year', 'available_copies', 'loaned_copies', 'lend_count']
+2025-01-19 16:24:18,490 - INFO - Successfully loaded 43 books from the file.
+2025-01-19 16:24:18,490 - INFO - Load books to list performed successfully.
+2025-01-19 16:24:18,490 - INFO - Get Popular Books performed successfully.
+2025-01-19 16:24:18,491 - INFO - Popular books saved to Files/popular_books.csv.
+2025-01-19 16:24:18,491 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 16:24:18,491 - INFO - Book 'edsd' by dsd has been successfully loaned.
+2025-01-19 16:24:18,492 - INFO - Book lent performed successfully.
+2025-01-19 16:24:21,689 - WARNING - Created new DataFrame with columns: ['title', 'author', 'is_loaned', 'copies', 'genre', 'year', 'available_copies', 'loaned_copies', 'lend_count']
+2025-01-19 16:24:21,692 - INFO - Successfully loaded 43 books from the file.
+2025-01-19 16:24:21,692 - INFO - Load books to list performed successfully.
+2025-01-19 16:24:21,692 - INFO - Get Popular Books performed successfully.
+2025-01-19 16:24:21,694 - INFO - Popular books saved to Files/popular_books.csv.
+2025-01-19 16:24:21,694 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 16:26:13,378 - INFO - User file read performed successfully.
+2025-01-19 16:26:14,449 - INFO - logged in successfully
+2025-01-19 16:26:14,455 - WARNING - Created new DataFrame with columns: ['title', 'author', 'is_loaned', 'copies', 'genre', 'year', 'available_copies', 'loaned_copies', 'lend_count']
+2025-01-19 16:26:14,457 - INFO - Get Popular Books performed successfully.
+2025-01-19 16:26:14,457 - INFO - No popular books found.
+2025-01-19 16:26:14,457 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 16:26:14,458 - INFO - Waiting list saved successfully to Files/waiting_list.csv.
+2025-01-19 16:26:14,458 - INFO - Load waiting list performed successfully.
+2025-01-19 16:26:37,441 - INFO - Book 'dfdf' by dfdf added successfully.
+2025-01-19 16:26:37,442 - INFO - Book added performed successfully.
+2025-01-19 16:26:39,800 - INFO - Get Popular Books performed successfully.
+2025-01-19 16:26:39,800 - INFO - No popular books found.
+2025-01-19 16:26:39,801 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 16:26:39,801 - INFO - Book 'dfdf' by dfdf has been successfully loaned.
+2025-01-19 16:26:39,801 - INFO - Book lent performed successfully.
+2025-01-19 16:30:03,366 - INFO - User file read performed successfully.
+2025-01-19 16:30:04,343 - INFO - logged in successfully
+2025-01-19 16:30:04,352 - INFO - Get Popular Books performed successfully.
+2025-01-19 16:30:04,352 - INFO - No popular books found.
+2025-01-19 16:30:04,353 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 16:30:04,353 - INFO - Waiting list saved successfully to Files/waiting_list.csv.
+2025-01-19 16:30:04,353 - INFO - Load waiting list performed successfully.
+2025-01-19 16:30:22,321 - INFO - Updated copies for 'dfdf' by dfdf.
+2025-01-19 16:30:22,322 - INFO - Book added performed successfully.
+2025-01-19 16:30:24,410 - INFO - Updated copies for 'dfdf' by dfdf.
+2025-01-19 16:30:24,411 - INFO - Book added performed successfully.
+2025-01-19 16:30:26,665 - INFO - Successfully loaded 44 books from the file.
+2025-01-19 16:30:26,665 - INFO - Load books to list performed successfully.
+2025-01-19 16:30:26,665 - INFO - Get Popular Books performed successfully.
+2025-01-19 16:30:26,665 - INFO - No popular books found.
+2025-01-19 16:30:26,666 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 16:30:26,666 - INFO - Book 'dfdf' by dfdf has been successfully loaned.
+2025-01-19 16:30:26,666 - INFO - Book lent performed successfully.
+2025-01-19 16:30:37,671 - INFO - Updated copies for 'dfdf' by dfdf.
+2025-01-19 16:30:37,672 - INFO - Book added performed successfully.
+2025-01-19 16:30:40,254 - INFO - Successfully loaded 44 books from the file.
+2025-01-19 16:30:40,255 - INFO - Load books to list performed successfully.
+2025-01-19 16:30:40,255 - INFO - Get Popular Books performed successfully.
+2025-01-19 16:30:40,255 - INFO - No popular books found.
+2025-01-19 16:30:40,255 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 16:30:40,255 - INFO - Book 'dfdf' by dfdf has been successfully loaned.
+2025-01-19 16:30:40,255 - INFO - Book lent performed successfully.
+2025-01-19 16:30:44,549 - INFO - Successfully loaded 44 books from the file.
+2025-01-19 16:30:44,549 - INFO - Load books to list performed successfully.
+2025-01-19 16:30:44,550 - INFO - Get Popular Books performed successfully.
+2025-01-19 16:30:44,550 - INFO - No popular books found.
+2025-01-19 16:30:44,550 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 16:30:44,550 - INFO - Book 'dfdf' by dfdf has been successfully loaned.
+2025-01-19 16:30:44,550 - INFO - Book lent performed successfully.
+2025-01-19 16:30:49,611 - INFO - Successfully loaded 44 books from the file.
+2025-01-19 16:30:49,611 - INFO - Load books to list performed successfully.
+2025-01-19 16:30:49,611 - INFO - Get Popular Books performed successfully.
+2025-01-19 16:30:49,611 - INFO - No popular books found.
+2025-01-19 16:30:49,611 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 16:31:00,279 - INFO - Updated copies for 'dfdf' by dfdf.
+2025-01-19 16:31:00,280 - INFO - Book added performed successfully.
+2025-01-19 16:31:06,411 - INFO - Successfully loaded 44 books from the file.
+2025-01-19 16:31:06,411 - INFO - Load books to list performed successfully.
+2025-01-19 16:31:06,412 - INFO - Get Popular Books performed successfully.
+2025-01-19 16:31:06,412 - INFO - No popular books found.
+2025-01-19 16:31:06,412 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 16:31:06,412 - INFO - Book 'dfdf' by dfdf has been successfully loaned.
+2025-01-19 16:31:06,412 - INFO - Book lent performed successfully.
+2025-01-19 16:31:08,686 - INFO - Successfully loaded 44 books from the file.
+2025-01-19 16:31:08,686 - INFO - Load books to list performed successfully.
+2025-01-19 16:31:08,686 - INFO - Get Popular Books performed successfully.
+2025-01-19 16:31:08,686 - INFO - No popular books found.
+2025-01-19 16:31:08,686 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 16:33:56,250 - INFO - User file read performed successfully.
+2025-01-19 16:33:57,423 - INFO - logged in successfully
+2025-01-19 16:33:57,433 - INFO - Successfully loaded 44 books from the file.
+2025-01-19 16:33:57,433 - INFO - Load books to list performed successfully.
+2025-01-19 16:33:57,434 - INFO - Get Popular Books performed successfully.
+2025-01-19 16:33:57,434 - INFO - No popular books found.
+2025-01-19 16:33:57,434 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 16:33:57,435 - INFO - Waiting list saved successfully to Files/waiting_list.csv.
+2025-01-19 16:33:57,435 - INFO - Load waiting list performed successfully.
+2025-01-19 16:34:03,993 - INFO - Successfully loaded 44 books from the file.
+2025-01-19 16:34:03,993 - INFO - Load books to list performed successfully.
+2025-01-19 16:34:03,994 - INFO - Get Popular Books performed successfully.
+2025-01-19 16:34:03,994 - INFO - No popular books found.
+2025-01-19 16:34:03,994 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 16:57:48,000 - INFO - User file read performed successfully.
+2025-01-19 16:57:49,237 - INFO - logged in successfully
+2025-01-19 16:57:49,245 - WARNING - Created new DataFrame with columns: ['title', 'author', 'is_loaned', 'copies', 'genre', 'year', 'available_copies', 'loaned_copies', 'lend_count']
+2025-01-19 17:00:12,688 - INFO - User file read performed successfully.
+2025-01-19 17:00:14,022 - WARNING - login failed, User not found
+2025-01-19 17:00:23,012 - INFO - User file read performed successfully.
+2025-01-19 17:00:24,093 - WARNING - login failed, User not found
+2025-01-19 17:06:22,408 - INFO - User file read performed successfully.
+2025-01-19 17:06:24,510 - WARNING - login failed, User not found
+2025-01-19 17:06:26,582 - INFO - User file read performed successfully.
+2025-01-19 17:06:26,584 - INFO - User 'adi' signed up successfully.
+2025-01-19 17:06:26,584 - INFO - User sign-up performed successfully.
+2025-01-19 17:06:29,173 - INFO - User file read performed successfully.
+2025-01-19 17:06:30,521 - INFO - logged in successfully
+2025-01-19 17:06:30,532 - INFO - Successfully loaded 34 books from the file.
+2025-01-19 17:06:30,532 - INFO - Load books to list performed successfully.
+2025-01-19 17:06:30,532 - INFO - Get Popular Books performed successfully.
+2025-01-19 17:06:30,535 - INFO - Popular books saved to Files/popular_books.csv.
+2025-01-19 17:06:30,535 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 17:06:30,537 - INFO - Waiting list saved successfully to Files/waiting_list.csv.
+2025-01-19 17:06:30,537 - INFO - Load waiting list performed successfully.
+2025-01-19 17:06:39,257 - INFO - Waiting list saved successfully to Files/waiting_list.csv.
+2025-01-19 17:06:39,257 - INFO - Load waiting list performed successfully.
+2025-01-19 17:06:40,797 - WARNING - Created new DataFrame with columns: ['title', 'author', 'is_loaned', 'copies', 'genre', 'year', 'available_copies', 'loaned_copies', 'lend_count']
+2025-01-19 17:06:40,800 - INFO - Successfully loaded 34 books from the file.
+2025-01-19 17:06:40,800 - INFO - Load books to list performed successfully.
+2025-01-19 17:06:40,801 - INFO - Get Popular Books performed successfully.
+2025-01-19 17:06:40,803 - INFO - Popular books saved to Files/popular_books.csv.
+2025-01-19 17:06:40,803 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 17:06:59,921 - INFO - Book 'sds' by sdsd added successfully.
+2025-01-19 17:06:59,922 - INFO - Book added performed successfully.
+2025-01-19 17:10:05,419 - INFO - User file read performed successfully.
+2025-01-19 17:10:06,394 - INFO - logged in successfully
+2025-01-19 17:10:06,401 - WARNING - Created new DataFrame with columns: ['title', 'author', 'is_loaned', 'copies', 'genre', 'year', 'available_copies', 'loaned_copies', 'lend_count']
+2025-01-19 17:10:06,405 - INFO - Successfully loaded 35 books from the file.
+2025-01-19 17:10:06,405 - INFO - Load books to list performed successfully.
+2025-01-19 17:10:06,406 - INFO - Get Popular Books performed successfully.
+2025-01-19 17:10:06,408 - INFO - Popular books saved to Files/popular_books.csv.
+2025-01-19 17:10:06,408 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 17:10:06,409 - INFO - Waiting list saved successfully to Files/waiting_list.csv.
+2025-01-19 17:10:06,409 - INFO - Load waiting list performed successfully.
+2025-01-19 17:10:31,412 - INFO - Book 'ddfdf' by dfdf added successfully.
+2025-01-19 17:10:31,413 - INFO - Book added performed successfully.
+2025-01-19 17:10:36,968 - INFO - Updated copies for 'ddfdf' by dfdf.
+2025-01-19 17:10:36,969 - INFO - Book added performed successfully.
+2025-01-19 17:10:41,168 - WARNING - Created new DataFrame with columns: ['title', 'author', 'is_loaned', 'copies', 'genre', 'year', 'available_copies', 'loaned_copies', 'lend_count']
+2025-01-19 17:10:41,171 - INFO - Successfully loaded 36 books from the file.
+2025-01-19 17:10:41,171 - INFO - Load books to list performed successfully.
+2025-01-19 17:10:41,171 - INFO - Get Popular Books performed successfully.
+2025-01-19 17:10:41,173 - INFO - Popular books saved to Files/popular_books.csv.
+2025-01-19 17:10:41,173 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 17:10:41,173 - INFO - Book 'ddfdf' by dfdf has been successfully loaned.
+2025-01-19 17:10:41,173 - INFO - Book lent performed successfully.
+2025-01-19 17:10:46,470 - WARNING - Created new DataFrame with columns: ['title', 'author', 'is_loaned', 'copies', 'genre', 'year', 'available_copies', 'loaned_copies', 'lend_count']
+2025-01-19 17:10:46,473 - INFO - Successfully loaded 36 books from the file.
+2025-01-19 17:10:46,473 - INFO - Load books to list performed successfully.
+2025-01-19 17:10:46,473 - INFO - Get Popular Books performed successfully.
+2025-01-19 17:10:46,475 - INFO - Popular books saved to Files/popular_books.csv.
+2025-01-19 17:10:46,475 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 17:10:46,475 - INFO - Book 'ddfdf' by dfdf has been successfully loaned.
+2025-01-19 17:10:46,475 - INFO - Book lent performed successfully.
+2025-01-19 17:10:52,072 - INFO - Book 'ddfdf' by dfdf has been successfully returned.
+2025-01-19 17:10:52,072 - INFO - Return book performed successfully.
+2025-01-19 17:10:55,518 - INFO - Book 'ddfdf' by dfdf has been successfully returned.
+2025-01-19 17:10:55,518 - INFO - Return book performed successfully.
+2025-01-19 17:10:58,523 - WARNING - Created new DataFrame with columns: ['title', 'author', 'is_loaned', 'copies', 'genre', 'year', 'available_copies', 'loaned_copies', 'lend_count']
+2025-01-19 17:10:58,527 - INFO - Successfully loaded 36 books from the file.
+2025-01-19 17:10:58,527 - INFO - Load books to list performed successfully.
+2025-01-19 17:10:58,528 - INFO - Get Popular Books performed successfully.
+2025-01-19 17:10:58,530 - INFO - Popular books saved to Files/popular_books.csv.
+2025-01-19 17:10:58,530 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 17:10:58,530 - INFO - Book 'ddfdf' by dfdf has been successfully loaned.
+2025-01-19 17:10:58,530 - INFO - Book lent performed successfully.
+2025-01-19 17:11:05,368 - WARNING - Created new DataFrame with columns: ['title', 'author', 'is_loaned', 'copies', 'genre', 'year', 'available_copies', 'loaned_copies', 'lend_count']
+2025-01-19 17:11:05,370 - INFO - Successfully loaded 36 books from the file.
+2025-01-19 17:11:05,370 - INFO - Load books to list performed successfully.
+2025-01-19 17:11:05,370 - INFO - Get Popular Books performed successfully.
+2025-01-19 17:11:05,372 - INFO - Popular books saved to Files/popular_books.csv.
+2025-01-19 17:11:05,372 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 17:11:12,652 - WARNING - Created new DataFrame with columns: ['title', 'author', 'is_loaned', 'copies', 'genre', 'year', 'available_copies', 'loaned_copies', 'lend_count']
+2025-01-19 17:11:12,656 - INFO - Successfully loaded 36 books from the file.
+2025-01-19 17:11:12,656 - INFO - Load books to list performed successfully.
+2025-01-19 17:11:12,657 - INFO - Get Popular Books performed successfully.
+2025-01-19 17:11:12,659 - INFO - Popular books saved to Files/popular_books.csv.
+2025-01-19 17:11:12,659 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 17:11:15,065 - INFO - Waiting list saved successfully to Files/waiting_list.csv.
+2025-01-19 17:11:15,065 - INFO - Load waiting list performed successfully.
+2025-01-19 17:11:18,720 - WARNING - Created new DataFrame with columns: ['title', 'author', 'is_loaned', 'copies', 'genre', 'year', 'available_copies', 'loaned_copies', 'lend_count']
+2025-01-19 17:11:18,723 - INFO - Successfully loaded 36 books from the file.
+2025-01-19 17:11:18,723 - INFO - Load books to list performed successfully.
+2025-01-19 17:11:18,724 - INFO - Get Popular Books performed successfully.
+2025-01-19 17:11:18,726 - INFO - Popular books saved to Files/popular_books.csv.
+2025-01-19 17:11:18,726 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 17:11:29,323 - WARNING - Created new DataFrame with columns: ['title', 'author', 'is_loaned', 'copies', 'genre', 'year', 'available_copies', 'loaned_copies', 'lend_count']
+2025-01-19 17:11:29,327 - INFO - Successfully loaded 36 books from the file.
+2025-01-19 17:11:29,327 - INFO - Load books to list performed successfully.
+2025-01-19 17:11:29,328 - INFO - Get Popular Books performed successfully.
+2025-01-19 17:11:29,330 - INFO - Popular books saved to Files/popular_books.csv.
+2025-01-19 17:11:29,330 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 17:15:21,913 - INFO - User file read performed successfully.
+2025-01-19 17:15:22,736 - INFO - logged in successfully
+2025-01-19 17:15:22,744 - INFO - Successfully loaded 36 books from the file.
+2025-01-19 17:15:22,744 - INFO - Load books to list performed successfully.
+2025-01-19 17:15:22,745 - INFO - Get Popular Books performed successfully.
+2025-01-19 17:15:22,747 - INFO - Popular books saved to Files/popular_books.csv.
+2025-01-19 17:15:22,747 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 17:15:22,749 - INFO - Waiting list saved successfully to Files/waiting_list.csv.
+2025-01-19 17:15:22,749 - INFO - Load waiting list performed successfully.
+2025-01-19 17:15:29,379 - WARNING - Created new DataFrame with columns: ['title', 'author', 'is_loaned', 'copies', 'genre', 'year', 'available_copies', 'loaned_copies', 'lend_count']
+2025-01-19 17:15:29,383 - INFO - Successfully loaded 36 books from the file.
+2025-01-19 17:15:29,383 - INFO - Load books to list performed successfully.
+2025-01-19 17:15:29,383 - INFO - Get Popular Books performed successfully.
+2025-01-19 17:15:29,385 - INFO - Popular books saved to Files/popular_books.csv.
+2025-01-19 17:15:29,385 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 17:17:01,631 - INFO - User file read performed successfully.
+2025-01-19 17:17:02,880 - INFO - logged in successfully
+2025-01-19 17:17:02,888 - WARNING - Created new DataFrame with columns: ['title', 'author', 'is_loaned', 'copies', 'genre', 'year', 'available_copies', 'loaned_copies', 'lend_count']
+2025-01-19 17:17:02,892 - INFO - Successfully loaded 36 books from the file.
+2025-01-19 17:17:02,892 - INFO - Load books to list performed successfully.
+2025-01-19 17:17:02,892 - INFO - Get Popular Books performed successfully.
+2025-01-19 17:17:02,895 - INFO - Popular books saved to Files/popular_books.csv.
+2025-01-19 17:17:02,895 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 17:17:02,896 - INFO - Waiting list saved successfully to Files/waiting_list.csv.
+2025-01-19 17:17:02,896 - INFO - Load waiting list performed successfully.
+2025-01-19 17:17:26,923 - WARNING - Created new DataFrame with columns: ['title', 'author', 'is_loaned', 'copies', 'genre', 'year', 'available_copies', 'loaned_copies', 'lend_count']
+2025-01-19 17:17:26,926 - INFO - Successfully loaded 36 books from the file.
+2025-01-19 17:17:26,926 - INFO - Load books to list performed successfully.
+2025-01-19 17:17:26,927 - INFO - Get Popular Books performed successfully.
+2025-01-19 17:17:26,929 - INFO - Popular books saved to Files/popular_books.csv.
+2025-01-19 17:17:26,929 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 17:18:35,588 - INFO - User file read performed successfully.
+2025-01-19 17:18:36,703 - INFO - logged in successfully
+2025-01-19 17:18:36,711 - WARNING - Created new DataFrame with columns: ['title', 'author', 'is_loaned', 'copies', 'genre', 'year', 'available_copies', 'loaned_copies', 'lend_count']
+2025-01-19 17:18:36,715 - INFO - Successfully loaded 36 books from the file.
+2025-01-19 17:18:36,715 - INFO - Load books to list performed successfully.
+2025-01-19 17:18:36,716 - INFO - Get Popular Books performed successfully.
+2025-01-19 17:18:36,718 - INFO - Popular books saved to Files/popular_books.csv.
+2025-01-19 17:18:36,718 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 17:18:36,719 - INFO - Waiting list saved successfully to Files/waiting_list.csv.
+2025-01-19 17:18:36,719 - INFO - Load waiting list performed successfully.
+2025-01-19 17:19:02,780 - WARNING - Created new DataFrame with columns: ['title', 'author', 'is_loaned', 'copies', 'genre', 'year', 'available_copies', 'loaned_copies', 'lend_count']
+2025-01-19 17:19:02,783 - INFO - Successfully loaded 36 books from the file.
+2025-01-19 17:19:02,783 - INFO - Load books to list performed successfully.
+2025-01-19 17:19:02,783 - INFO - Get Popular Books performed successfully.
+2025-01-19 17:19:02,786 - INFO - Popular books saved to Files/popular_books.csv.
+2025-01-19 17:19:02,786 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 17:20:33,465 - INFO - User file read performed successfully.
+2025-01-19 17:20:34,912 - INFO - logged in successfully
+2025-01-19 17:20:34,923 - WARNING - Created new DataFrame with columns: ['title', 'author', 'is_loaned', 'copies', 'genre', 'year', 'available_copies', 'loaned_copies', 'lend_count']
+2025-01-19 17:20:34,926 - INFO - Successfully loaded 36 books from the file.
+2025-01-19 17:20:34,927 - INFO - Load books to list performed successfully.
+2025-01-19 17:20:34,927 - INFO - Get Popular Books performed successfully.
+2025-01-19 17:20:34,928 - INFO - Popular books saved to Files/popular_books.csv.
+2025-01-19 17:20:34,928 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 17:20:34,929 - INFO - Waiting list saved successfully to Files/waiting_list.csv.
+2025-01-19 17:20:34,929 - INFO - Load waiting list performed successfully.
+2025-01-19 17:20:41,742 - INFO - Successfully loaded 36 books from the file.
+2025-01-19 17:20:41,743 - INFO - Load books to list performed successfully.
+2025-01-19 17:20:41,743 - INFO - Get Popular Books performed successfully.
+2025-01-19 17:20:41,743 - INFO - Popular books saved to Files/popular_books.csv.
+2025-01-19 17:20:41,743 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 17:25:30,005 - INFO - User file read performed successfully.
+2025-01-19 17:25:30,909 - INFO - logged in successfully
+2025-01-19 17:25:30,915 - WARNING - Created new DataFrame with columns: ['title', 'author', 'is_loaned', 'copies', 'genre', 'year', 'available_copies', 'loaned_copies', 'lend_count']
+2025-01-19 17:25:30,918 - INFO - Successfully loaded 36 books from the file.
+2025-01-19 17:25:30,918 - INFO - Load books to list performed successfully.
+2025-01-19 17:25:30,919 - INFO - Get Popular Books performed successfully.
+2025-01-19 17:25:30,922 - INFO - Popular books saved to Files/popular_books.csv.
+2025-01-19 17:25:30,922 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 17:25:30,924 - INFO - Waiting list saved successfully to Files/waiting_list.csv.
+2025-01-19 17:25:30,924 - INFO - Load waiting list performed successfully.
+2025-01-19 17:25:39,132 - INFO - Successfully loaded 36 books from the file.
+2025-01-19 17:25:39,132 - INFO - Load books to list performed successfully.
+2025-01-19 17:25:39,132 - INFO - Get Popular Books performed successfully.
+2025-01-19 17:25:39,135 - INFO - Popular books saved to Files/popular_books.csv.
+2025-01-19 17:25:39,135 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 17:26:05,009 - INFO - Successfully loaded 36 books from the file.
+2025-01-19 17:26:05,009 - INFO - Load books to list performed successfully.
+2025-01-19 17:26:05,009 - INFO - Get Popular Books performed successfully.
+2025-01-19 17:26:05,013 - INFO - Popular books saved to Files/popular_books.csv.
+2025-01-19 17:26:05,013 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 17:26:06,312 - INFO - Successfully loaded 36 books from the file.
+2025-01-19 17:26:06,312 - INFO - Load books to list performed successfully.
+2025-01-19 17:26:06,312 - INFO - Get Popular Books performed successfully.
+2025-01-19 17:26:06,315 - INFO - Popular books saved to Files/popular_books.csv.
+2025-01-19 17:26:06,315 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 17:26:14,615 - INFO - Successfully loaded 36 books from the file.
+2025-01-19 17:26:14,615 - INFO - Load books to list performed successfully.
+2025-01-19 17:26:14,615 - INFO - Get Popular Books performed successfully.
+2025-01-19 17:26:14,618 - INFO - Popular books saved to Files/popular_books.csv.
+2025-01-19 17:26:14,618 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 17:27:12,407 - INFO - User file read performed successfully.
+2025-01-19 17:27:13,773 - INFO - logged in successfully
+2025-01-19 17:27:13,781 - WARNING - Created new DataFrame with columns: ['title', 'author', 'is_loaned', 'copies', 'genre', 'year', 'available_copies', 'loaned_copies', 'lend_count']
+2025-01-19 17:27:13,784 - INFO - Successfully loaded 36 books from the file.
+2025-01-19 17:27:13,784 - INFO - Load books to list performed successfully.
+2025-01-19 17:27:13,785 - INFO - Get Popular Books performed successfully.
+2025-01-19 17:27:13,789 - INFO - Popular books saved to Files/popular_books.csv.
+2025-01-19 17:27:13,789 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 17:27:13,791 - INFO - Waiting list saved successfully to Files/waiting_list.csv.
+2025-01-19 17:27:13,791 - INFO - Load waiting list performed successfully.
+2025-01-19 17:27:15,712 - INFO - Successfully loaded 36 books from the file.
+2025-01-19 17:27:15,712 - INFO - Load books to list performed successfully.
+2025-01-19 17:27:15,712 - INFO - Get Popular Books performed successfully.
+2025-01-19 17:27:15,715 - INFO - Popular books saved to Files/popular_books.csv.
+2025-01-19 17:27:15,715 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 17:27:48,112 - INFO - Book 'ddf' by dfdf added successfully.
+2025-01-19 17:27:48,113 - INFO - Book added performed successfully.
+2025-01-19 17:27:49,782 - INFO - Updated copies for 'ddf' by dfdf.
+2025-01-19 17:27:49,782 - INFO - Book added performed successfully.
+2025-01-19 17:27:52,985 - INFO - Successfully loaded 37 books from the file.
+2025-01-19 17:27:52,985 - INFO - Load books to list performed successfully.
+2025-01-19 17:27:52,985 - INFO - Get Popular Books performed successfully.
+2025-01-19 17:27:52,988 - INFO - Popular books saved to Files/popular_books.csv.
+2025-01-19 17:27:52,988 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 17:27:52,988 - INFO - Book 'ddf' by dfdf has been successfully loaned.
+2025-01-19 17:27:52,988 - INFO - Book lent performed successfully.
+2025-01-19 17:27:57,418 - INFO - Successfully loaded 37 books from the file.
+2025-01-19 17:27:57,418 - INFO - Load books to list performed successfully.
+2025-01-19 17:27:57,418 - INFO - Get Popular Books performed successfully.
+2025-01-19 17:27:57,421 - INFO - Popular books saved to Files/popular_books.csv.
+2025-01-19 17:27:57,422 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 17:27:57,422 - INFO - Book 'ddf' by dfdf has been successfully loaned.
+2025-01-19 17:27:57,422 - INFO - Book lent performed successfully.
+2025-01-19 17:28:01,327 - INFO - Updated copies for 'ddf' by dfdf.
+2025-01-19 17:28:01,328 - INFO - Book added performed successfully.
+2025-01-19 17:28:02,834 - INFO - Updated copies for 'ddf' by dfdf.
+2025-01-19 17:28:02,835 - INFO - Book added performed successfully.
+2025-01-19 17:28:05,332 - INFO - Book 'ddf' by dfdf has been successfully returned.
+2025-01-19 17:28:05,333 - INFO - Return book performed successfully.
+2025-01-19 17:28:06,922 - INFO - Book 'ddf' by dfdf has been successfully returned.
+2025-01-19 17:28:06,922 - INFO - Return book performed successfully.
+2025-01-19 17:28:09,047 - WARNING - Cannot return a book that is not loaned.
+2025-01-19 17:28:09,047 - INFO - Return book performed successfully.
+2025-01-19 17:28:11,890 - INFO - Successfully loaded 37 books from the file.
+2025-01-19 17:28:11,890 - INFO - Load books to list performed successfully.
+2025-01-19 17:28:11,891 - INFO - Get Popular Books performed successfully.
+2025-01-19 17:28:11,895 - INFO - Popular books saved to Files/popular_books.csv.
+2025-01-19 17:28:11,895 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 17:28:11,895 - INFO - Book 'ddf' by dfdf has been successfully loaned.
+2025-01-19 17:28:11,895 - INFO - Book lent performed successfully.
+2025-01-19 17:28:13,740 - INFO - Successfully loaded 37 books from the file.
+2025-01-19 17:28:13,741 - INFO - Load books to list performed successfully.
+2025-01-19 17:28:13,741 - INFO - Get Popular Books performed successfully.
+2025-01-19 17:28:13,744 - INFO - Popular books saved to Files/popular_books.csv.
+2025-01-19 17:28:13,744 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 17:28:13,744 - INFO - Book 'ddf' by dfdf has been successfully loaned.
+2025-01-19 17:28:13,744 - INFO - Book lent performed successfully.
+2025-01-19 17:28:16,106 - INFO - Successfully loaded 37 books from the file.
+2025-01-19 17:28:16,106 - INFO - Load books to list performed successfully.
+2025-01-19 17:28:16,106 - INFO - Get Popular Books performed successfully.
+2025-01-19 17:28:16,109 - INFO - Popular books saved to Files/popular_books.csv.
+2025-01-19 17:28:16,110 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 17:28:16,110 - INFO - Book 'ddf' by dfdf has been successfully loaned.
+2025-01-19 17:28:16,110 - INFO - Book lent performed successfully.
+2025-01-19 17:28:18,573 - INFO - Successfully loaded 37 books from the file.
+2025-01-19 17:28:18,573 - INFO - Load books to list performed successfully.
+2025-01-19 17:28:18,574 - INFO - Get Popular Books performed successfully.
+2025-01-19 17:28:18,577 - INFO - Popular books saved to Files/popular_books.csv.
+2025-01-19 17:28:18,578 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 17:29:50,769 - INFO - User file read performed successfully.
+2025-01-19 17:29:52,150 - INFO - logged in successfully
+2025-01-19 17:29:52,160 - INFO - Successfully loaded 37 books from the file.
+2025-01-19 17:29:52,160 - INFO - Load books to list performed successfully.
+2025-01-19 17:29:52,161 - INFO - Get Popular Books performed successfully.
+2025-01-19 17:29:52,165 - INFO - Popular books saved to Files/popular_books.csv.
+2025-01-19 17:29:52,165 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 17:29:52,167 - INFO - Waiting list saved successfully to Files/waiting_list.csv.
+2025-01-19 17:29:52,167 - INFO - Load waiting list performed successfully.
+2025-01-19 17:29:56,067 - INFO - Successfully loaded 37 books from the file.
+2025-01-19 17:29:56,067 - INFO - Load books to list performed successfully.
+2025-01-19 17:29:56,067 - INFO - Get Popular Books performed successfully.
+2025-01-19 17:29:56,071 - INFO - Popular books saved to Files/popular_books.csv.
+2025-01-19 17:29:56,071 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 17:30:15,210 - INFO - Successfully loaded 37 books from the file.
+2025-01-19 17:30:15,210 - INFO - Load books to list performed successfully.
+2025-01-19 17:30:15,211 - INFO - Get Popular Books performed successfully.
+2025-01-19 17:30:15,216 - INFO - Popular books saved to Files/popular_books.csv.
+2025-01-19 17:30:15,216 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 17:31:10,048 - INFO - User file read performed successfully.
+2025-01-19 17:31:11,108 - INFO - logged in successfully
+2025-01-19 17:31:11,116 - INFO - Successfully loaded 37 books from the file.
+2025-01-19 17:31:11,116 - INFO - Load books to list performed successfully.
+2025-01-19 17:31:11,116 - INFO - Get Popular Books performed successfully.
+2025-01-19 17:31:11,125 - INFO - Popular books saved to Files/popular_books.csv.
+2025-01-19 17:31:11,125 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 17:31:11,126 - INFO - Waiting list saved successfully to Files/waiting_list.csv.
+2025-01-19 17:31:11,126 - INFO - Load waiting list performed successfully.
+2025-01-19 17:31:45,697 - INFO - User file read performed successfully.
+2025-01-19 17:31:46,613 - INFO - logged in successfully
+2025-01-19 17:31:46,623 - INFO - Successfully loaded 37 books from the file.
+2025-01-19 17:31:46,623 - INFO - Load books to list performed successfully.
+2025-01-19 17:31:46,623 - INFO - Get Popular Books performed successfully.
+2025-01-19 17:31:46,632 - INFO - Popular books saved to Files/popular_books.csv.
+2025-01-19 17:31:46,632 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 17:31:46,634 - INFO - Waiting list saved successfully to Files/waiting_list.csv.
+2025-01-19 17:31:46,634 - INFO - Load waiting list performed successfully.
+2025-01-19 17:32:38,074 - INFO - User file read performed successfully.
+2025-01-19 17:32:39,376 - INFO - logged in successfully
+2025-01-19 17:32:39,386 - INFO - Successfully loaded 37 books from the file.
+2025-01-19 17:32:39,386 - INFO - Load books to list performed successfully.
+2025-01-19 17:32:39,386 - INFO - Get Popular Books performed successfully.
+2025-01-19 17:32:39,395 - INFO - Popular books saved to Files/popular_books.csv.
+2025-01-19 17:32:39,395 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 17:32:39,396 - INFO - Waiting list saved successfully to Files/waiting_list.csv.
+2025-01-19 17:32:39,396 - INFO - Load waiting list performed successfully.
+2025-01-19 17:32:47,952 - INFO - Successfully loaded 37 books from the file.
+2025-01-19 17:32:47,953 - INFO - Load books to list performed successfully.
+2025-01-19 17:32:47,953 - INFO - Get Popular Books performed successfully.
+2025-01-19 17:32:47,961 - INFO - Popular books saved to Files/popular_books.csv.
+2025-01-19 17:32:47,962 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 17:33:32,817 - INFO - User file read performed successfully.
+2025-01-19 17:33:33,786 - INFO - logged in successfully
+2025-01-19 17:33:33,795 - INFO - Successfully loaded 37 books from the file.
+2025-01-19 17:33:33,796 - INFO - Load books to list performed successfully.
+2025-01-19 17:33:33,796 - INFO - Get Popular Books performed successfully.
+2025-01-19 17:33:33,800 - INFO - Popular books saved to Files/popular_books.csv.
+2025-01-19 17:33:33,800 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 17:33:33,801 - INFO - Waiting list saved successfully to Files/waiting_list.csv.
+2025-01-19 17:33:33,801 - INFO - Load waiting list performed successfully.
+2025-01-19 17:33:39,192 - INFO - Successfully loaded 37 books from the file.
+2025-01-19 17:33:39,192 - INFO - Load books to list performed successfully.
+2025-01-19 17:33:39,192 - INFO - Get Popular Books performed successfully.
+2025-01-19 17:33:39,196 - INFO - Popular books saved to Files/popular_books.csv.
+2025-01-19 17:33:39,196 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 17:33:43,647 - INFO - Waiting list saved successfully to Files/waiting_list.csv.
+2025-01-19 17:33:43,647 - INFO - Load waiting list performed successfully.
+2025-01-19 17:34:04,584 - INFO - User file read performed successfully.
+2025-01-19 17:34:05,625 - INFO - logged in successfully
+2025-01-19 17:34:05,634 - INFO - Successfully loaded 34 books from the file.
+2025-01-19 17:34:05,634 - INFO - Load books to list performed successfully.
+2025-01-19 17:34:05,634 - INFO - Get Popular Books performed successfully.
+2025-01-19 17:34:05,639 - INFO - Popular books saved to Files/popular_books.csv.
+2025-01-19 17:34:05,639 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 17:34:05,640 - INFO - Waiting list saved successfully to Files/waiting_list.csv.
+2025-01-19 17:34:05,640 - INFO - Load waiting list performed successfully.
+2025-01-19 17:34:11,257 - INFO - Successfully loaded 34 books from the file.
+2025-01-19 17:34:11,257 - INFO - Load books to list performed successfully.
+2025-01-19 17:34:11,258 - INFO - Get Popular Books performed successfully.
+2025-01-19 17:34:11,262 - INFO - Popular books saved to Files/popular_books.csv.
+2025-01-19 17:34:11,262 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 17:34:16,944 - INFO - Waiting list saved successfully to Files/waiting_list.csv.
+2025-01-19 17:34:16,944 - INFO - Load waiting list performed successfully.
+2025-01-19 17:34:21,382 - INFO - Successfully loaded 34 books from the file.
+2025-01-19 17:34:21,382 - INFO - Load books to list performed successfully.
+2025-01-19 17:34:21,382 - INFO - Get Popular Books performed successfully.
+2025-01-19 17:34:21,386 - INFO - Popular books saved to Files/popular_books.csv.
+2025-01-19 17:34:21,386 - INFO - Load popular books to CSV performed successfully.

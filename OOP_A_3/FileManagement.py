@@ -90,6 +90,7 @@ def ensure_csv_columns(required_columns):
             except (FileNotFoundError, pd.errors.EmptyDataError):
                 # Create a new DataFrame if the file is missing or empty
                 df = pd.DataFrame(columns=required_columns)
+                df.to_csv(file_path, index=False)
                 logging.warning(f"Created new DataFrame with columns: {required_columns}")
             kwargs["df"] = df
             return func(*args, **kwargs)
@@ -98,7 +99,6 @@ def ensure_csv_columns(required_columns):
 
 class FileManagement:
     waiting_list = {}
-    lend_counter = {}
 
     @staticmethod
     @handle_exceptions
@@ -137,56 +137,63 @@ class FileManagement:
     @staticmethod
     @log_action("Get Popular Books")
     @handle_exceptions
-    def get_popular_books():
-        if not FileManagement.lend_counter:
-            return
+    # @ensure_csv_columns(["title", "author", "is_loaned", "copies", "genre", "year", "available_copies", "loaned_copies", "lend_count"])
+    def get_popular_books(file_path="Files/popular_books.csv", df=None):
+        books_df = pd.read_csv("Files/books.csv")
+        books_df = books_df.sort_values(by="lend_count", ascending=False)
+        top_books = books_df.head(10)
 
-        popular_books = sorted(FileManagement.lend_counter.items(), key=lambda item: item[1], reverse= True)
-
-        temp_list = popular_books[:10]
-        keys = list(map(lambda item: item[0], temp_list))
-        book = FileManagement.load_books_to_list()
-
-        return [key for key in keys if key in book]
+        all_books = FileManagement.load_books_to_list()
+        popular_books = [
+            book for book in all_books if (book.title, book.author) in zip(top_books["title"], top_books["author"])
+        ]
+        return popular_books
 
     @staticmethod
     @log_action("Load popular books to CSV")
     @handle_exceptions
-    @ensure_csv_columns(["title", "author", "is_loaned", "copies", "genre", "year", "available_copies", "loaned_copies"])
-    def load_populars_to_csv(file_path = "Files/popular_books.csv",  df=None):
-        populars = FileManagement.get_popular_books()
+    @ensure_csv_columns(["title", "author", "is_loaned", "copies", "genre", "year", "available_copies", "loaned_copies", "lend_count"])
+    def load_populars_to_csv(file_path="Files/popular_books.csv", df=None):
+        popular_books = FileManagement.get_popular_books()
+        books_df = pd.read_csv("Files/books.csv")
 
-        if not populars:
+        if not popular_books:
             logging.info("No popular books found.")
             return
 
-        found_books = []
-
-        for book in populars:
-            matching_row = df[
-                (df["title"] == book.title) &
-                (df["author"] == book.author) &
-                (df["copies"] == book.copies) &
-                (df["is_loaned"] == book.is_loaned) &
-                (df["genre"] == book.genre) &
-                (df["year"] == book.year)
+        # Prepare the data to save
+        popular_data = []
+        for book in popular_books:
+            matching_row = books_df[
+                (books_df["title"] == book.title) &
+                (books_df["author"] == book.author)
                 ]
             if not matching_row.empty:
-                available_copies = matching_row["available_copies"].iloc[0]
-                loaned_copies = matching_row["loaned_copies"].iloc[0]
-                book_data = book.get_fields() + [available_copies, loaned_copies]
-                found_books.append(book_data)
+                book_data = {
+                    "title": book.title,
+                    "author": book.author,
+                    "is_loaned": book.is_loaned,
+                    "copies": book.copies,
+                    "genre": book.genre,
+                    "year": book.year,
+                    "available_copies": matching_row["available_copies"].iloc[0],
+                    "loaned_copies": matching_row["loaned_copies"].iloc[0],
+                    "lend_count": matching_row["lend_count"].iloc[0],
+                }
+                popular_data.append(book_data)
 
-        df = pd.DataFrame(found_books)
+        # Update the DataFrame and save it
+        df = pd.DataFrame(popular_data)
+        df = df.sort_values(by="lend_count", ascending=False)
         df.to_csv(file_path, index=False)
-        logging.info(f"Popular books saved to CSV.")
+        logging.info(f"Popular books saved to {file_path}.")
 
     @staticmethod
     @log_action("Book added")
     @handle_exceptions
     @check_file_exists
-    @ensure_csv_columns(["title", "author", "is_loaned", "copies", "genre", "year", "available_copies", "loaned_copies"])
-    def add_book(book: Book, file_path = "Files/books.csv",  df=None):
+    @ensure_csv_columns(["title", "author", "is_loaned", "copies", "genre", "year", "available_copies", "loaned_copies", "lend_count"])
+    def add_book(book: Book, file_path="Files/books.csv", df=None):
         book_mask = (df["title"] == book.title) & (df["author"] == book.author)
         if book_mask.any():
             index = df[book_mask].index[0]
@@ -197,6 +204,7 @@ class FileManagement:
         else:
             available_copies = book.copies if book.is_loaned == "No" else 0
             loaned_copies = book.copies if book.is_loaned == "Yes" else 0
+            lend_count = 0  # Initializing lend_count to 0 for new book
             new_book = {
                 "title": book.title,
                 "author": book.author,
@@ -206,6 +214,7 @@ class FileManagement:
                 "year": book.year,
                 "available_copies": available_copies,
                 "loaned_copies": loaned_copies,
+                "lend_count": lend_count,  # Add lend_count column
             }
             df = pd.concat([df, pd.DataFrame([new_book])], ignore_index=True)
             logging.info(f"Book '{book.title}' by {book.author} added successfully.")
@@ -216,7 +225,7 @@ class FileManagement:
     @log_action("Book removed")
     @handle_exceptions
     @check_file_exists
-    @ensure_csv_columns(["title", "author", "is_loaned", "copies", "genre", "year", "available_copies", "loaned_copies"])
+    @ensure_csv_columns(["title", "author", "is_loaned", "copies", "genre", "year", "available_copies", "loaned_copies", "lend_count"])
     def remove_book(book: Book, file_path = "Files/books.csv",  df=None):
         match = (df["title"] == book.title) & (df["author"] == book.author)
         if match.any():
@@ -239,8 +248,8 @@ class FileManagement:
     @log_action("Book lent")
     @handle_exceptions
     @check_file_exists
-    @ensure_csv_columns(["title", "author", "is_loaned", "copies", "genre", "year", "available_copies", "loaned_copies"])
-    def lend_book(book: Book, file_path = "Files/books.csv",  df=None):
+    @ensure_csv_columns(["title", "author", "is_loaned", "copies", "genre", "year", "available_copies", "loaned_copies", "lend_count"])
+    def lend_book(book: Book, file_path="Files/books.csv", df=None):
         book_mask = (df["title"] == book.title) & (df["author"] == book.author)
         if not book_mask.any():
             logging.warning(f"Book '{book.title}' by {book.author} was not found.")
@@ -251,13 +260,18 @@ class FileManagement:
             logging.warning(f"No available copies of '{book.title}' by {book.author} to lend.")
             return False
 
+        # Update the available and loaned copies
         df.at[index, "available_copies"] -= 1
         df.at[index, "loaned_copies"] += 1
-        if book not in FileManagement.lend_counter:
-            FileManagement.lend_counter[book] = 0
-        FileManagement.lend_counter[book] += 1
 
+        # Update the lend_count for tracking popularity
+        df.at[index, "lend_count"] += 1
+
+        # Save the changes to books.csv
         df.to_csv(file_path, index=False)
+
+        # Update popular_books.csv to reflect lend count changes
+        FileManagement.load_populars_to_csv()
         logging.info(f"Book '{book.title}' by {book.author} has been successfully loaned.")
         return True
 
@@ -369,7 +383,7 @@ class FileManagement:
     @log_action("Return book")
     @handle_exceptions
     @check_file_exists
-    @ensure_csv_columns(["title", "author", "is_loaned", "copies", "genre", "year", "available_copies", "loaned_copies"])
+    @ensure_csv_columns(["title", "author", "is_loaned", "copies", "genre", "year", "available_copies", "loaned_copies", "lend_count"])
     def return_book(book: Book, file_path = "Files/books.csv",  df=None):
         book_mask = (df["title"] == book.title) & (df["author"] == book.author)
 
