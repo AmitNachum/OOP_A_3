@@ -1,6 +1,4 @@
 import logging
-import threading
-import time
 import tkinter as tk
 from tkinter import ttk, messagebox
 import pandas as pd
@@ -298,7 +296,7 @@ class LibraryApp:
             ).grid(row=row, column=col, padx=10, pady=5)
 
     def create_table(self, frame):
-        self.tree = ttk.Treeview(frame)
+        self.tree = ttk.Treeview(frame, show="headings", selectmode="browse")
         self.tree.pack(fill=tk.BOTH, expand=True, side=tk.LEFT)
 
         scrollbar = ttk.Scrollbar(frame, orient="vertical", command=self.tree.yview)
@@ -334,7 +332,7 @@ class LibraryApp:
         year = self.entries["year"].get()
 
         if not title or not author or not genre or not year:
-            messagebox.showerror("Error", "Please enter all fields")
+            messagebox.showerror("Error", "Please enter all fields:\n title\n author \n genre\n year")
             return
 
         try:
@@ -346,10 +344,10 @@ class LibraryApp:
         book = self.factory.create_book(title, author, genre, year)
         FileManagement.add_book(book)
 
-        self.notify(f"Added the Book {book}")
+        self.notify(f"Added the Book {book.title}")
 
         self.load_csv("Files/books.csv")
-        messagebox.showinfo("Success", f"Added the Book {book}")
+        messagebox.showinfo("Success", f"Added the Book {book.title}")
 
     def remove_book(self):
         title = self.entries["title"].get()
@@ -358,7 +356,7 @@ class LibraryApp:
         year = self.entries["year"].get()
 
         if not title or not author or not genre or not year:
-            messagebox.showerror("Error", "Please enter all fields")
+            messagebox.showerror("Error", "Please enter all fields:\n title\n author \n genre\n year")
             return
 
         try:
@@ -370,10 +368,10 @@ class LibraryApp:
         book = self.factory.create_book(title, author, genre, year)
         FileManagement.remove_book(book)
 
-        self.notify(f"Removed the Book {book}")
+        self.notify(f"Removed the Book {book.title}")
 
         self.load_csv("Files/books.csv")
-        messagebox.showinfo("Success", f"Removed the Book {book}")
+        messagebox.showinfo("Success", f"Removed the Book {book.title}")
 
     def search_book(self):
         title = self.entries["title"].get()
@@ -414,7 +412,8 @@ class LibraryApp:
         active_strategies = list(filter(None, strategies_and_values))
 
         if not active_strategies:
-            messagebox.showinfo("Info", "Please enter at least one search criteria")
+            messagebox.showinfo("Info", "Please enter at least one search criteria:\n title \n author \n genre\n year\n is loaned?\n copies\n"
+                                        "available copies\n loaned_copies\n lend count")
             return
 
         strategies = (pair[0] for pair in active_strategies)
@@ -434,7 +433,7 @@ class LibraryApp:
         year = self.entries["year"].get()
 
         if not title or not author or not genre or not year:
-            messagebox.showerror("Error", "Please enter all fields")
+            messagebox.showerror("Error", "Please enter all fields:\n title\n author \n genre\n year")
             return
 
         try:
@@ -455,14 +454,14 @@ class LibraryApp:
         self.load_csv("Files/books.csv")
 
         if success:
-            self.notify(f"Loaned the Book {book}")
+            self.notify(f"Loaned the Book {book.title}")
             # Success message
-            messagebox.showinfo("Success", f"Loaned the Book {book}")
+            messagebox.showinfo("Success", f"Loaned the Book {book.title}")
 
     def handle_info_submission(self, info, book):
         FileManagement.ask_info(book, info)
         name = info.get("name")
-        self.notify(f"Added {name} to the Book {book} waiting list")
+        self.notify(f"Added {name} to the Book {book.title} waiting list")
 
         messagebox.showinfo("Info", "Your details have been added to the waiting list.")
 
@@ -473,7 +472,7 @@ class LibraryApp:
         year = self.entries["year"].get()
 
         if not title or not author or not genre or not year:
-            messagebox.showerror("Error", "Please enter all fields")
+            messagebox.showerror("Error", "Please enter all fields:\n title\n author \n genre\n year")
             return
 
         try:
@@ -490,7 +489,7 @@ class LibraryApp:
         self.load_csv("Files/books.csv")
 
         # Success message
-        messagebox.showinfo("Success", f"Returned the Book {book}")
+        messagebox.showinfo("Success", f"Returned the Book {book.title}")
 
     def view_populars(self):
         FileManagement.load_populars_to_csv()
