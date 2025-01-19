@@ -2,6 +2,7 @@ import tkinter as tk
 from tkinter import ttk, messagebox
 import pandas as pd
 from FileManagement import FileManagement
+
 from BookFactroy import BookFactory
 from User import User
 from SearchStrategy import *
@@ -377,7 +378,7 @@ class LibraryApp:
         strategies = (pair[0] for pair in active_strategies)
         search_vals = {strategy.__class__.__name__: value for strategy, value in active_strategies}
 
-        FileManagement.search_book("Files/books.csv", *strategies, **search_vals)
+        FileManagement.search_book(*strategies, **search_vals)
         self.load_csv("Files/search.csv")
 
     def view_books(self):
@@ -420,7 +421,6 @@ class LibraryApp:
         FileManagement.ask_info(book, info)
         name = info.get("name")
         self.notify(f"Added {name} to the Book {book} waiting list")
-        print(f"{self.logged_in_user} Added {name} to the Book {book} waiting list")
 
         messagebox.showinfo("Info", "Your details have been added to the waiting list.")
 

@@ -1,0 +1,546 @@
+2025-01-18 22:05:17,671 - INFO - Users file read successfully.
+2025-01-18 22:05:19,461 - INFO - Popular Books file read successfully.
+2025-01-18 22:05:19,463 - INFO - No popular books found. File not updated.
+2025-01-18 22:05:19,463 - INFO - Waiting list file loaded successfully from Files/waiting_list.csv.
+2025-01-18 22:05:19,464 - INFO - Waiting list saved successfully to Files/waiting_list.csv.
+2025-01-18 22:05:38,842 - INFO - Books file read successfully.
+2025-01-18 22:05:38,843 - INFO - Book 'sdsd' by ssds added successfully.
+2025-01-18 22:05:44,351 - INFO - Waiting list file loaded successfully from Files/waiting_list.csv.
+2025-01-18 22:05:44,351 - INFO - Waiting list saved successfully to Files/waiting_list.csv.
+2025-01-18 22:05:53,645 - INFO - Popular Books file read successfully.
+2025-01-18 22:05:53,646 - INFO - No popular books found. File not updated.
+2025-01-18 22:07:05,582 - INFO - Users file read successfully.
+2025-01-18 22:07:06,664 - INFO - Popular Books file read successfully.
+2025-01-18 22:07:06,666 - INFO - No popular books found. File not updated.
+2025-01-18 22:07:06,667 - INFO - Waiting list file loaded successfully from Files/waiting_list.csv.
+2025-01-18 22:07:06,667 - INFO - Waiting list saved successfully to Files/waiting_list.csv.
+2025-01-18 22:07:09,006 - INFO - Waiting list file loaded successfully from Files/waiting_list.csv.
+2025-01-18 22:07:09,006 - INFO - Waiting list saved successfully to Files/waiting_list.csv.
+2025-01-18 22:07:38,678 - INFO - Books file read successfully.
+2025-01-18 22:07:38,679 - WARNING - Book 'sdsd' by sdsd was not found.
+2025-01-18 22:07:57,906 - INFO - Books file read successfully.
+2025-01-18 22:07:57,906 - WARNING - Book 'sdsd' by sdsd was not found.
+2025-01-18 22:08:03,125 - INFO - Books file read successfully.
+2025-01-18 22:08:03,126 - WARNING - Book 'sdsd' by sdsd was not found.
+2025-01-18 22:08:06,169 - INFO - Books file read successfully.
+2025-01-18 22:08:06,170 - WARNING - Book 'sdsd' by sdsd was not found in the library.
+2025-01-18 22:08:11,616 - INFO - Books file read successfully.
+2025-01-18 22:08:11,616 - WARNING - Book 'sdsd' by sdsd was not found in the library.
+2025-01-18 22:08:49,176 - INFO - Books file loaded successfully from Files/books.csv.
+2025-01-18 22:08:49,178 - INFO - Books file loaded successfully from Files/books.csv.
+2025-01-18 22:08:49,179 - INFO - Successfully loaded 35 books from the file.
+2025-01-18 22:08:49,179 - INFO - Loaded 35 books into the search process.
+2025-01-18 22:08:49,179 - INFO - Search completed with 0 results.
+2025-01-18 22:08:49,180 - INFO - Search results written to 'Files/search.csv'. 0 books found and saved.
+2025-01-18 22:09:16,806 - INFO - Books file loaded successfully from Files/books.csv.
+2025-01-18 22:09:16,807 - INFO - Books file loaded successfully from Files/books.csv.
+2025-01-18 22:09:16,808 - INFO - Successfully loaded 35 books from the file.
+2025-01-18 22:09:16,808 - INFO - Loaded 35 books into the search process.
+2025-01-18 22:09:16,808 - INFO - Search completed with 1 results.
+2025-01-18 22:09:16,809 - INFO - Search results written to 'Files/search.csv'. 1 books found and saved.
+2025-01-18 22:09:23,076 - INFO - Books file read successfully.
+2025-01-18 22:09:23,077 - INFO - Book 'sdsd' by ssds has been successfully loaned.
+2025-01-18 22:09:36,522 - INFO - Books file read successfully.
+2025-01-18 22:09:36,522 - WARNING - No available copies of 'sdsd' by ssds to lend.
+2025-01-18 22:09:56,808 - INFO - Waiting list file loaded successfully from Files/waiting_list.csv.
+2025-01-18 22:09:56,809 - INFO - Added new entry for 'sdsd' in the waiting list.
+2025-01-18 22:09:56,809 - INFO - Waiting list saved successfully to Files/waiting_list.csv.
+2025-01-19 01:07:23,582 - INFO - Users file read successfully.
+2025-01-19 01:07:24,562 - INFO - Popular Books file read successfully.
+2025-01-19 01:07:24,565 - INFO - No popular books found. File not updated.
+2025-01-19 01:07:24,565 - INFO - Waiting list file loaded successfully from Files/waiting_list.csv.
+2025-01-19 01:07:24,566 - INFO - Waiting list saved successfully to Files/waiting_list.csv.
+2025-01-19 01:08:05,556 - INFO - Books file read successfully.
+2025-01-19 01:08:05,557 - WARNING - Cannot remove 'sdsd' by ssds because there are loaned copies.
+2025-01-19 01:08:18,140 - INFO - Books file read successfully.
+2025-01-19 01:08:18,142 - INFO - Book 'sdsd' by ssds has been successfully returned.
+2025-01-19 01:08:25,867 - INFO - Books file read successfully.
+2025-01-19 01:08:25,868 - INFO - Book 'sdsd' by ssds has been removed completely.
+2025-01-19 01:08:41,692 - INFO - Books file read successfully.
+2025-01-19 01:08:41,692 - WARNING - Book 'sdsd' by ssds was not found in the library.
+2025-01-19 01:08:47,780 - INFO - Books file loaded successfully from Files/books.csv.
+2025-01-19 01:08:47,781 - INFO - Books file loaded successfully from Files/books.csv.
+2025-01-19 01:08:47,782 - INFO - Successfully loaded 34 books from the file.
+2025-01-19 01:08:47,782 - INFO - Loaded 34 books into the search process.
+2025-01-19 01:08:47,782 - INFO - Search completed with 0 results.
+2025-01-19 01:08:47,783 - INFO - Search results written to 'Files/search.csv'. 0 books found and saved.
+2025-01-19 01:09:11,330 - INFO - Waiting list file loaded successfully from Files/waiting_list.csv.
+2025-01-19 01:09:11,330 - INFO - Waiting list saved successfully to Files/waiting_list.csv.
+2025-01-19 01:09:22,030 - INFO - Books file read successfully.
+2025-01-19 01:09:22,030 - WARNING - Book 'sdsd' by ssds was not found.
+2025-01-19 01:09:28,768 - INFO - Books file read successfully.
+2025-01-19 01:09:28,768 - WARNING - Book 'sdsd' by ssds was not found in the library.
+2025-01-19 01:09:37,963 - INFO - Popular Books file read successfully.
+2025-01-19 01:09:37,965 - INFO - No popular books found. File not updated.
+2025-01-19 01:09:46,625 - INFO - Books file read successfully.
+2025-01-19 01:09:46,626 - INFO - Book 'sdsd' by ssds added successfully.
+2025-01-19 01:09:49,729 - INFO - Books file read successfully.
+2025-01-19 01:09:49,730 - INFO - Updated copies for 'sdsd' by ssds.
+2025-01-19 01:09:51,536 - INFO - Books file read successfully.
+2025-01-19 01:09:51,537 - INFO - Book 'sdsd' by ssds has been successfully loaned.
+2025-01-19 01:09:53,727 - INFO - Books file read successfully.
+2025-01-19 01:09:53,728 - INFO - Book 'sdsd' by ssds has been successfully loaned.
+2025-01-19 01:09:55,717 - INFO - Books file read successfully.
+2025-01-19 01:09:55,718 - INFO - Updated copies for 'sdsd' by ssds.
+2025-01-19 01:09:57,131 - INFO - Books file read successfully.
+2025-01-19 01:09:57,132 - INFO - Updated copies for 'sdsd' by ssds.
+2025-01-19 01:09:58,407 - INFO - Books file read successfully.
+2025-01-19 01:09:58,408 - INFO - Updated copies for 'sdsd' by ssds.
+2025-01-19 01:10:03,024 - INFO - Books file read successfully.
+2025-01-19 01:10:03,025 - INFO - Book 'sdsd' by ssds has been successfully loaned.
+2025-01-19 01:10:04,984 - INFO - Books file read successfully.
+2025-01-19 01:10:04,986 - INFO - Book 'sdsd' by ssds has been successfully loaned.
+2025-01-19 01:10:06,319 - INFO - Books file read successfully.
+2025-01-19 01:10:06,320 - INFO - Book 'sdsd' by ssds has been successfully loaned.
+2025-01-19 01:10:08,577 - INFO - Books file loaded successfully from Files/books.csv.
+2025-01-19 01:10:08,579 - INFO - Successfully loaded 35 books from the file.
+2025-01-19 01:10:08,580 - INFO - Popular Books file read successfully.
+2025-01-19 01:10:08,582 - INFO - Popular books saved to CSV.
+2025-01-19 01:10:44,488 - INFO - Waiting list file loaded successfully from Files/waiting_list.csv.
+2025-01-19 01:10:44,489 - INFO - Waiting list saved successfully to Files/waiting_list.csv.
+2025-01-19 01:10:45,873 - INFO - Books file loaded successfully from Files/books.csv.
+2025-01-19 01:10:45,873 - INFO - Successfully loaded 35 books from the file.
+2025-01-19 01:10:45,874 - INFO - Popular Books file read successfully.
+2025-01-19 01:10:45,875 - INFO - Popular books saved to CSV.
+2025-01-19 01:10:49,424 - INFO - Books file read successfully.
+2025-01-19 01:10:49,425 - INFO - One copy of 'sdsd' by ssds has been removed.
+2025-01-19 01:10:54,769 - INFO - Books file read successfully.
+2025-01-19 01:10:54,769 - INFO - One copy of 'sdsd' by ssds has been removed.
+2025-01-19 01:10:59,676 - INFO - Books file read successfully.
+2025-01-19 01:10:59,677 - INFO - One copy of 'sdsd' by ssds has been removed.
+2025-01-19 01:11:07,309 - INFO - Books file read successfully.
+2025-01-19 01:11:07,310 - INFO - Updated copies for 'sdsd' by ssds.
+2025-01-19 01:11:09,882 - INFO - Books file read successfully.
+2025-01-19 01:11:09,882 - INFO - Updated copies for 'sdsd' by ssds.
+2025-01-19 01:11:11,894 - INFO - Books file read successfully.
+2025-01-19 01:11:11,895 - WARNING - No available copies of 'sdsd' by ssds to lend.
+2025-01-19 01:11:16,837 - INFO - Books file read successfully.
+2025-01-19 01:11:16,838 - INFO - Updated copies for 'sdsd' by ssds.
+2025-01-19 01:11:18,918 - INFO - Books file read successfully.
+2025-01-19 01:11:18,918 - INFO - Updated copies for 'sdsd' by ssds.
+2025-01-19 01:11:23,081 - INFO - Books file read successfully.
+2025-01-19 01:11:23,082 - INFO - One copy of 'sdsd' by ssds has been removed.
+2025-01-19 01:11:26,903 - INFO - Books file read successfully.
+2025-01-19 01:11:26,904 - INFO - One copy of 'sdsd' by ssds has been removed.
+2025-01-19 01:14:39,106 - INFO - Users file read successfully.
+2025-01-19 01:14:40,230 - INFO - Popular Books file read successfully.
+2025-01-19 01:14:40,232 - INFO - No popular books found. File not updated.
+2025-01-19 01:14:40,233 - INFO - Waiting list file loaded successfully from Files/waiting_list.csv.
+2025-01-19 01:14:40,233 - INFO - Waiting list saved successfully to Files/waiting_list.csv.
+2025-01-19 01:14:50,870 - INFO - Books file read successfully.
+2025-01-19 01:14:50,871 - INFO - Book 'dsd' by sdsd added successfully.
+2025-01-19 01:14:54,363 - INFO - Books file read successfully.
+2025-01-19 01:14:54,363 - INFO - Updated copies for 'dsd' by sdsd.
+2025-01-19 01:15:00,048 - INFO - Books file read successfully.
+2025-01-19 01:15:00,049 - INFO - One copy of 'dsd' by sdsd has been removed.
+2025-01-19 01:15:04,975 - INFO - Books file read successfully.
+2025-01-19 01:15:04,976 - INFO - Book 'dsd' by sdsd has been removed completely.
+2025-01-19 01:15:34,295 - INFO - Books file loaded successfully from Files/books.csv.
+2025-01-19 01:15:34,296 - INFO - Books file loaded successfully from Files/books.csv.
+2025-01-19 01:15:34,297 - INFO - Successfully loaded 35 books from the file.
+2025-01-19 01:15:34,297 - INFO - Loaded 35 books into the search process.
+2025-01-19 01:15:34,297 - INFO - Search completed with 1 results.
+2025-01-19 01:15:34,298 - INFO - Search results written to 'Files/search.csv'. 1 books found and saved.
+2025-01-19 01:15:44,166 - INFO - Books file read successfully.
+2025-01-19 01:15:44,167 - INFO - Book 'sdsd' by ssds has been successfully returned.
+2025-01-19 01:15:50,683 - INFO - Books file read successfully.
+2025-01-19 01:15:50,683 - WARNING - No available copies of 'sdsd' by ssds to lend.
+2025-01-19 01:15:58,310 - INFO - Books file read successfully.
+2025-01-19 01:15:58,311 - INFO - One copy of 'sdsd' by ssds has been removed.
+2025-01-19 01:16:05,912 - INFO - Books file read successfully.
+2025-01-19 01:16:05,913 - INFO - One copy of 'sdsd' by ssds has been removed.
+2025-01-19 01:19:39,279 - INFO - Users file read successfully.
+2025-01-19 01:19:40,162 - INFO - Popular Books file read successfully.
+2025-01-19 01:19:40,164 - INFO - No popular books found. File not updated.
+2025-01-19 01:19:40,164 - INFO - Waiting list file loaded successfully from Files/waiting_list.csv.
+2025-01-19 01:19:40,165 - INFO - Waiting list saved successfully to Files/waiting_list.csv.
+2025-01-19 01:19:55,373 - INFO - Books file loaded successfully from Files/books.csv.
+2025-01-19 01:19:55,374 - INFO - Books file loaded successfully from Files/books.csv.
+2025-01-19 01:19:55,375 - INFO - Successfully loaded 35 books from the file.
+2025-01-19 01:19:55,375 - INFO - Loaded 35 books into the search process.
+2025-01-19 01:19:55,375 - INFO - Search completed with 1 results.
+2025-01-19 01:19:55,377 - INFO - Search results written to 'Files/search.csv'. 1 books found and saved.
+2025-01-19 01:19:58,150 - INFO - Books file read successfully.
+2025-01-19 01:19:58,151 - WARNING - No available copies of 'sdsd' by ssds to lend.
+2025-01-19 01:20:03,659 - INFO - Books file read successfully.
+2025-01-19 01:20:03,660 - INFO - One copy of 'sdsd' by ssds has been removed.
+2025-01-19 01:20:39,546 - INFO - Books file read successfully.
+2025-01-19 01:20:39,547 - WARNING - Cannot remove 'sdsd' by ssds because there are loaned copies.
+2025-01-19 01:20:43,536 - INFO - Books file read successfully.
+2025-01-19 01:20:43,537 - WARNING - Cannot remove 'sdsd' by ssds because there are loaned copies.
+2025-01-19 01:20:58,695 - INFO - Books file read successfully.
+2025-01-19 01:20:58,696 - WARNING - Cannot remove 'sdsd' by ssds because there are loaned copies.
+2025-01-19 01:21:05,645 - INFO - Books file read successfully.
+2025-01-19 01:21:05,646 - INFO - Book 'sdsd' by ssds has been successfully returned.
+2025-01-19 01:21:08,503 - INFO - Books file read successfully.
+2025-01-19 01:21:08,504 - INFO - Book 'sdsd' by ssds has been successfully returned.
+2025-01-19 01:21:10,454 - INFO - Books file read successfully.
+2025-01-19 01:21:10,456 - INFO - Book 'sdsd' by ssds has been successfully returned.
+2025-01-19 01:21:13,904 - INFO - Books file read successfully.
+2025-01-19 01:21:13,905 - WARNING - Cannot remove 'sdsd' by ssds because there are loaned copies.
+2025-01-19 01:21:22,281 - INFO - Books file read successfully.
+2025-01-19 01:21:22,282 - INFO - Book 'sdsd' by ssds has been successfully returned.
+2025-01-19 01:21:24,599 - INFO - Books file read successfully.
+2025-01-19 01:21:24,600 - INFO - Book 'sdsd' by ssds has been removed completely.
+2025-01-19 01:21:29,227 - INFO - Books file read successfully.
+2025-01-19 01:21:29,228 - INFO - Book 'sdsd' by ssds added successfully.
+2025-01-19 01:21:32,374 - INFO - Books file read successfully.
+2025-01-19 01:21:32,375 - INFO - Updated copies for 'sdsd' by ssds.
+2025-01-19 01:21:35,515 - INFO - Books file read successfully.
+2025-01-19 01:21:35,516 - INFO - Book 'sdsd' by ssds has been successfully loaned.
+2025-01-19 01:21:37,722 - INFO - Books file read successfully.
+2025-01-19 01:21:37,723 - INFO - Book 'sdsd' by ssds has been successfully loaned.
+2025-01-19 01:21:39,845 - INFO - Books file read successfully.
+2025-01-19 01:21:39,846 - INFO - Book 'sdsd' by ssds has been successfully returned.
+2025-01-19 01:21:43,102 - INFO - Books file read successfully.
+2025-01-19 01:21:43,103 - INFO - Updated copies for 'sdsd' by ssds.
+2025-01-19 01:21:45,057 - INFO - Books file read successfully.
+2025-01-19 01:21:45,058 - INFO - Updated copies for 'sdsd' by ssds.
+2025-01-19 01:21:46,408 - INFO - Books file read successfully.
+2025-01-19 01:21:46,409 - INFO - Updated copies for 'sdsd' by ssds.
+2025-01-19 01:21:50,915 - INFO - Books file read successfully.
+2025-01-19 01:21:50,916 - INFO - Book 'sdsd' by ssds has been successfully returned.
+2025-01-19 01:21:53,736 - INFO - Books file read successfully.
+2025-01-19 01:21:53,738 - INFO - Book 'sdsd' by ssds has been successfully loaned.
+2025-01-19 01:21:55,626 - INFO - Books file read successfully.
+2025-01-19 01:21:55,627 - INFO - Book 'sdsd' by ssds has been successfully loaned.
+2025-01-19 01:22:00,896 - INFO - Books file read successfully.
+2025-01-19 01:22:00,897 - INFO - One copy of 'sdsd' by ssds has been removed.
+2025-01-19 01:22:09,330 - INFO - Books file read successfully.
+2025-01-19 01:22:09,331 - INFO - Book 'sdsd' by ssds has been successfully returned.
+2025-01-19 01:22:11,666 - INFO - Books file read successfully.
+2025-01-19 01:22:11,667 - INFO - Book 'sdsd' by ssds has been successfully loaned.
+2025-01-19 01:22:13,264 - INFO - Books file read successfully.
+2025-01-19 01:22:13,265 - INFO - Book 'sdsd' by ssds has been successfully loaned.
+2025-01-19 01:22:15,710 - INFO - Books file read successfully.
+2025-01-19 01:22:15,711 - INFO - Book 'sdsd' by ssds has been successfully loaned.
+2025-01-19 01:22:18,132 - INFO - Books file read successfully.
+2025-01-19 01:22:18,133 - INFO - One copy of 'sdsd' by ssds has been removed.
+2025-01-19 01:24:07,461 - INFO - Books file read successfully.
+2025-01-19 01:24:07,463 - INFO - Book 'sdsd' by ssds has been successfully returned.
+2025-01-19 01:24:11,829 - INFO - Books file read successfully.
+2025-01-19 01:24:11,830 - INFO - One copy of 'sdsd' by ssds has been removed.
+2025-01-19 01:26:56,993 - INFO - Users file read successfully.
+2025-01-19 01:26:58,345 - INFO - Popular Books file read successfully.
+2025-01-19 01:26:58,346 - INFO - No popular books found. File not updated.
+2025-01-19 01:26:58,346 - INFO - Waiting list file loaded successfully from Files/waiting_list.csv.
+2025-01-19 01:26:58,347 - INFO - Waiting list saved successfully to Files/waiting_list.csv.
+2025-01-19 01:27:12,100 - INFO - Books file read successfully.
+2025-01-19 01:27:12,100 - INFO - Book 'dfdfgf' by hghgh added successfully.
+2025-01-19 01:27:14,263 - INFO - Books file read successfully.
+2025-01-19 01:27:14,265 - INFO - Updated copies for 'dfdfgf' by hghgh.
+2025-01-19 01:27:28,473 - INFO - Books file read successfully.
+2025-01-19 01:27:28,475 - INFO - Book 'dfdfgf' by hghgh has been successfully loaned.
+2025-01-19 01:27:31,054 - INFO - Books file read successfully.
+2025-01-19 01:27:31,056 - INFO - Book 'dfdfgf' by hghgh has been successfully loaned.
+2025-01-19 01:27:35,780 - INFO - Books file read successfully.
+2025-01-19 01:27:35,781 - INFO - One copy of 'dfdfgf' by hghgh has been removed.
+2025-01-19 01:30:26,677 - INFO - Users file read successfully.
+2025-01-19 01:30:27,768 - INFO - Popular Books file read successfully.
+2025-01-19 01:30:27,770 - INFO - No popular books found. File not updated.
+2025-01-19 01:30:27,771 - INFO - Waiting list file loaded successfully from Files/waiting_list.csv.
+2025-01-19 01:30:27,772 - INFO - Waiting list saved successfully to Files/waiting_list.csv.
+2025-01-19 01:30:45,654 - INFO - Books file read successfully.
+2025-01-19 01:30:45,655 - INFO - Book 'frer' by rtrt added successfully.
+2025-01-19 01:30:48,744 - INFO - Books file read successfully.
+2025-01-19 01:30:48,745 - INFO - Updated copies for 'frer' by rtrt.
+2025-01-19 01:30:50,364 - INFO - Books file read successfully.
+2025-01-19 01:30:50,365 - INFO - Book 'frer' by rtrt has been successfully loaned.
+2025-01-19 01:30:54,000 - INFO - Books file read successfully.
+2025-01-19 01:30:54,001 - INFO - One copy of 'frer' by rtrt has been removed.
+2025-01-19 01:30:57,390 - INFO - Books file read successfully.
+2025-01-19 01:30:57,390 - WARNING - Cannot remove 'frer' by rtrt because there are loaned copies.
+2025-01-19 01:31:02,557 - INFO - Books file read successfully.
+2025-01-19 01:31:02,558 - WARNING - Cannot remove 'frer' by rtrt because there are loaned copies.
+2025-01-19 01:31:17,955 - INFO - Books file read successfully.
+2025-01-19 01:31:17,955 - WARNING - Cannot remove 'frer' by rtrt because there are loaned copies.
+2025-01-19 01:32:39,382 - INFO - Users file read successfully.
+2025-01-19 01:32:40,347 - INFO - Popular Books file read successfully.
+2025-01-19 01:32:40,349 - INFO - No popular books found. File not updated.
+2025-01-19 01:32:40,350 - INFO - Waiting list file loaded successfully from Files/waiting_list.csv.
+2025-01-19 01:32:40,350 - INFO - Waiting list saved successfully to Files/waiting_list.csv.
+2025-01-19 01:32:49,558 - INFO - Books file read successfully.
+2025-01-19 01:32:49,559 - INFO - Book 'gfgg' by fgfg added successfully.
+2025-01-19 01:32:50,939 - INFO - Books file read successfully.
+2025-01-19 01:32:50,940 - INFO - Updated copies for 'gfgg' by fgfg.
+2025-01-19 01:32:52,312 - INFO - Books file read successfully.
+2025-01-19 01:32:52,313 - INFO - Book 'gfgg' by fgfg has been successfully loaned.
+2025-01-19 01:32:55,860 - INFO - Books file read successfully.
+2025-01-19 01:32:55,861 - INFO - One copy of 'gfgg' by fgfg has been removed.
+2025-01-19 01:32:58,583 - INFO - Books file read successfully.
+2025-01-19 01:32:58,584 - WARNING - Cannot remove 'gfgg' by fgfg because there are loaned copies.
+2025-01-19 01:33:11,220 - INFO - Books file read successfully.
+2025-01-19 01:33:11,221 - WARNING - Cannot remove 'gfgg' by fgfg because there are loaned copies.
+2025-01-19 01:33:14,527 - INFO - Books file read successfully.
+2025-01-19 01:33:14,528 - INFO - Updated copies for 'gfgg' by fgfg.
+2025-01-19 01:33:17,942 - INFO - Books file read successfully.
+2025-01-19 01:33:17,943 - INFO - One copy of 'gfgg' by fgfg has been removed.
+2025-01-19 01:33:20,297 - INFO - Books file read successfully.
+2025-01-19 01:33:20,297 - WARNING - Cannot remove 'gfgg' by fgfg because there are loaned copies.
+2025-01-19 01:41:12,313 - ERROR - Unexpected error: tuple index out of range
+2025-01-19 01:41:13,693 - ERROR - Unexpected error: tuple index out of range
+2025-01-19 01:41:14,144 - ERROR - Unexpected error: tuple index out of range
+2025-01-19 01:41:14,325 - ERROR - Unexpected error: tuple index out of range
+2025-01-19 01:41:14,520 - ERROR - Unexpected error: tuple index out of range
+2025-01-19 01:41:14,707 - ERROR - Unexpected error: tuple index out of range
+2025-01-19 01:41:16,920 - ERROR - Unexpected error: tuple index out of range
+2025-01-19 01:42:33,720 - ERROR - Unexpected error: tuple index out of range
+2025-01-19 01:44:43,300 - ERROR - ValueError: Invalid file path or buffer object type: <class 'User.User'>
+2025-01-19 01:44:57,554 - ERROR - Unexpected error: tuple index out of range
+2025-01-19 01:52:24,951 - ERROR - Unexpected error: tuple index out of range
+2025-01-19 01:52:32,616 - ERROR - Unexpected error: tuple index out of range
+2025-01-19 01:55:12,183 - ERROR - Unexpected error: tuple index out of range
+2025-01-19 01:56:55,355 - ERROR - Unexpected error: tuple index out of range
+2025-01-19 02:00:50,861 - ERROR - ValueError: Invalid file path or buffer object type: <class 'User.User'>
+2025-01-19 02:00:55,525 - ERROR - ValueError: Invalid file path or buffer object type: <class 'User.User'>
+2025-01-19 02:24:40,945 - INFO - User file read performed successfully.
+2025-01-19 02:24:42,691 - ERROR - ValueError: Invalid file path or buffer object type: <class 'NoneType'>
+2025-01-19 02:24:42,691 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 02:24:42,693 - INFO - Waiting list saved successfully to Files/waiting_list.csv.
+2025-01-19 02:24:42,693 - INFO - Load waiting list performed successfully.
+2025-01-19 02:25:11,347 - INFO - Waiting list saved successfully to Files/waiting_list.csv.
+2025-01-19 02:25:11,347 - INFO - Load waiting list performed successfully.
+2025-01-19 02:25:19,448 - ERROR - ValueError: Invalid file path or buffer object type: <class 'NoneType'>
+2025-01-19 02:25:19,448 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 02:25:33,241 - ERROR - file_path is required but not provided.
+2025-01-19 02:25:33,241 - INFO - Book added performed successfully.
+2025-01-19 02:25:55,532 - ERROR - file_path is required but not provided.
+2025-01-19 02:25:55,533 - INFO - Book added performed successfully.
+2025-01-19 02:25:58,659 - ERROR - file_path is required but not provided.
+2025-01-19 02:25:58,659 - INFO - Book removed performed successfully.
+2025-01-19 02:26:03,480 - ERROR - file_path is required but not provided.
+2025-01-19 02:26:03,480 - INFO - Book added performed successfully.
+2025-01-19 02:26:10,237 - ERROR - file_path is required but not provided.
+2025-01-19 02:26:10,237 - INFO - Book added performed successfully.
+2025-01-19 02:31:00,125 - INFO - User file read performed successfully.
+2025-01-19 02:31:01,510 - INFO - Get Popular Books performed successfully.
+2025-01-19 02:31:01,510 - INFO - No popular books found.
+2025-01-19 02:31:01,510 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 02:31:01,512 - INFO - Waiting list saved successfully to Files/waiting_list.csv.
+2025-01-19 02:31:01,512 - INFO - Load waiting list performed successfully.
+2025-01-19 02:31:10,670 - INFO - Waiting list saved successfully to Files/waiting_list.csv.
+2025-01-19 02:31:10,670 - INFO - Load waiting list performed successfully.
+2025-01-19 02:32:05,637 - INFO - User file read performed successfully.
+2025-01-19 02:32:06,730 - INFO - Get Popular Books performed successfully.
+2025-01-19 02:32:06,730 - INFO - No popular books found.
+2025-01-19 02:32:06,730 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 02:32:06,732 - INFO - Waiting list saved successfully to Files/waiting_list.csv.
+2025-01-19 02:32:06,732 - INFO - Load waiting list performed successfully.
+2025-01-19 02:32:17,885 - INFO - Book 'eer' by ere added successfully.
+2025-01-19 02:32:17,887 - INFO - Book added performed successfully.
+2025-01-19 02:32:21,810 - WARNING - Book 'eer' by ere already exists.
+2025-01-19 02:32:21,810 - INFO - Book added performed successfully.
+2025-01-19 02:32:26,152 - WARNING - Book 'eer' by ere already exists.
+2025-01-19 02:32:26,153 - INFO - Book added performed successfully.
+2025-01-19 02:32:28,833 - WARNING - Book 'eer' by ere already exists.
+2025-01-19 02:32:28,833 - INFO - Book added performed successfully.
+2025-01-19 02:32:36,834 - WARNING - Book 'eer' by ere already exists.
+2025-01-19 02:32:36,834 - INFO - Book added performed successfully.
+2025-01-19 02:34:27,431 - INFO - User file read performed successfully.
+2025-01-19 02:34:28,527 - INFO - Get Popular Books performed successfully.
+2025-01-19 02:34:28,527 - INFO - No popular books found.
+2025-01-19 02:34:28,527 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 02:34:28,529 - INFO - Waiting list saved successfully to Files/waiting_list.csv.
+2025-01-19 02:34:28,529 - INFO - Load waiting list performed successfully.
+2025-01-19 02:34:39,698 - INFO - Book 'erer' by erer added successfully.
+2025-01-19 02:34:39,700 - INFO - Book added performed successfully.
+2025-01-19 02:34:44,161 - INFO - Updated copies for 'erer' by erer.
+2025-01-19 02:34:44,162 - INFO - Book added performed successfully.
+2025-01-19 02:34:47,326 - INFO - Updated copies for 'erer' by erer.
+2025-01-19 02:34:47,327 - INFO - Book added performed successfully.
+2025-01-19 02:34:49,640 - ERROR - file_path is required but not provided.
+2025-01-19 02:34:49,640 - INFO - Book removed performed successfully.
+2025-01-19 02:34:55,745 - ERROR - file_path is required but not provided.
+2025-01-19 02:34:55,746 - INFO - Book removed performed successfully.
+2025-01-19 02:34:59,344 - ERROR - file_path is required but not provided.
+2025-01-19 02:34:59,344 - INFO - Book lent performed successfully.
+2025-01-19 02:39:36,481 - INFO - User file read performed successfully.
+2025-01-19 02:39:37,488 - INFO - Get Popular Books performed successfully.
+2025-01-19 02:39:37,489 - INFO - No popular books found.
+2025-01-19 02:39:37,489 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 02:39:37,491 - INFO - Waiting list saved successfully to Files/waiting_list.csv.
+2025-01-19 02:39:37,491 - INFO - Load waiting list performed successfully.
+2025-01-19 02:39:49,940 - INFO - Book 'asas' by asas added successfully.
+2025-01-19 02:39:49,942 - INFO - Book added performed successfully.
+2025-01-19 02:39:53,530 - INFO - Updated copies for 'asas' by asas.
+2025-01-19 02:39:53,530 - INFO - Book added performed successfully.
+2025-01-19 02:39:56,231 - INFO - Updated copies for 'asas' by asas.
+2025-01-19 02:39:56,232 - INFO - Book added performed successfully.
+2025-01-19 02:39:58,729 - INFO - One copy of 'asas' by asas has been removed.
+2025-01-19 02:39:58,730 - INFO - Book removed performed successfully.
+2025-01-19 02:40:00,948 - INFO - One copy of 'asas' by asas has been removed.
+2025-01-19 02:40:00,950 - INFO - Book removed performed successfully.
+2025-01-19 02:40:03,416 - INFO - Book 'asas' by asas has been removed completely.
+2025-01-19 02:40:03,417 - INFO - Book removed performed successfully.
+2025-01-19 02:40:05,794 - INFO - Book 'asas' by asas added successfully.
+2025-01-19 02:40:05,796 - INFO - Book added performed successfully.
+2025-01-19 02:40:19,764 - INFO - Book 'asas' by asas has been successfully loaned.
+2025-01-19 02:40:19,765 - INFO - Book lent performed successfully.
+2025-01-19 02:40:23,353 - WARNING - No available copies of 'asas' by asas to lend.
+2025-01-19 02:40:23,353 - INFO - Book lent performed successfully.
+2025-01-19 02:40:29,110 - INFO - Add to waiting list performed successfully.
+2025-01-19 02:40:36,859 - INFO - Added new entry for 'asas' in the waiting list.
+2025-01-19 02:40:36,860 - INFO - Waiting list saved successfully to Files/waiting_list.csv.
+2025-01-19 02:40:36,860 - INFO - Load waiting list performed successfully.
+2025-01-19 02:40:40,907 - ERROR - file_path is required but not provided.
+2025-01-19 02:40:40,907 - INFO - Load books to list performed successfully.
+2025-01-19 02:45:27,404 - INFO - User file read performed successfully.
+2025-01-19 02:45:29,550 - INFO - Get Popular Books performed successfully.
+2025-01-19 02:45:29,550 - INFO - No popular books found.
+2025-01-19 02:45:29,550 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 02:45:29,551 - INFO - Waiting list saved successfully to Files/waiting_list.csv.
+2025-01-19 02:45:29,551 - INFO - Load waiting list performed successfully.
+2025-01-19 02:45:38,082 - INFO - Get Popular Books performed successfully.
+2025-01-19 02:45:38,082 - INFO - No popular books found.
+2025-01-19 02:45:38,083 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 02:45:39,807 - INFO - Waiting list saved successfully to Files/waiting_list.csv.
+2025-01-19 02:45:39,807 - INFO - Load waiting list performed successfully.
+2025-01-19 02:45:41,442 - INFO - Get Popular Books performed successfully.
+2025-01-19 02:45:41,442 - INFO - No popular books found.
+2025-01-19 02:45:41,442 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 02:45:44,571 - INFO - Waiting list saved successfully to Files/waiting_list.csv.
+2025-01-19 02:45:44,571 - INFO - Load waiting list performed successfully.
+2025-01-19 02:45:45,595 - INFO - Get Popular Books performed successfully.
+2025-01-19 02:45:45,595 - INFO - No popular books found.
+2025-01-19 02:45:45,595 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 02:46:17,981 - INFO - Book 'wewew' by sdfgh added successfully.
+2025-01-19 02:46:17,982 - INFO - Book added performed successfully.
+2025-01-19 02:54:24,949 - INFO - User file read performed successfully.
+2025-01-19 02:54:26,309 - INFO - Get Popular Books performed successfully.
+2025-01-19 02:54:26,309 - INFO - No popular books found.
+2025-01-19 02:54:26,309 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 02:54:26,311 - INFO - Waiting list saved successfully to Files/waiting_list.csv.
+2025-01-19 02:54:26,311 - INFO - Load waiting list performed successfully.
+2025-01-19 02:57:06,378 - INFO - User file read performed successfully.
+2025-01-19 02:57:07,604 - INFO - Get Popular Books performed successfully.
+2025-01-19 02:57:07,604 - INFO - No popular books found.
+2025-01-19 02:57:07,604 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 02:57:07,606 - INFO - Waiting list saved successfully to Files/waiting_list.csv.
+2025-01-19 02:57:07,606 - INFO - Load waiting list performed successfully.
+2025-01-19 02:57:19,554 - INFO - Book 'ererer' by dfdfd added successfully.
+2025-01-19 02:57:19,555 - INFO - Book added performed successfully.
+2025-01-19 02:57:22,063 - ERROR - ValueError: Invalid file path or buffer object type: <class 'SearchStrategy.SearchByTitle'>
+2025-01-19 02:57:22,063 - INFO - Search books performed successfully.
+2025-01-19 02:57:40,865 - ERROR - ValueError: Invalid file path or buffer object type: <class 'SearchStrategy.SearchByTitle'>
+2025-01-19 02:57:40,865 - INFO - Search books performed successfully.
+2025-01-19 03:00:03,262 - INFO - User file read performed successfully.
+2025-01-19 03:00:04,695 - INFO - Get Popular Books performed successfully.
+2025-01-19 03:00:04,695 - INFO - No popular books found.
+2025-01-19 03:00:04,695 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 03:00:04,697 - INFO - Waiting list saved successfully to Files/waiting_list.csv.
+2025-01-19 03:00:04,697 - INFO - Load waiting list performed successfully.
+2025-01-19 03:00:19,449 - INFO - Book 'dddsd' by sdsd added successfully.
+2025-01-19 03:00:19,451 - INFO - Book added performed successfully.
+2025-01-19 03:00:22,552 - ERROR - ValueError: Invalid file path or buffer object type: <class 'SearchStrategy.SearchByTitle'>
+2025-01-19 03:00:22,552 - INFO - Search books performed successfully.
+2025-01-19 03:02:05,195 - INFO - User file read performed successfully.
+2025-01-19 03:02:07,076 - INFO - Get Popular Books performed successfully.
+2025-01-19 03:02:07,076 - INFO - No popular books found.
+2025-01-19 03:02:07,076 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 03:02:07,078 - INFO - Waiting list saved successfully to Files/waiting_list.csv.
+2025-01-19 03:02:07,078 - INFO - Load waiting list performed successfully.
+2025-01-19 03:02:29,342 - INFO - Book 'ssdd' by ssd added successfully.
+2025-01-19 03:02:29,343 - INFO - Book added performed successfully.
+2025-01-19 03:02:34,927 - ERROR - ValueError: Invalid file path or buffer object type: <class 'SearchStrategy.SearchByTitle'>
+2025-01-19 03:02:34,927 - INFO - Search books performed successfully.
+2025-01-19 03:05:15,567 - INFO - User file read performed successfully.
+2025-01-19 03:05:17,103 - INFO - Get Popular Books performed successfully.
+2025-01-19 03:05:17,103 - INFO - No popular books found.
+2025-01-19 03:05:17,103 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 03:05:17,106 - INFO - Waiting list saved successfully to Files/waiting_list.csv.
+2025-01-19 03:05:17,106 - INFO - Load waiting list performed successfully.
+2025-01-19 03:05:27,678 - INFO - Book 'sdsd' by ssdsd added successfully.
+2025-01-19 03:05:27,680 - INFO - Book added performed successfully.
+2025-01-19 03:24:52,187 - INFO - User file read performed successfully.
+2025-01-19 03:24:53,537 - INFO - Get Popular Books performed successfully.
+2025-01-19 03:24:53,537 - INFO - No popular books found.
+2025-01-19 03:24:53,537 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 03:24:53,539 - INFO - Waiting list saved successfully to Files/waiting_list.csv.
+2025-01-19 03:24:53,539 - INFO - Load waiting list performed successfully.
+2025-01-19 03:25:07,481 - INFO - Book 'eer' by erer added successfully.
+2025-01-19 03:25:07,482 - INFO - Book added performed successfully.
+2025-01-19 03:25:11,785 - ERROR - ValueError: Invalid file path or buffer object type: <class 'SearchStrategy.SearchByTitle'>
+2025-01-19 03:25:11,786 - INFO - Search books performed successfully.
+2025-01-19 03:25:14,898 - ERROR - ValueError: Invalid file path or buffer object type: <class 'SearchStrategy.SearchByTitle'>
+2025-01-19 03:25:14,899 - INFO - Search books performed successfully.
+2025-01-19 03:25:32,847 - INFO - Waiting list saved successfully to Files/waiting_list.csv.
+2025-01-19 03:25:32,848 - INFO - Load waiting list performed successfully.
+2025-01-19 03:25:36,442 - INFO - Get Popular Books performed successfully.
+2025-01-19 03:25:36,442 - INFO - No popular books found.
+2025-01-19 03:25:36,442 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 03:25:39,171 - ERROR - ValueError: Invalid file path or buffer object type: <class 'SearchStrategy.SearchByTitle'>
+2025-01-19 03:25:39,171 - INFO - Search books performed successfully.
+2025-01-19 03:27:36,102 - INFO - User file read performed successfully.
+2025-01-19 03:27:36,946 - INFO - Get Popular Books performed successfully.
+2025-01-19 03:27:36,946 - INFO - No popular books found.
+2025-01-19 03:27:36,946 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 03:27:36,948 - INFO - Waiting list saved successfully to Files/waiting_list.csv.
+2025-01-19 03:27:36,948 - INFO - Load waiting list performed successfully.
+2025-01-19 03:27:54,803 - ERROR - ValueError: Invalid file path or buffer object type: <class 'SearchStrategy.SearchByTitle'>
+2025-01-19 03:27:54,803 - INFO - Search books performed successfully.
+2025-01-19 03:27:57,960 - ERROR - ValueError: Invalid file path or buffer object type: <class 'SearchStrategy.SearchByTitle'>
+2025-01-19 03:27:57,960 - INFO - Search books performed successfully.
+2025-01-19 03:30:40,688 - INFO - User file read performed successfully.
+2025-01-19 03:30:41,906 - INFO - Get Popular Books performed successfully.
+2025-01-19 03:30:41,906 - INFO - No popular books found.
+2025-01-19 03:30:41,906 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 03:30:41,908 - INFO - Waiting list saved successfully to Files/waiting_list.csv.
+2025-01-19 03:30:41,908 - INFO - Load waiting list performed successfully.
+2025-01-19 03:34:59,962 - INFO - User file read performed successfully.
+2025-01-19 03:35:00,997 - INFO - Get Popular Books performed successfully.
+2025-01-19 03:35:00,997 - INFO - No popular books found.
+2025-01-19 03:35:00,997 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 03:35:00,999 - INFO - Waiting list saved successfully to Files/waiting_list.csv.
+2025-01-19 03:35:00,999 - INFO - Load waiting list performed successfully.
+2025-01-19 03:36:26,092 - INFO - User file read performed successfully.
+2025-01-19 03:36:27,329 - INFO - Get Popular Books performed successfully.
+2025-01-19 03:36:27,330 - INFO - No popular books found.
+2025-01-19 03:36:27,330 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 03:36:27,332 - INFO - Waiting list saved successfully to Files/waiting_list.csv.
+2025-01-19 03:36:27,332 - INFO - Load waiting list performed successfully.
+2025-01-19 03:36:34,460 - WARNING - Created new DataFrame with columns: ['title', 'author', 'is_loaned', 'copies', 'genre', 'year', 'available_copies', 'loaned_copies']
+2025-01-19 03:41:02,599 - INFO - User file read performed successfully.
+2025-01-19 03:41:03,637 - INFO - Get Popular Books performed successfully.
+2025-01-19 03:41:03,637 - INFO - No popular books found.
+2025-01-19 03:41:03,637 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 03:41:03,639 - INFO - Waiting list saved successfully to Files/waiting_list.csv.
+2025-01-19 03:41:03,639 - INFO - Load waiting list performed successfully.
+2025-01-19 03:41:11,118 - INFO - Books file loaded successfully from Files/books.csv.
+2025-01-19 03:41:11,120 - INFO - Successfully loaded 46 books from the file.
+2025-01-19 03:41:11,120 - INFO - Load books to list performed successfully.
+2025-01-19 03:41:11,120 - INFO - Loaded 46 books for searching.
+2025-01-19 03:41:11,120 - INFO - Search completed with 0 results.
+2025-01-19 03:41:11,120 - INFO - Search results saved to Files/books.csv.
+2025-01-19 03:41:11,120 - INFO - Search books performed successfully.
+2025-01-19 03:44:56,030 - INFO - User file read performed successfully.
+2025-01-19 03:44:57,086 - INFO - Get Popular Books performed successfully.
+2025-01-19 03:44:57,086 - INFO - No popular books found.
+2025-01-19 03:44:57,086 - INFO - Load popular books to CSV performed successfully.
+2025-01-19 03:44:57,088 - INFO - Waiting list saved successfully to Files/waiting_list.csv.
+2025-01-19 03:44:57,088 - INFO - Load waiting list performed successfully.
+2025-01-19 03:45:05,222 - INFO - Books file loaded successfully from Files/books.csv.
+2025-01-19 03:45:05,224 - INFO - Successfully loaded 34 books from the file.
+2025-01-19 03:45:05,224 - INFO - Load books to list performed successfully.
+2025-01-19 03:45:05,224 - INFO - Loaded 34 books for searching.
+2025-01-19 03:45:05,224 - INFO - Search completed with 0 results.
+2025-01-19 03:45:05,225 - INFO - Search results saved to Files/books.csv.
+2025-01-19 03:45:05,225 - INFO - Search books performed successfully.
+2025-01-19 03:45:20,065 - INFO - Books file loaded successfully from Files/books.csv.
+2025-01-19 03:45:20,067 - INFO - Successfully loaded 34 books from the file.
+2025-01-19 03:45:20,067 - INFO - Load books to list performed successfully.
+2025-01-19 03:45:20,068 - INFO - Loaded 34 books for searching.
+2025-01-19 03:45:20,068 - INFO - Search completed with 17 results.
+2025-01-19 03:45:20,076 - INFO - Search results saved to Files/books.csv.
+2025-01-19 03:45:20,076 - INFO - Search books performed successfully.
+2025-01-19 03:45:30,850 - INFO - Books file loaded successfully from Files/books.csv.
+2025-01-19 03:45:30,853 - INFO - Successfully loaded 34 books from the file.
+2025-01-19 03:45:30,853 - INFO - Load books to list performed successfully.
+2025-01-19 03:45:30,853 - INFO - Loaded 34 books for searching.
+2025-01-19 03:45:30,853 - INFO - Search completed with 7 results.
+2025-01-19 03:45:30,857 - INFO - Search results saved to Files/books.csv.
+2025-01-19 03:45:30,857 - INFO - Search books performed successfully.
+2025-01-19 03:45:46,803 - INFO - Waiting list saved successfully to Files/waiting_list.csv.
+2025-01-19 03:45:46,803 - INFO - Load waiting list performed successfully.
+2025-01-19 03:45:51,039 - INFO - Get Popular Books performed successfully.
+2025-01-19 03:45:51,039 - INFO - No popular books found.
+2025-01-19 03:45:51,039 - INFO - Load popular books to CSV performed successfully.
