@@ -1,11 +1,21 @@
+import logging
 import tkinter as tk
 from tkinter import ttk, messagebox
 import pandas as pd
 from FileManagement import FileManagement
-
 from BookFactroy import BookFactory
 from User import User
 from SearchStrategy import *
+
+# Configure the logging
+logging.basicConfig(
+    level=logging.DEBUG,
+    format='%(asctime)s - %(levelname)s - %(message)s',
+    handlers=[
+        logging.FileHandler("Files/log.txt"),
+        logging.StreamHandler()
+    ]
+)
 
 class AskInfoWindow(tk.Toplevel):
     def __init__(self, parent, book, callback):
@@ -123,6 +133,7 @@ class LoginWindow(tk.Toplevel):
             user = User(user_name, password)
             if user.password == stored_hashed_password:
                 messagebox.showinfo("Success", f"Welcome {user_name}!")
+                logging.info("logged in successfully")
                 self.app.logged_in = True
                 self.app.logged_in_user = user_name  # Store the logged-in username
                 self.app.setup_ui()
@@ -130,8 +141,10 @@ class LoginWindow(tk.Toplevel):
                 return True
             else:
                 messagebox.showerror("Error", "Incorrect password")
+                logging.error("login failed, Incorrect password")
         else:
             messagebox.showerror("Error", "User not found")
+            logging.warning("login failed, User not found")
 
 class LibraryApp:
     def __init__(self, root):
@@ -465,6 +478,8 @@ class LibraryApp:
         # Reset any attributes that might interfere with reinitialization
         if hasattr(self, 'tree'):
             del self.tree
+
+        logging.info("log out successful")
 
         # Show the login window again
         self.login_window = LoginWindow(self)

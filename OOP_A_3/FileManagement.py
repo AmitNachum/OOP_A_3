@@ -19,7 +19,6 @@ logging.basicConfig(
 )
 
 # Define decorators
-# Define a decorator to log actions with different log levels
 def log_action(action, level=logging.INFO):
     """Decorator to log the action performed with a specific logging level."""
     def decorator(func):
