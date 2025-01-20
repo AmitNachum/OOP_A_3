@@ -1,3 +1,4 @@
+import ast
 import csv
 import functools
 import inspect
@@ -99,6 +100,30 @@ def ensure_csv_columns(required_columns):
 
 class FileManagement:
     waiting_list = {}
+
+    @staticmethod
+    @log_action("Got User Notification")
+    @handle_exceptions
+    def get_user_notifications(user_name):
+        """Fetch the notifications for a given user from the database."""
+        users = FileManagement.read_users()
+        user_row = users[users['user_name'] == user_name]
+
+        if not user_row.empty:
+            # Access the serialized 'notifications' field
+            notifications_str = user_row.iloc[0]['notifications']
+
+            try:
+                # Convert the serialized string back into a dictionary
+                notifications = ast.literal_eval(notifications_str)
+
+                # Return the messages for the specific user
+                if isinstance(notifications, dict):
+                    return notifications
+            except (ValueError, SyntaxError):
+                logging.error(f"Failed to parse notifications for user: {user_name}")
+                return {}
+        return {}
 
     @staticmethod
     @log_action("Load users to list")
@@ -273,10 +298,13 @@ class FileManagement:
                 logging.info(f"Book '{book.title}' by {book.author} has been removed completely.")
             else:
                 logging.warning(f"Cannot remove '{book.title}' by {book.author} because there are loaned copies.")
+                return False
         else:
             logging.warning(f"Book '{book.title}' by {book.author} was not found in the library.")
+            return False
 
         df.to_csv(file_path, index=False)
+        return True
 
     @staticmethod
     @log_action("Book lent")
@@ -430,17 +458,18 @@ class FileManagement:
 
         if not book_mask.any():
             logging.warning(f"Book '{book.title}' by {book.author} was not found.")
-            return
+            return False
 
         index = df[book_mask].index[0]
         if df.at[index, "loaned_copies"] <= 0:
             logging.warning(f"Cannot return a book that is not loaned.")
-            return
+            return False
 
         df.at[index, "available_copies"] += 1
         df.at[index, "loaned_copies"] -= 1
         df.to_csv(file_path, index=False)
         logging.info(f"Book '{book.title}' by {book.author} has been successfully returned.")
+        return True
 
 
 if __name__ == '__main__':

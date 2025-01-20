@@ -2166,3 +2166,925 @@
 2025-01-20 17:03:13,188 - INFO - Successfully loaded 1 users from the file.
 2025-01-20 17:03:13,188 - INFO - Load users to list performed successfully.
 2025-01-20 17:03:13,189 - INFO - Notification Added performed successfully.
+2025-01-20 18:28:09,876 - INFO - User file read performed successfully.
+2025-01-20 18:28:12,185 - INFO - logged in successfully
+2025-01-20 18:28:12,192 - INFO - Successfully loaded 34 books from the file.
+2025-01-20 18:28:12,192 - INFO - Load books to list performed successfully.
+2025-01-20 18:28:12,192 - INFO - Get Popular Books performed successfully.
+2025-01-20 18:28:12,195 - INFO - Popular books saved to Files/popular_books.csv.
+2025-01-20 18:28:12,195 - INFO - Load popular books to CSV performed successfully.
+2025-01-20 18:28:12,195 - INFO - Waiting list saved successfully to Files/waiting_list.csv.
+2025-01-20 18:28:12,195 - INFO - Load waiting list performed successfully.
+2025-01-20 18:30:06,470 - INFO - Books file loaded successfully from Files/books.csv.
+2025-01-20 18:30:06,472 - INFO - Successfully loaded 34 books from the file.
+2025-01-20 18:30:06,472 - INFO - Load books to list performed successfully.
+2025-01-20 18:30:06,472 - INFO - Loaded 34 books for searching.
+2025-01-20 18:30:06,472 - INFO - Search completed with 17 results.
+2025-01-20 18:30:06,477 - INFO - Search results saved to Files/books.csv.
+2025-01-20 18:30:06,477 - INFO - Search books performed successfully.
+2025-01-20 18:30:13,022 - INFO - Successfully loaded 34 books from the file.
+2025-01-20 18:30:13,023 - INFO - Load books to list performed successfully.
+2025-01-20 18:30:13,023 - INFO - Get Popular Books performed successfully.
+2025-01-20 18:30:13,027 - INFO - Popular books saved to Files/popular_books.csv.
+2025-01-20 18:30:13,027 - INFO - Load popular books to CSV performed successfully.
+2025-01-20 18:30:18,133 - INFO - Waiting list saved successfully to Files/waiting_list.csv.
+2025-01-20 18:30:18,133 - INFO - Load waiting list performed successfully.
+2025-01-20 18:30:25,485 - INFO - Successfully loaded 34 books from the file.
+2025-01-20 18:30:25,486 - INFO - Load books to list performed successfully.
+2025-01-20 18:30:25,486 - INFO - Get Popular Books performed successfully.
+2025-01-20 18:30:25,492 - INFO - Popular books saved to Files/popular_books.csv.
+2025-01-20 18:30:25,492 - INFO - Load popular books to CSV performed successfully.
+2025-01-20 18:31:10,376 - INFO - log out successful
+2025-01-20 18:31:17,548 - INFO - User file read performed successfully.
+2025-01-20 18:31:20,011 - INFO - logged in successfully
+2025-01-20 18:31:20,016 - INFO - Successfully loaded 34 books from the file.
+2025-01-20 18:31:20,016 - INFO - Load books to list performed successfully.
+2025-01-20 18:31:20,016 - INFO - Get Popular Books performed successfully.
+2025-01-20 18:31:20,019 - INFO - Popular books saved to Files/popular_books.csv.
+2025-01-20 18:31:20,019 - INFO - Load popular books to CSV performed successfully.
+2025-01-20 18:31:20,019 - INFO - Waiting list saved successfully to Files/waiting_list.csv.
+2025-01-20 18:31:20,019 - INFO - Load waiting list performed successfully.
+2025-01-20 18:38:09,172 - INFO - User file read performed successfully.
+2025-01-20 18:38:10,727 - INFO - logged in successfully
+2025-01-20 18:38:10,734 - INFO - Successfully loaded 34 books from the file.
+2025-01-20 18:38:10,734 - INFO - Load books to list performed successfully.
+2025-01-20 18:38:10,734 - INFO - Get Popular Books performed successfully.
+2025-01-20 18:38:10,737 - INFO - Popular books saved to Files/popular_books.csv.
+2025-01-20 18:38:10,737 - INFO - Load popular books to CSV performed successfully.
+2025-01-20 18:38:10,737 - INFO - Waiting list saved successfully to Files/waiting_list.csv.
+2025-01-20 18:38:10,737 - INFO - Load waiting list performed successfully.
+2025-01-20 18:38:21,709 - INFO - Book 'sasas' by asasas added successfully.
+2025-01-20 18:38:21,710 - INFO - Book added performed successfully.
+2025-01-20 18:38:21,711 - INFO - Successfully loaded 1 users from the file.
+2025-01-20 18:38:21,711 - INFO - Load users to list performed successfully.
+2025-01-20 18:38:21,713 - INFO - Notification Added performed successfully.
+2025-01-20 18:38:37,513 - INFO - Updated copies for 'sasas' by asasas.
+2025-01-20 18:38:37,514 - INFO - Book added performed successfully.
+2025-01-20 18:38:37,514 - INFO - Successfully loaded 1 users from the file.
+2025-01-20 18:38:37,514 - INFO - Load users to list performed successfully.
+2025-01-20 18:38:37,516 - INFO - Notification Added performed successfully.
+2025-01-20 18:38:46,520 - INFO - One copy of 'sasas' by asasas has been removed.
+2025-01-20 18:38:46,521 - INFO - Book removed performed successfully.
+2025-01-20 18:38:46,523 - INFO - Successfully loaded 1 users from the file.
+2025-01-20 18:38:46,523 - INFO - Load users to list performed successfully.
+2025-01-20 18:38:46,525 - INFO - Notification Added performed successfully.
+2025-01-20 18:50:55,848 - INFO - User file read performed successfully.
+2025-01-20 18:50:57,478 - INFO - logged in successfully
+2025-01-20 18:50:57,484 - INFO - Successfully loaded 35 books from the file.
+2025-01-20 18:50:57,485 - INFO - Load books to list performed successfully.
+2025-01-20 18:50:57,485 - INFO - Get Popular Books performed successfully.
+2025-01-20 18:50:57,488 - INFO - Popular books saved to Files/popular_books.csv.
+2025-01-20 18:50:57,488 - INFO - Load popular books to CSV performed successfully.
+2025-01-20 18:50:57,488 - INFO - Waiting list saved successfully to Files/waiting_list.csv.
+2025-01-20 18:50:57,488 - INFO - Load waiting list performed successfully.
+2025-01-20 18:51:14,680 - INFO - Book 'aaas' by asas added successfully.
+2025-01-20 18:51:14,682 - INFO - Book added performed successfully.
+2025-01-20 18:51:14,683 - INFO - Successfully loaded 1 users from the file.
+2025-01-20 18:51:14,683 - INFO - Load users to list performed successfully.
+2025-01-20 18:51:14,685 - INFO - Notification Added performed successfully.
+2025-01-20 18:51:59,775 - INFO - User file read performed successfully.
+2025-01-20 18:52:01,123 - INFO - logged in successfully
+2025-01-20 18:52:01,129 - INFO - Successfully loaded 36 books from the file.
+2025-01-20 18:52:01,130 - INFO - Load books to list performed successfully.
+2025-01-20 18:52:01,130 - INFO - Get Popular Books performed successfully.
+2025-01-20 18:52:01,132 - INFO - Popular books saved to Files/popular_books.csv.
+2025-01-20 18:52:01,133 - INFO - Load popular books to CSV performed successfully.
+2025-01-20 18:52:01,133 - INFO - Waiting list saved successfully to Files/waiting_list.csv.
+2025-01-20 18:52:01,133 - INFO - Load waiting list performed successfully.
+2025-01-20 18:52:10,126 - INFO - Book 'wwe' by wewedsdsdd added successfully.
+2025-01-20 18:52:10,127 - INFO - Book added performed successfully.
+2025-01-20 18:52:10,128 - INFO - Successfully loaded 1 users from the file.
+2025-01-20 18:52:10,128 - INFO - Load users to list performed successfully.
+2025-01-20 18:52:10,129 - INFO - Notification Added performed successfully.
+2025-01-20 18:52:27,364 - INFO - Updated copies for 'wwe' by wewedsdsdd.
+2025-01-20 18:52:27,366 - INFO - Book added performed successfully.
+2025-01-20 18:52:27,367 - INFO - Successfully loaded 1 users from the file.
+2025-01-20 18:52:27,367 - INFO - Load users to list performed successfully.
+2025-01-20 18:52:27,369 - INFO - Notification Added performed successfully.
+2025-01-20 18:52:35,559 - INFO - One copy of 'wwe' by wewedsdsdd has been removed.
+2025-01-20 18:52:35,560 - INFO - Book removed performed successfully.
+2025-01-20 18:52:35,561 - INFO - Successfully loaded 1 users from the file.
+2025-01-20 18:52:35,561 - INFO - Load users to list performed successfully.
+2025-01-20 18:52:35,562 - INFO - Notification Added performed successfully.
+2025-01-20 18:53:21,099 - INFO - User file read performed successfully.
+2025-01-20 18:53:22,551 - INFO - logged in successfully
+2025-01-20 18:53:22,558 - INFO - Successfully loaded 37 books from the file.
+2025-01-20 18:53:22,558 - INFO - Load books to list performed successfully.
+2025-01-20 18:53:22,558 - INFO - Get Popular Books performed successfully.
+2025-01-20 18:53:22,561 - INFO - Popular books saved to Files/popular_books.csv.
+2025-01-20 18:53:22,561 - INFO - Load popular books to CSV performed successfully.
+2025-01-20 18:53:22,562 - INFO - Waiting list saved successfully to Files/waiting_list.csv.
+2025-01-20 18:53:22,562 - INFO - Load waiting list performed successfully.
+2025-01-20 18:53:33,265 - INFO - Book 'wssd' by sdsd added successfully.
+2025-01-20 18:53:33,265 - INFO - Book added performed successfully.
+2025-01-20 18:53:33,266 - INFO - Successfully loaded 1 users from the file.
+2025-01-20 18:53:33,266 - INFO - Load users to list performed successfully.
+2025-01-20 18:53:33,267 - INFO - Notification Added performed successfully.
+2025-01-20 18:53:36,925 - INFO - Updated copies for 'wssd' by sdsd.
+2025-01-20 18:53:36,926 - INFO - Book added performed successfully.
+2025-01-20 18:53:36,927 - INFO - Successfully loaded 1 users from the file.
+2025-01-20 18:53:36,927 - INFO - Load users to list performed successfully.
+2025-01-20 18:53:36,928 - INFO - Notification Added performed successfully.
+2025-01-20 18:53:42,911 - INFO - One copy of 'wssd' by sdsd has been removed.
+2025-01-20 18:53:42,913 - INFO - Book removed performed successfully.
+2025-01-20 18:53:42,914 - INFO - Successfully loaded 1 users from the file.
+2025-01-20 18:53:42,914 - INFO - Load users to list performed successfully.
+2025-01-20 18:53:42,916 - INFO - Notification Added performed successfully.
+2025-01-20 18:56:18,423 - INFO - User file read performed successfully.
+2025-01-20 18:56:20,155 - INFO - logged in successfully
+2025-01-20 18:56:20,162 - INFO - Successfully loaded 38 books from the file.
+2025-01-20 18:56:20,162 - INFO - Load books to list performed successfully.
+2025-01-20 18:56:20,162 - INFO - Get Popular Books performed successfully.
+2025-01-20 18:56:20,165 - INFO - Popular books saved to Files/popular_books.csv.
+2025-01-20 18:56:20,165 - INFO - Load popular books to CSV performed successfully.
+2025-01-20 18:56:20,166 - INFO - Waiting list saved successfully to Files/waiting_list.csv.
+2025-01-20 18:56:20,166 - INFO - Load waiting list performed successfully.
+2025-01-20 18:56:28,754 - INFO - Book 'sdsd' by sdsd added successfully.
+2025-01-20 18:56:28,755 - INFO - Book added performed successfully.
+2025-01-20 18:56:28,756 - INFO - Successfully loaded 1 users from the file.
+2025-01-20 18:56:28,756 - INFO - Load users to list performed successfully.
+2025-01-20 18:56:28,757 - INFO - Notification Added performed successfully.
+2025-01-20 18:58:18,318 - INFO - User file read performed successfully.
+2025-01-20 18:58:19,487 - INFO - logged in successfully
+2025-01-20 18:58:19,494 - INFO - Successfully loaded 39 books from the file.
+2025-01-20 18:58:19,494 - INFO - Load books to list performed successfully.
+2025-01-20 18:58:19,494 - INFO - Get Popular Books performed successfully.
+2025-01-20 18:58:19,498 - INFO - Popular books saved to Files/popular_books.csv.
+2025-01-20 18:58:19,498 - INFO - Load popular books to CSV performed successfully.
+2025-01-20 18:58:19,499 - INFO - Waiting list saved successfully to Files/waiting_list.csv.
+2025-01-20 18:58:19,499 - INFO - Load waiting list performed successfully.
+2025-01-20 18:58:26,533 - INFO - Book 'asasa' by sdsd added successfully.
+2025-01-20 18:58:26,533 - INFO - Book added performed successfully.
+2025-01-20 18:58:26,534 - INFO - Successfully loaded 1 users from the file.
+2025-01-20 18:58:26,534 - INFO - Load users to list performed successfully.
+2025-01-20 18:58:26,535 - INFO - Notification Added performed successfully.
+2025-01-20 18:58:30,587 - INFO - Book 'asasa' by sdsd has been removed completely.
+2025-01-20 18:58:30,589 - INFO - Book removed performed successfully.
+2025-01-20 18:58:30,590 - INFO - Successfully loaded 1 users from the file.
+2025-01-20 18:58:30,590 - INFO - Load users to list performed successfully.
+2025-01-20 18:58:30,592 - INFO - Notification Added performed successfully.
+2025-01-20 18:58:39,470 - WARNING - Book 'asasa' by sdsd was not found in the library.
+2025-01-20 18:58:39,472 - INFO - Book removed performed successfully.
+2025-01-20 18:58:39,473 - INFO - Successfully loaded 1 users from the file.
+2025-01-20 18:58:39,473 - INFO - Load users to list performed successfully.
+2025-01-20 18:58:39,475 - INFO - Notification Added performed successfully.
+2025-01-20 18:59:14,597 - INFO - User file read performed successfully.
+2025-01-20 18:59:16,051 - INFO - logged in successfully
+2025-01-20 18:59:16,058 - INFO - Successfully loaded 39 books from the file.
+2025-01-20 18:59:16,058 - INFO - Load books to list performed successfully.
+2025-01-20 18:59:16,058 - INFO - Get Popular Books performed successfully.
+2025-01-20 18:59:16,061 - INFO - Popular books saved to Files/popular_books.csv.
+2025-01-20 18:59:16,061 - INFO - Load popular books to CSV performed successfully.
+2025-01-20 18:59:16,062 - INFO - Waiting list saved successfully to Files/waiting_list.csv.
+2025-01-20 18:59:16,062 - INFO - Load waiting list performed successfully.
+2025-01-20 18:59:25,875 - INFO - Updated copies for 'sdsd' by sdsd.
+2025-01-20 18:59:25,876 - INFO - Book added performed successfully.
+2025-01-20 18:59:25,876 - INFO - Successfully loaded 1 users from the file.
+2025-01-20 18:59:25,876 - INFO - Load users to list performed successfully.
+2025-01-20 18:59:25,877 - INFO - Notification Added performed successfully.
+2025-01-20 18:59:34,628 - INFO - One copy of 'sdsd' by sdsd has been removed.
+2025-01-20 18:59:34,629 - INFO - Book removed performed successfully.
+2025-01-20 18:59:34,630 - INFO - Successfully loaded 1 users from the file.
+2025-01-20 18:59:34,630 - INFO - Load users to list performed successfully.
+2025-01-20 18:59:34,632 - INFO - Notification Added performed successfully.
+2025-01-20 18:59:38,759 - INFO - Updated copies for 'sdsd' by sdsd.
+2025-01-20 18:59:38,760 - INFO - Book added performed successfully.
+2025-01-20 18:59:38,761 - INFO - Successfully loaded 1 users from the file.
+2025-01-20 18:59:38,761 - INFO - Load users to list performed successfully.
+2025-01-20 18:59:38,763 - INFO - Notification Added performed successfully.
+2025-01-20 18:59:45,689 - INFO - One copy of 'sdsd' by sdsd has been removed.
+2025-01-20 18:59:45,691 - INFO - Book removed performed successfully.
+2025-01-20 18:59:45,692 - INFO - Successfully loaded 1 users from the file.
+2025-01-20 18:59:45,692 - INFO - Load users to list performed successfully.
+2025-01-20 18:59:45,694 - INFO - Notification Added performed successfully.
+2025-01-20 19:06:17,589 - INFO - User file read performed successfully.
+2025-01-20 19:06:19,046 - INFO - logged in successfully
+2025-01-20 19:06:19,053 - INFO - Successfully loaded 39 books from the file.
+2025-01-20 19:06:19,053 - INFO - Load books to list performed successfully.
+2025-01-20 19:06:19,053 - INFO - Get Popular Books performed successfully.
+2025-01-20 19:06:19,056 - INFO - Popular books saved to Files/popular_books.csv.
+2025-01-20 19:06:19,056 - INFO - Load popular books to CSV performed successfully.
+2025-01-20 19:06:19,057 - INFO - Waiting list saved successfully to Files/waiting_list.csv.
+2025-01-20 19:06:19,057 - INFO - Load waiting list performed successfully.
+2025-01-20 19:06:27,998 - INFO - Book 'ssd' by sdd added successfully.
+2025-01-20 19:06:27,999 - INFO - Book added performed successfully.
+2025-01-20 19:06:27,999 - INFO - Successfully loaded 1 users from the file.
+2025-01-20 19:06:27,999 - INFO - Load users to list performed successfully.
+2025-01-20 19:06:28,000 - INFO - Notification Added performed successfully.
+2025-01-20 19:06:35,657 - INFO - Updated copies for 'ssd' by sdd.
+2025-01-20 19:06:35,658 - INFO - Book added performed successfully.
+2025-01-20 19:06:35,659 - INFO - Successfully loaded 1 users from the file.
+2025-01-20 19:06:35,659 - INFO - Load users to list performed successfully.
+2025-01-20 19:06:35,661 - INFO - Notification Added performed successfully.
+2025-01-20 19:06:43,543 - INFO - One copy of 'ssd' by sdd has been removed.
+2025-01-20 19:06:43,545 - INFO - Book removed performed successfully.
+2025-01-20 19:06:43,546 - INFO - Successfully loaded 1 users from the file.
+2025-01-20 19:06:43,546 - INFO - Load users to list performed successfully.
+2025-01-20 19:06:43,548 - INFO - Notification Added performed successfully.
+2025-01-20 19:09:15,608 - INFO - User file read performed successfully.
+2025-01-20 19:09:17,089 - INFO - logged in successfully
+2025-01-20 19:09:17,093 - INFO - Successfully loaded 1 users from the file.
+2025-01-20 19:09:17,093 - INFO - Load users to list performed successfully.
+2025-01-20 19:09:17,096 - INFO - Successfully loaded 40 books from the file.
+2025-01-20 19:09:17,096 - INFO - Load books to list performed successfully.
+2025-01-20 19:09:17,096 - INFO - Get Popular Books performed successfully.
+2025-01-20 19:09:17,099 - INFO - Popular books saved to Files/popular_books.csv.
+2025-01-20 19:09:17,099 - INFO - Load popular books to CSV performed successfully.
+2025-01-20 19:09:17,100 - INFO - Waiting list saved successfully to Files/waiting_list.csv.
+2025-01-20 19:09:17,100 - INFO - Load waiting list performed successfully.
+2025-01-20 19:09:30,780 - INFO - Book 'add' by sdd added successfully.
+2025-01-20 19:09:30,782 - INFO - Book added performed successfully.
+2025-01-20 19:09:30,784 - INFO - Notification Added performed successfully.
+2025-01-20 19:09:47,291 - INFO - Updated copies for 'add' by sdd.
+2025-01-20 19:09:47,292 - INFO - Book added performed successfully.
+2025-01-20 19:09:47,293 - INFO - Notification Added performed successfully.
+2025-01-20 19:09:56,127 - INFO - One copy of 'add' by sdd has been removed.
+2025-01-20 19:09:56,129 - INFO - Book removed performed successfully.
+2025-01-20 19:09:56,132 - INFO - Notification Added performed successfully.
+2025-01-20 19:28:21,737 - INFO - User file read performed successfully.
+2025-01-20 19:28:23,846 - INFO - logged in successfully
+2025-01-20 19:28:23,851 - INFO - Successfully loaded 1 users from the file.
+2025-01-20 19:28:23,851 - INFO - Load users to list performed successfully.
+2025-01-20 19:28:23,854 - INFO - Successfully loaded 41 books from the file.
+2025-01-20 19:28:23,854 - INFO - Load books to list performed successfully.
+2025-01-20 19:28:23,854 - INFO - Get Popular Books performed successfully.
+2025-01-20 19:28:23,857 - INFO - Popular books saved to Files/popular_books.csv.
+2025-01-20 19:28:23,857 - INFO - Load popular books to CSV performed successfully.
+2025-01-20 19:28:23,857 - INFO - Waiting list saved successfully to Files/waiting_list.csv.
+2025-01-20 19:28:23,857 - INFO - Load waiting list performed successfully.
+2025-01-20 19:28:29,779 - INFO - User file read performed successfully.
+2025-01-20 19:29:29,247 - INFO - User file read performed successfully.
+2025-01-20 19:29:30,771 - INFO - logged in successfully
+2025-01-20 19:29:30,777 - INFO - Successfully loaded 1 users from the file.
+2025-01-20 19:29:30,777 - INFO - Load users to list performed successfully.
+2025-01-20 19:29:30,779 - INFO - Successfully loaded 41 books from the file.
+2025-01-20 19:29:30,779 - INFO - Load books to list performed successfully.
+2025-01-20 19:29:30,779 - INFO - Get Popular Books performed successfully.
+2025-01-20 19:29:30,782 - INFO - Popular books saved to Files/popular_books.csv.
+2025-01-20 19:29:30,782 - INFO - Load popular books to CSV performed successfully.
+2025-01-20 19:29:30,783 - INFO - Waiting list saved successfully to Files/waiting_list.csv.
+2025-01-20 19:29:30,783 - INFO - Load waiting list performed successfully.
+2025-01-20 19:29:32,334 - INFO - User file read performed successfully.
+2025-01-20 19:43:50,283 - INFO - User file read performed successfully.
+2025-01-20 19:43:51,783 - INFO - logged in successfully
+2025-01-20 19:43:51,787 - INFO - Successfully loaded 1 users from the file.
+2025-01-20 19:43:51,787 - INFO - Load users to list performed successfully.
+2025-01-20 19:43:51,790 - INFO - Successfully loaded 41 books from the file.
+2025-01-20 19:43:51,790 - INFO - Load books to list performed successfully.
+2025-01-20 19:43:51,790 - INFO - Get Popular Books performed successfully.
+2025-01-20 19:43:51,793 - INFO - Popular books saved to Files/popular_books.csv.
+2025-01-20 19:43:51,793 - INFO - Load popular books to CSV performed successfully.
+2025-01-20 19:43:51,793 - INFO - Waiting list saved successfully to Files/waiting_list.csv.
+2025-01-20 19:43:51,794 - INFO - Load waiting list performed successfully.
+2025-01-20 19:45:44,584 - INFO - User file read performed successfully.
+2025-01-20 19:45:45,995 - INFO - logged in successfully
+2025-01-20 19:45:45,999 - INFO - Successfully loaded 1 users from the file.
+2025-01-20 19:45:45,999 - INFO - Load users to list performed successfully.
+2025-01-20 19:45:46,002 - INFO - Successfully loaded 41 books from the file.
+2025-01-20 19:45:46,002 - INFO - Load books to list performed successfully.
+2025-01-20 19:45:46,002 - INFO - Get Popular Books performed successfully.
+2025-01-20 19:45:46,005 - INFO - Popular books saved to Files/popular_books.csv.
+2025-01-20 19:45:46,005 - INFO - Load popular books to CSV performed successfully.
+2025-01-20 19:45:46,006 - INFO - Waiting list saved successfully to Files/waiting_list.csv.
+2025-01-20 19:45:46,006 - INFO - Load waiting list performed successfully.
+2025-01-20 19:45:47,549 - INFO - User file read performed successfully.
+2025-01-20 19:46:19,289 - INFO - User file read performed successfully.
+2025-01-20 19:46:21,128 - INFO - logged in successfully
+2025-01-20 19:46:21,132 - INFO - Successfully loaded 1 users from the file.
+2025-01-20 19:46:21,133 - INFO - Load users to list performed successfully.
+2025-01-20 19:46:21,135 - INFO - Successfully loaded 41 books from the file.
+2025-01-20 19:46:21,135 - INFO - Load books to list performed successfully.
+2025-01-20 19:46:21,135 - INFO - Get Popular Books performed successfully.
+2025-01-20 19:46:21,138 - INFO - Popular books saved to Files/popular_books.csv.
+2025-01-20 19:46:21,138 - INFO - Load popular books to CSV performed successfully.
+2025-01-20 19:46:21,139 - INFO - Waiting list saved successfully to Files/waiting_list.csv.
+2025-01-20 19:46:21,139 - INFO - Load waiting list performed successfully.
+2025-01-20 19:46:22,508 - INFO - User file read performed successfully.
+2025-01-20 19:47:03,624 - INFO - User file read performed successfully.
+2025-01-20 19:47:05,114 - INFO - logged in successfully
+2025-01-20 19:47:05,118 - INFO - Successfully loaded 1 users from the file.
+2025-01-20 19:47:05,118 - INFO - Load users to list performed successfully.
+2025-01-20 19:47:05,121 - INFO - Successfully loaded 41 books from the file.
+2025-01-20 19:47:05,121 - INFO - Load books to list performed successfully.
+2025-01-20 19:47:05,121 - INFO - Get Popular Books performed successfully.
+2025-01-20 19:47:05,124 - INFO - Popular books saved to Files/popular_books.csv.
+2025-01-20 19:47:05,124 - INFO - Load popular books to CSV performed successfully.
+2025-01-20 19:47:05,124 - INFO - Waiting list saved successfully to Files/waiting_list.csv.
+2025-01-20 19:47:05,124 - INFO - Load waiting list performed successfully.
+2025-01-20 19:47:35,403 - INFO - User file read performed successfully.
+2025-01-20 19:47:36,728 - INFO - logged in successfully
+2025-01-20 19:47:36,733 - INFO - Successfully loaded 1 users from the file.
+2025-01-20 19:47:36,733 - INFO - Load users to list performed successfully.
+2025-01-20 19:47:36,736 - INFO - Successfully loaded 41 books from the file.
+2025-01-20 19:47:36,736 - INFO - Load books to list performed successfully.
+2025-01-20 19:47:36,736 - INFO - Get Popular Books performed successfully.
+2025-01-20 19:47:36,739 - INFO - Popular books saved to Files/popular_books.csv.
+2025-01-20 19:47:36,739 - INFO - Load popular books to CSV performed successfully.
+2025-01-20 19:47:36,740 - INFO - Waiting list saved successfully to Files/waiting_list.csv.
+2025-01-20 19:47:36,740 - INFO - Load waiting list performed successfully.
+2025-01-20 19:47:38,008 - INFO - User file read performed successfully.
+2025-01-20 19:50:50,775 - INFO - User file read performed successfully.
+2025-01-20 19:50:52,076 - INFO - logged in successfully
+2025-01-20 19:50:52,080 - INFO - Successfully loaded 1 users from the file.
+2025-01-20 19:50:52,080 - INFO - Load users to list performed successfully.
+2025-01-20 19:50:52,083 - INFO - Successfully loaded 41 books from the file.
+2025-01-20 19:50:52,083 - INFO - Load books to list performed successfully.
+2025-01-20 19:50:52,083 - INFO - Get Popular Books performed successfully.
+2025-01-20 19:50:52,086 - INFO - Popular books saved to Files/popular_books.csv.
+2025-01-20 19:50:52,086 - INFO - Load popular books to CSV performed successfully.
+2025-01-20 19:50:52,086 - INFO - Waiting list saved successfully to Files/waiting_list.csv.
+2025-01-20 19:50:52,086 - INFO - Load waiting list performed successfully.
+2025-01-20 19:50:53,718 - INFO - User file read performed successfully.
+2025-01-20 19:50:57,677 - INFO - User file read performed successfully.
+2025-01-20 19:51:20,975 - INFO - User file read performed successfully.
+2025-01-20 19:51:22,411 - INFO - logged in successfully
+2025-01-20 19:51:22,415 - INFO - Successfully loaded 1 users from the file.
+2025-01-20 19:51:22,415 - INFO - Load users to list performed successfully.
+2025-01-20 19:51:22,418 - INFO - Successfully loaded 41 books from the file.
+2025-01-20 19:51:22,418 - INFO - Load books to list performed successfully.
+2025-01-20 19:51:22,418 - INFO - Get Popular Books performed successfully.
+2025-01-20 19:51:22,421 - INFO - Popular books saved to Files/popular_books.csv.
+2025-01-20 19:51:22,421 - INFO - Load popular books to CSV performed successfully.
+2025-01-20 19:51:22,422 - INFO - Waiting list saved successfully to Files/waiting_list.csv.
+2025-01-20 19:51:22,422 - INFO - Load waiting list performed successfully.
+2025-01-20 19:51:24,642 - INFO - User file read performed successfully.
+2025-01-20 19:51:59,345 - INFO - User file read performed successfully.
+2025-01-20 19:52:00,658 - INFO - logged in successfully
+2025-01-20 19:52:00,663 - INFO - Successfully loaded 1 users from the file.
+2025-01-20 19:52:00,663 - INFO - Load users to list performed successfully.
+2025-01-20 19:52:00,666 - INFO - Successfully loaded 41 books from the file.
+2025-01-20 19:52:00,666 - INFO - Load books to list performed successfully.
+2025-01-20 19:52:00,666 - INFO - Get Popular Books performed successfully.
+2025-01-20 19:52:00,669 - INFO - Popular books saved to Files/popular_books.csv.
+2025-01-20 19:52:00,669 - INFO - Load popular books to CSV performed successfully.
+2025-01-20 19:52:00,670 - INFO - Waiting list saved successfully to Files/waiting_list.csv.
+2025-01-20 19:52:00,670 - INFO - Load waiting list performed successfully.
+2025-01-20 19:52:01,907 - INFO - User file read performed successfully.
+2025-01-20 19:52:44,955 - INFO - User file read performed successfully.
+2025-01-20 19:52:46,590 - INFO - logged in successfully
+2025-01-20 19:52:46,596 - INFO - Successfully loaded 1 users from the file.
+2025-01-20 19:52:46,596 - INFO - Load users to list performed successfully.
+2025-01-20 19:52:46,598 - INFO - Successfully loaded 41 books from the file.
+2025-01-20 19:52:46,598 - INFO - Load books to list performed successfully.
+2025-01-20 19:52:46,598 - INFO - Get Popular Books performed successfully.
+2025-01-20 19:52:46,601 - INFO - Popular books saved to Files/popular_books.csv.
+2025-01-20 19:52:46,601 - INFO - Load popular books to CSV performed successfully.
+2025-01-20 19:52:46,602 - INFO - Waiting list saved successfully to Files/waiting_list.csv.
+2025-01-20 19:52:46,602 - INFO - Load waiting list performed successfully.
+2025-01-20 19:52:48,395 - INFO - User file read performed successfully.
+2025-01-20 19:55:01,495 - INFO - User file read performed successfully.
+2025-01-20 19:55:02,730 - INFO - logged in successfully
+2025-01-20 19:55:02,734 - INFO - Successfully loaded 1 users from the file.
+2025-01-20 19:55:02,734 - INFO - Load users to list performed successfully.
+2025-01-20 19:55:02,737 - INFO - Successfully loaded 41 books from the file.
+2025-01-20 19:55:02,737 - INFO - Load books to list performed successfully.
+2025-01-20 19:55:02,737 - INFO - Get Popular Books performed successfully.
+2025-01-20 19:55:02,740 - INFO - Popular books saved to Files/popular_books.csv.
+2025-01-20 19:55:02,740 - INFO - Load popular books to CSV performed successfully.
+2025-01-20 19:55:02,741 - INFO - Waiting list saved successfully to Files/waiting_list.csv.
+2025-01-20 19:55:02,741 - INFO - Load waiting list performed successfully.
+2025-01-20 19:55:04,671 - INFO - User file read performed successfully.
+2025-01-20 19:59:06,071 - INFO - User file read performed successfully.
+2025-01-20 19:59:08,318 - INFO - logged in successfully
+2025-01-20 19:59:08,322 - INFO - Successfully loaded 1 users from the file.
+2025-01-20 19:59:08,322 - INFO - Load users to list performed successfully.
+2025-01-20 19:59:08,325 - INFO - Successfully loaded 41 books from the file.
+2025-01-20 19:59:08,325 - INFO - Load books to list performed successfully.
+2025-01-20 19:59:08,325 - INFO - Get Popular Books performed successfully.
+2025-01-20 19:59:08,328 - INFO - Popular books saved to Files/popular_books.csv.
+2025-01-20 19:59:08,328 - INFO - Load popular books to CSV performed successfully.
+2025-01-20 19:59:08,329 - INFO - Waiting list saved successfully to Files/waiting_list.csv.
+2025-01-20 19:59:08,329 - INFO - Load waiting list performed successfully.
+2025-01-20 19:59:09,982 - INFO - User file read performed successfully.
+2025-01-20 19:59:37,371 - INFO - Book 'aaaa' by cccc added successfully.
+2025-01-20 19:59:37,372 - INFO - Book added performed successfully.
+2025-01-20 19:59:37,374 - INFO - Notification Added performed successfully.
+2025-01-20 19:59:40,744 - INFO - User file read performed successfully.
+2025-01-20 20:00:21,943 - INFO - User file read performed successfully.
+2025-01-20 20:00:23,321 - INFO - logged in successfully
+2025-01-20 20:00:23,326 - INFO - Successfully loaded 1 users from the file.
+2025-01-20 20:00:23,326 - INFO - Load users to list performed successfully.
+2025-01-20 20:00:23,329 - INFO - Successfully loaded 42 books from the file.
+2025-01-20 20:00:23,329 - INFO - Load books to list performed successfully.
+2025-01-20 20:00:23,329 - INFO - Get Popular Books performed successfully.
+2025-01-20 20:00:23,332 - INFO - Popular books saved to Files/popular_books.csv.
+2025-01-20 20:00:23,332 - INFO - Load popular books to CSV performed successfully.
+2025-01-20 20:00:23,333 - INFO - Waiting list saved successfully to Files/waiting_list.csv.
+2025-01-20 20:00:23,333 - INFO - Load waiting list performed successfully.
+2025-01-20 20:00:24,657 - INFO - User file read performed successfully.
+2025-01-20 20:00:34,524 - INFO - Book 'sdsdd' by dsdsd added successfully.
+2025-01-20 20:00:34,526 - INFO - Book added performed successfully.
+2025-01-20 20:00:34,527 - INFO - Notification Added performed successfully.
+2025-01-20 20:00:44,723 - INFO - Book 'sdsdd' by dsdsd has been removed completely.
+2025-01-20 20:00:44,723 - INFO - Book removed performed successfully.
+2025-01-20 20:00:44,724 - INFO - Notification Added performed successfully.
+2025-01-20 20:00:54,377 - INFO - User file read performed successfully.
+2025-01-20 20:00:59,422 - WARNING - Book 'sdsdd' by dsdsd was not found in the library.
+2025-01-20 20:00:59,423 - INFO - Book removed performed successfully.
+2025-01-20 20:00:59,425 - INFO - Notification Added performed successfully.
+2025-01-20 20:01:14,019 - WARNING - Book 'sdsdd' by dsdsd was not found in the library.
+2025-01-20 20:01:14,020 - INFO - Book removed performed successfully.
+2025-01-20 20:01:14,021 - INFO - Notification Added performed successfully.
+2025-01-20 20:01:30,274 - INFO - Book 'sdsdd' by dsdsd added successfully.
+2025-01-20 20:01:30,275 - INFO - Book added performed successfully.
+2025-01-20 20:01:30,277 - INFO - Notification Added performed successfully.
+2025-01-20 20:01:50,985 - INFO - User file read performed successfully.
+2025-01-20 20:01:52,756 - INFO - logged in successfully
+2025-01-20 20:01:52,761 - INFO - Successfully loaded 1 users from the file.
+2025-01-20 20:01:52,761 - INFO - Load users to list performed successfully.
+2025-01-20 20:01:52,763 - INFO - Successfully loaded 43 books from the file.
+2025-01-20 20:01:52,763 - INFO - Load books to list performed successfully.
+2025-01-20 20:01:52,763 - INFO - Get Popular Books performed successfully.
+2025-01-20 20:01:52,766 - INFO - Popular books saved to Files/popular_books.csv.
+2025-01-20 20:01:52,766 - INFO - Load popular books to CSV performed successfully.
+2025-01-20 20:01:52,767 - INFO - Waiting list saved successfully to Files/waiting_list.csv.
+2025-01-20 20:01:52,767 - INFO - Load waiting list performed successfully.
+2025-01-20 20:01:54,357 - INFO - User file read performed successfully.
+2025-01-20 20:02:06,005 - INFO - Book 'asdsd' by ddff added successfully.
+2025-01-20 20:02:06,006 - INFO - Book added performed successfully.
+2025-01-20 20:02:06,008 - INFO - Notification Added performed successfully.
+2025-01-20 20:02:10,310 - INFO - User file read performed successfully.
+2025-01-20 20:06:14,505 - INFO - User file read performed successfully.
+2025-01-20 20:06:16,131 - INFO - logged in successfully
+2025-01-20 20:06:16,136 - INFO - Successfully loaded 1 users from the file.
+2025-01-20 20:06:16,137 - INFO - Load users to list performed successfully.
+2025-01-20 20:06:16,139 - INFO - Successfully loaded 44 books from the file.
+2025-01-20 20:06:16,139 - INFO - Load books to list performed successfully.
+2025-01-20 20:06:16,139 - INFO - Get Popular Books performed successfully.
+2025-01-20 20:06:16,144 - INFO - Popular books saved to Files/popular_books.csv.
+2025-01-20 20:06:16,144 - INFO - Load popular books to CSV performed successfully.
+2025-01-20 20:06:16,145 - INFO - Waiting list saved successfully to Files/waiting_list.csv.
+2025-01-20 20:06:16,145 - INFO - Load waiting list performed successfully.
+2025-01-20 20:06:17,582 - INFO - User file read performed successfully.
+2025-01-20 20:06:29,667 - INFO - Book 'sdsd' by ddff added successfully.
+2025-01-20 20:06:29,668 - INFO - Book added performed successfully.
+2025-01-20 20:12:59,810 - INFO - User file read performed successfully.
+2025-01-20 20:13:01,274 - INFO - logged in successfully
+2025-01-20 20:13:01,278 - INFO - Successfully loaded 1 users from the file.
+2025-01-20 20:13:01,278 - INFO - Load users to list performed successfully.
+2025-01-20 20:13:01,281 - INFO - Successfully loaded 45 books from the file.
+2025-01-20 20:13:01,281 - INFO - Load books to list performed successfully.
+2025-01-20 20:13:01,281 - INFO - Get Popular Books performed successfully.
+2025-01-20 20:13:01,284 - INFO - Popular books saved to Files/popular_books.csv.
+2025-01-20 20:13:01,284 - INFO - Load popular books to CSV performed successfully.
+2025-01-20 20:13:01,285 - INFO - Waiting list saved successfully to Files/waiting_list.csv.
+2025-01-20 20:13:01,285 - INFO - Load waiting list performed successfully.
+2025-01-20 20:13:02,566 - INFO - User file read performed successfully.
+2025-01-20 20:13:15,051 - INFO - Book 'wdsd' by dfdf added successfully.
+2025-01-20 20:13:15,052 - INFO - Book added performed successfully.
+2025-01-20 20:13:15,055 - INFO - Notification Added performed successfully.
+2025-01-20 20:13:20,401 - INFO - User file read performed successfully.
+2025-01-20 20:13:22,899 - INFO - Updated copies for 'wdsd' by dfdf.
+2025-01-20 20:13:22,900 - INFO - Book added performed successfully.
+2025-01-20 20:13:22,901 - INFO - Notification Added performed successfully.
+2025-01-20 20:13:25,791 - INFO - User file read performed successfully.
+2025-01-20 20:13:29,156 - INFO - User file read performed successfully.
+2025-01-20 20:13:32,404 - INFO - User file read performed successfully.
+2025-01-20 20:13:35,793 - INFO - Updated copies for 'wdsd' by dfdf.
+2025-01-20 20:13:35,794 - INFO - Book added performed successfully.
+2025-01-20 20:13:35,796 - INFO - Notification Added performed successfully.
+2025-01-20 20:13:38,531 - INFO - User file read performed successfully.
+2025-01-20 20:13:41,729 - INFO - One copy of 'wdsd' by dfdf has been removed.
+2025-01-20 20:13:41,731 - INFO - Book removed performed successfully.
+2025-01-20 20:13:41,733 - INFO - Notification Added performed successfully.
+2025-01-20 20:13:45,712 - INFO - User file read performed successfully.
+2025-01-20 20:13:49,165 - INFO - One copy of 'wdsd' by dfdf has been removed.
+2025-01-20 20:13:49,166 - INFO - Book removed performed successfully.
+2025-01-20 20:13:49,168 - INFO - Notification Added performed successfully.
+2025-01-20 20:13:51,869 - INFO - User file read performed successfully.
+2025-01-20 20:13:56,349 - INFO - Book 'wdsd' by dfdf has been removed completely.
+2025-01-20 20:13:56,350 - INFO - Book removed performed successfully.
+2025-01-20 20:13:56,351 - INFO - Notification Added performed successfully.
+2025-01-20 20:13:59,664 - INFO - User file read performed successfully.
+2025-01-20 20:14:14,042 - INFO - User file read performed successfully.
+2025-01-20 20:14:15,532 - INFO - logged in successfully
+2025-01-20 20:14:15,536 - INFO - Successfully loaded 1 users from the file.
+2025-01-20 20:14:15,536 - INFO - Load users to list performed successfully.
+2025-01-20 20:14:15,539 - INFO - Successfully loaded 45 books from the file.
+2025-01-20 20:14:15,539 - INFO - Load books to list performed successfully.
+2025-01-20 20:14:15,539 - INFO - Get Popular Books performed successfully.
+2025-01-20 20:14:15,542 - INFO - Popular books saved to Files/popular_books.csv.
+2025-01-20 20:14:15,542 - INFO - Load popular books to CSV performed successfully.
+2025-01-20 20:14:15,543 - INFO - Waiting list saved successfully to Files/waiting_list.csv.
+2025-01-20 20:14:15,543 - INFO - Load waiting list performed successfully.
+2025-01-20 20:14:17,005 - INFO - User file read performed successfully.
+2025-01-20 20:14:36,335 - INFO - Book 'dff' by ddff added successfully.
+2025-01-20 20:14:36,336 - INFO - Book added performed successfully.
+2025-01-20 20:14:36,338 - INFO - Notification Added performed successfully.
+2025-01-20 20:14:42,262 - INFO - User file read performed successfully.
+2025-01-20 20:16:48,378 - INFO - User file read performed successfully.
+2025-01-20 20:16:49,615 - INFO - logged in successfully
+2025-01-20 20:16:49,620 - INFO - Successfully loaded 1 users from the file.
+2025-01-20 20:16:49,620 - INFO - Load users to list performed successfully.
+2025-01-20 20:16:49,622 - INFO - Successfully loaded 46 books from the file.
+2025-01-20 20:16:49,622 - INFO - Load books to list performed successfully.
+2025-01-20 20:16:49,622 - INFO - Get Popular Books performed successfully.
+2025-01-20 20:16:49,625 - INFO - Popular books saved to Files/popular_books.csv.
+2025-01-20 20:16:49,626 - INFO - Load popular books to CSV performed successfully.
+2025-01-20 20:16:49,626 - INFO - Waiting list saved successfully to Files/waiting_list.csv.
+2025-01-20 20:16:49,626 - INFO - Load waiting list performed successfully.
+2025-01-20 20:17:01,258 - INFO - User file read performed successfully.
+2025-01-20 20:17:02,877 - INFO - logged in successfully
+2025-01-20 20:17:02,881 - INFO - Successfully loaded 1 users from the file.
+2025-01-20 20:17:02,881 - INFO - Load users to list performed successfully.
+2025-01-20 20:17:02,884 - INFO - Successfully loaded 46 books from the file.
+2025-01-20 20:17:02,884 - INFO - Load books to list performed successfully.
+2025-01-20 20:17:02,884 - INFO - Get Popular Books performed successfully.
+2025-01-20 20:17:02,887 - INFO - Popular books saved to Files/popular_books.csv.
+2025-01-20 20:17:02,887 - INFO - Load popular books to CSV performed successfully.
+2025-01-20 20:17:02,888 - INFO - Waiting list saved successfully to Files/waiting_list.csv.
+2025-01-20 20:17:02,888 - INFO - Load waiting list performed successfully.
+2025-01-20 20:17:07,452 - INFO - User file read performed successfully.
+2025-01-20 20:17:18,791 - INFO - Book 'sddd' by dfgg added successfully.
+2025-01-20 20:17:18,792 - INFO - Book added performed successfully.
+2025-01-20 20:17:18,794 - INFO - Notification Added performed successfully.
+2025-01-20 20:17:40,410 - INFO - Updated copies for 'sddd' by dfgg.
+2025-01-20 20:17:40,411 - INFO - Book added performed successfully.
+2025-01-20 20:17:40,411 - INFO - Notification Added performed successfully.
+2025-01-20 20:17:51,259 - INFO - Updated copies for 'sddd' by dfgg.
+2025-01-20 20:17:51,260 - INFO - Book added performed successfully.
+2025-01-20 20:17:51,261 - INFO - Notification Added performed successfully.
+2025-01-20 20:17:59,011 - INFO - One copy of 'sddd' by dfgg has been removed.
+2025-01-20 20:17:59,013 - INFO - Book removed performed successfully.
+2025-01-20 20:17:59,015 - INFO - Notification Added performed successfully.
+2025-01-20 20:18:02,965 - INFO - User file read performed successfully.
+2025-01-20 20:18:11,328 - INFO - One copy of 'sddd' by dfgg has been removed.
+2025-01-20 20:18:11,330 - INFO - Book removed performed successfully.
+2025-01-20 20:18:11,332 - INFO - Notification Added performed successfully.
+2025-01-20 20:24:06,515 - INFO - User file read performed successfully.
+2025-01-20 20:24:08,141 - INFO - logged in successfully
+2025-01-20 20:24:08,146 - INFO - Successfully loaded 1 users from the file.
+2025-01-20 20:24:08,146 - INFO - Load users to list performed successfully.
+2025-01-20 20:24:08,147 - INFO - User file read performed successfully.
+2025-01-20 20:24:08,149 - INFO - Successfully loaded 47 books from the file.
+2025-01-20 20:24:08,149 - INFO - Load books to list performed successfully.
+2025-01-20 20:24:08,150 - INFO - Get Popular Books performed successfully.
+2025-01-20 20:24:08,152 - INFO - Popular books saved to Files/popular_books.csv.
+2025-01-20 20:24:08,152 - INFO - Load popular books to CSV performed successfully.
+2025-01-20 20:24:08,153 - INFO - Waiting list saved successfully to Files/waiting_list.csv.
+2025-01-20 20:24:08,153 - INFO - Load waiting list performed successfully.
+2025-01-20 20:24:17,583 - INFO - User file read performed successfully.
+2025-01-20 20:24:33,238 - INFO - Book 'ssd' by ssd added successfully.
+2025-01-20 20:24:33,240 - INFO - Book added performed successfully.
+2025-01-20 20:28:11,253 - INFO - User file read performed successfully.
+2025-01-20 20:28:12,740 - INFO - logged in successfully
+2025-01-20 20:28:12,744 - INFO - Successfully loaded 1 users from the file.
+2025-01-20 20:28:12,744 - INFO - Load users to list performed successfully.
+2025-01-20 20:28:12,745 - INFO - User file read performed successfully.
+2025-01-20 20:28:12,748 - INFO - Successfully loaded 48 books from the file.
+2025-01-20 20:28:12,748 - INFO - Load books to list performed successfully.
+2025-01-20 20:28:12,748 - INFO - Get Popular Books performed successfully.
+2025-01-20 20:28:12,751 - INFO - Popular books saved to Files/popular_books.csv.
+2025-01-20 20:28:12,751 - INFO - Load popular books to CSV performed successfully.
+2025-01-20 20:28:12,752 - INFO - Waiting list saved successfully to Files/waiting_list.csv.
+2025-01-20 20:28:12,752 - INFO - Load waiting list performed successfully.
+2025-01-20 20:28:19,681 - INFO - User file read performed successfully.
+2025-01-20 20:31:48,536 - INFO - User file read performed successfully.
+2025-01-20 20:31:50,034 - INFO - logged in successfully
+2025-01-20 20:31:50,039 - INFO - Successfully loaded 1 users from the file.
+2025-01-20 20:31:50,039 - INFO - Load users to list performed successfully.
+2025-01-20 20:31:50,040 - INFO - User file read performed successfully.
+2025-01-20 20:31:50,043 - INFO - Successfully loaded 48 books from the file.
+2025-01-20 20:31:50,043 - INFO - Load books to list performed successfully.
+2025-01-20 20:31:50,043 - INFO - Get Popular Books performed successfully.
+2025-01-20 20:31:50,046 - INFO - Popular books saved to Files/popular_books.csv.
+2025-01-20 20:31:50,046 - INFO - Load popular books to CSV performed successfully.
+2025-01-20 20:31:50,046 - INFO - Waiting list saved successfully to Files/waiting_list.csv.
+2025-01-20 20:31:50,046 - INFO - Load waiting list performed successfully.
+2025-01-20 20:31:51,143 - INFO - User file read performed successfully.
+2025-01-20 20:34:08,774 - INFO - User file read performed successfully.
+2025-01-20 20:34:10,329 - INFO - logged in successfully
+2025-01-20 20:34:10,333 - INFO - Successfully loaded 1 users from the file.
+2025-01-20 20:34:10,333 - INFO - Load users to list performed successfully.
+2025-01-20 20:34:10,334 - INFO - User file read performed successfully.
+2025-01-20 20:34:10,337 - INFO - Successfully loaded 48 books from the file.
+2025-01-20 20:34:10,337 - INFO - Load books to list performed successfully.
+2025-01-20 20:34:10,337 - INFO - Get Popular Books performed successfully.
+2025-01-20 20:34:10,340 - INFO - Popular books saved to Files/popular_books.csv.
+2025-01-20 20:34:10,340 - INFO - Load popular books to CSV performed successfully.
+2025-01-20 20:34:10,341 - INFO - Waiting list saved successfully to Files/waiting_list.csv.
+2025-01-20 20:34:10,341 - INFO - Load waiting list performed successfully.
+2025-01-20 20:34:11,604 - INFO - User file read performed successfully.
+2025-01-20 20:35:06,855 - INFO - User file read performed successfully.
+2025-01-20 20:35:08,311 - INFO - logged in successfully
+2025-01-20 20:35:08,315 - INFO - Successfully loaded 1 users from the file.
+2025-01-20 20:35:08,315 - INFO - Load users to list performed successfully.
+2025-01-20 20:35:08,316 - INFO - User file read performed successfully.
+2025-01-20 20:35:08,318 - INFO - Successfully loaded 48 books from the file.
+2025-01-20 20:35:08,319 - INFO - Load books to list performed successfully.
+2025-01-20 20:35:08,319 - INFO - Get Popular Books performed successfully.
+2025-01-20 20:35:08,321 - INFO - Popular books saved to Files/popular_books.csv.
+2025-01-20 20:35:08,322 - INFO - Load popular books to CSV performed successfully.
+2025-01-20 20:35:08,322 - INFO - Waiting list saved successfully to Files/waiting_list.csv.
+2025-01-20 20:35:08,322 - INFO - Load waiting list performed successfully.
+2025-01-20 20:35:09,863 - INFO - User file read performed successfully.
+2025-01-20 20:39:29,883 - INFO - User file read performed successfully.
+2025-01-20 20:39:31,250 - INFO - logged in successfully
+2025-01-20 20:39:31,255 - INFO - Successfully loaded 1 users from the file.
+2025-01-20 20:39:31,255 - INFO - Load users to list performed successfully.
+2025-01-20 20:39:31,256 - INFO - User file read performed successfully.
+2025-01-20 20:39:31,258 - INFO - Successfully loaded 48 books from the file.
+2025-01-20 20:39:31,258 - INFO - Load books to list performed successfully.
+2025-01-20 20:39:31,259 - INFO - Get Popular Books performed successfully.
+2025-01-20 20:39:31,261 - INFO - Popular books saved to Files/popular_books.csv.
+2025-01-20 20:39:31,262 - INFO - Load popular books to CSV performed successfully.
+2025-01-20 20:39:31,262 - INFO - Waiting list saved successfully to Files/waiting_list.csv.
+2025-01-20 20:39:31,262 - INFO - Load waiting list performed successfully.
+2025-01-20 20:39:32,670 - INFO - User file read performed successfully.
+2025-01-20 20:40:50,055 - INFO - User file read performed successfully.
+2025-01-20 20:40:51,547 - INFO - logged in successfully
+2025-01-20 20:40:51,551 - INFO - Successfully loaded 1 users from the file.
+2025-01-20 20:40:51,551 - INFO - Load users to list performed successfully.
+2025-01-20 20:40:51,552 - INFO - User file read performed successfully.
+2025-01-20 20:40:51,555 - INFO - Successfully loaded 48 books from the file.
+2025-01-20 20:40:51,555 - INFO - Load books to list performed successfully.
+2025-01-20 20:40:51,555 - INFO - Get Popular Books performed successfully.
+2025-01-20 20:40:51,558 - INFO - Popular books saved to Files/popular_books.csv.
+2025-01-20 20:40:51,558 - INFO - Load popular books to CSV performed successfully.
+2025-01-20 20:40:51,558 - INFO - Waiting list saved successfully to Files/waiting_list.csv.
+2025-01-20 20:40:51,558 - INFO - Load waiting list performed successfully.
+2025-01-20 20:40:53,036 - INFO - User file read performed successfully.
+2025-01-20 20:45:07,596 - INFO - User file read performed successfully.
+2025-01-20 20:45:09,122 - INFO - logged in successfully
+2025-01-20 20:45:09,126 - INFO - Successfully loaded 1 users from the file.
+2025-01-20 20:45:09,126 - INFO - Load users to list performed successfully.
+2025-01-20 20:45:09,127 - INFO - User file read performed successfully.
+2025-01-20 20:45:09,130 - INFO - Successfully loaded 48 books from the file.
+2025-01-20 20:45:09,130 - INFO - Load books to list performed successfully.
+2025-01-20 20:45:09,130 - INFO - Get Popular Books performed successfully.
+2025-01-20 20:45:09,133 - INFO - Popular books saved to Files/popular_books.csv.
+2025-01-20 20:45:09,133 - INFO - Load popular books to CSV performed successfully.
+2025-01-20 20:45:09,134 - INFO - Waiting list saved successfully to Files/waiting_list.csv.
+2025-01-20 20:45:09,134 - INFO - Load waiting list performed successfully.
+2025-01-20 20:45:10,852 - INFO - User file read performed successfully.
+2025-01-20 20:45:48,595 - INFO - Book 'efrfrf' by rfrf added successfully.
+2025-01-20 20:45:48,597 - INFO - Book added performed successfully.
+2025-01-20 20:45:48,598 - INFO - Notification Added performed successfully.
+2025-01-20 20:45:52,251 - INFO - User file read performed successfully.
+2025-01-20 20:48:57,197 - INFO - User file read performed successfully.
+2025-01-20 20:48:58,575 - INFO - logged in successfully
+2025-01-20 20:48:58,579 - INFO - Successfully loaded 1 users from the file.
+2025-01-20 20:48:58,579 - INFO - Load users to list performed successfully.
+2025-01-20 20:48:58,580 - INFO - User file read performed successfully.
+2025-01-20 20:48:58,580 - ERROR - Failed to parse notifications for user: adi
+2025-01-20 20:48:58,583 - INFO - Successfully loaded 49 books from the file.
+2025-01-20 20:48:58,583 - INFO - Load books to list performed successfully.
+2025-01-20 20:48:58,583 - INFO - Get Popular Books performed successfully.
+2025-01-20 20:48:58,586 - INFO - Popular books saved to Files/popular_books.csv.
+2025-01-20 20:48:58,586 - INFO - Load popular books to CSV performed successfully.
+2025-01-20 20:48:58,587 - INFO - Waiting list saved successfully to Files/waiting_list.csv.
+2025-01-20 20:48:58,587 - INFO - Load waiting list performed successfully.
+2025-01-20 20:49:01,259 - INFO - User file read performed successfully.
+2025-01-20 20:49:01,260 - ERROR - Failed to parse notifications for user: adi
+2025-01-20 20:49:17,288 - INFO - Book 'ssdd' by sdssd added successfully.
+2025-01-20 20:49:17,289 - INFO - Book added performed successfully.
+2025-01-20 20:49:17,292 - INFO - Notification Added performed successfully.
+2025-01-20 20:49:20,348 - INFO - User file read performed successfully.
+2025-01-20 20:54:46,562 - INFO - User file read performed successfully.
+2025-01-20 20:54:47,973 - INFO - logged in successfully
+2025-01-20 20:54:47,979 - INFO - Successfully loaded 1 users from the file.
+2025-01-20 20:54:47,979 - INFO - Load users to list performed successfully.
+2025-01-20 20:54:47,979 - INFO - User file read performed successfully.
+2025-01-20 20:54:47,980 - ERROR - Failed to parse notifications for user: adi
+2025-01-20 20:54:47,980 - INFO - Got User Notification performed successfully.
+2025-01-20 20:54:47,982 - INFO - Successfully loaded 50 books from the file.
+2025-01-20 20:54:47,982 - INFO - Load books to list performed successfully.
+2025-01-20 20:54:47,982 - INFO - Get Popular Books performed successfully.
+2025-01-20 20:54:47,985 - INFO - Popular books saved to Files/popular_books.csv.
+2025-01-20 20:54:47,985 - INFO - Load popular books to CSV performed successfully.
+2025-01-20 20:54:47,986 - INFO - Waiting list saved successfully to Files/waiting_list.csv.
+2025-01-20 20:54:47,986 - INFO - Load waiting list performed successfully.
+2025-01-20 20:54:57,146 - INFO - User file read performed successfully.
+2025-01-20 20:54:57,146 - ERROR - Failed to parse notifications for user: adi
+2025-01-20 20:54:57,146 - INFO - Got User Notification performed successfully.
+2025-01-20 20:55:00,216 - INFO - Book 'sdsdsd' by sdddff added successfully.
+2025-01-20 20:55:00,218 - INFO - Book added performed successfully.
+2025-01-20 20:55:00,220 - INFO - Notification Added performed successfully.
+2025-01-20 20:55:03,017 - INFO - User file read performed successfully.
+2025-01-20 20:55:03,018 - INFO - Got User Notification performed successfully.
+2025-01-20 20:55:36,887 - INFO - User file read performed successfully.
+2025-01-20 20:55:38,345 - INFO - logged in successfully
+2025-01-20 20:55:38,350 - INFO - Successfully loaded 1 users from the file.
+2025-01-20 20:55:38,350 - INFO - Load users to list performed successfully.
+2025-01-20 20:55:38,350 - INFO - User file read performed successfully.
+2025-01-20 20:55:38,351 - INFO - Got User Notification performed successfully.
+2025-01-20 20:55:38,353 - INFO - Successfully loaded 51 books from the file.
+2025-01-20 20:55:38,353 - INFO - Load books to list performed successfully.
+2025-01-20 20:55:38,353 - INFO - Get Popular Books performed successfully.
+2025-01-20 20:55:38,356 - INFO - Popular books saved to Files/popular_books.csv.
+2025-01-20 20:55:38,356 - INFO - Load popular books to CSV performed successfully.
+2025-01-20 20:55:38,357 - INFO - Waiting list saved successfully to Files/waiting_list.csv.
+2025-01-20 20:55:38,357 - INFO - Load waiting list performed successfully.
+2025-01-20 20:55:41,926 - INFO - User file read performed successfully.
+2025-01-20 20:55:41,927 - INFO - Got User Notification performed successfully.
+2025-01-20 20:55:51,396 - INFO - Book 'ssdd' by dsdsd added successfully.
+2025-01-20 20:55:51,397 - INFO - Book added performed successfully.
+2025-01-20 20:55:59,065 - INFO - User file read performed successfully.
+2025-01-20 20:55:59,066 - INFO - Got User Notification performed successfully.
+2025-01-20 20:56:01,829 - INFO - Book 'ssdd' by dsdsd has been removed completely.
+2025-01-20 20:56:01,831 - INFO - Book removed performed successfully.
+2025-01-20 20:56:04,350 - INFO - User file read performed successfully.
+2025-01-20 20:56:04,351 - INFO - Got User Notification performed successfully.
+2025-01-20 21:10:25,564 - INFO - User file read performed successfully.
+2025-01-20 21:10:25,566 - INFO - User 'me' signed up successfully.
+2025-01-20 21:10:25,566 - INFO - User sign-up performed successfully.
+2025-01-20 21:10:28,849 - INFO - User file read performed successfully.
+2025-01-20 21:10:30,581 - INFO - logged in successfully
+2025-01-20 21:10:30,586 - INFO - Successfully loaded 2 users from the file.
+2025-01-20 21:10:30,586 - INFO - Load users to list performed successfully.
+2025-01-20 21:10:30,587 - INFO - User file read performed successfully.
+2025-01-20 21:10:30,587 - ERROR - Failed to parse notifications for user: adi
+2025-01-20 21:10:30,587 - INFO - Got User Notification performed successfully.
+2025-01-20 21:10:30,588 - INFO - User file read performed successfully.
+2025-01-20 21:10:30,588 - ERROR - Failed to parse notifications for user: me
+2025-01-20 21:10:30,588 - INFO - Got User Notification performed successfully.
+2025-01-20 21:10:30,591 - INFO - Successfully loaded 51 books from the file.
+2025-01-20 21:10:30,591 - INFO - Load books to list performed successfully.
+2025-01-20 21:10:30,591 - INFO - Get Popular Books performed successfully.
+2025-01-20 21:10:30,594 - INFO - Popular books saved to Files/popular_books.csv.
+2025-01-20 21:10:30,594 - INFO - Load popular books to CSV performed successfully.
+2025-01-20 21:10:30,595 - INFO - Waiting list saved successfully to Files/waiting_list.csv.
+2025-01-20 21:10:30,595 - INFO - Load waiting list performed successfully.
+2025-01-20 21:10:50,443 - INFO - User file read performed successfully.
+2025-01-20 21:10:50,444 - ERROR - Failed to parse notifications for user: me
+2025-01-20 21:10:50,444 - INFO - Got User Notification performed successfully.
+2025-01-20 21:11:02,568 - INFO - Book 'ssdd' by ddf added successfully.
+2025-01-20 21:11:02,569 - INFO - Book added performed successfully.
+2025-01-20 21:11:02,570 - INFO - Notification Added performed successfully.
+2025-01-20 21:11:05,790 - INFO - User file read performed successfully.
+2025-01-20 21:11:05,790 - ERROR - Failed to parse notifications for user: me
+2025-01-20 21:11:05,790 - INFO - Got User Notification performed successfully.
+2025-01-20 21:11:11,933 - INFO - Book 'ssdd' by ddf has been removed completely.
+2025-01-20 21:11:11,934 - INFO - Book removed performed successfully.
+2025-01-20 21:11:37,205 - WARNING - Book 'ssdd' by ddf was not found in the library.
+2025-01-20 21:11:37,205 - INFO - Book removed performed successfully.
+2025-01-20 21:11:58,763 - WARNING - Book 'ssdd' by ddf was not found in the library.
+2025-01-20 21:11:58,763 - INFO - Book removed performed successfully.
+2025-01-20 21:12:04,376 - INFO - Book 'ssdd' by ddf added successfully.
+2025-01-20 21:12:04,377 - INFO - Book added performed successfully.
+2025-01-20 21:12:04,380 - INFO - Notification Added performed successfully.
+2025-01-20 21:12:11,318 - INFO - Updated copies for 'ssdd' by ddf.
+2025-01-20 21:12:11,319 - INFO - Book added performed successfully.
+2025-01-20 21:12:11,321 - INFO - Notification Added performed successfully.
+2025-01-20 21:12:14,489 - INFO - Updated copies for 'ssdd' by ddf.
+2025-01-20 21:12:14,491 - INFO - Book added performed successfully.
+2025-01-20 21:12:14,493 - INFO - Notification Added performed successfully.
+2025-01-20 21:12:17,383 - INFO - One copy of 'ssdd' by ddf has been removed.
+2025-01-20 21:12:17,384 - INFO - Book removed performed successfully.
+2025-01-20 21:12:22,628 - INFO - One copy of 'ssdd' by ddf has been removed.
+2025-01-20 21:12:22,629 - INFO - Book removed performed successfully.
+2025-01-20 21:12:30,361 - INFO - Book 'ssdd' by ddf has been removed completely.
+2025-01-20 21:12:30,362 - INFO - Book removed performed successfully.
+2025-01-20 21:21:18,416 - INFO - User file read performed successfully.
+2025-01-20 21:21:19,745 - INFO - logged in successfully
+2025-01-20 21:21:19,749 - INFO - Successfully loaded 2 users from the file.
+2025-01-20 21:21:19,749 - INFO - Load users to list performed successfully.
+2025-01-20 21:21:19,750 - INFO - User file read performed successfully.
+2025-01-20 21:21:19,750 - ERROR - Failed to parse notifications for user: adi
+2025-01-20 21:21:19,750 - INFO - Got User Notification performed successfully.
+2025-01-20 21:21:19,751 - INFO - User file read performed successfully.
+2025-01-20 21:21:19,751 - ERROR - Failed to parse notifications for user: me
+2025-01-20 21:21:19,751 - INFO - Got User Notification performed successfully.
+2025-01-20 21:21:19,753 - INFO - Successfully loaded 34 books from the file.
+2025-01-20 21:21:19,753 - INFO - Load books to list performed successfully.
+2025-01-20 21:21:19,753 - INFO - Get Popular Books performed successfully.
+2025-01-20 21:21:19,756 - INFO - Popular books saved to Files/popular_books.csv.
+2025-01-20 21:21:19,756 - INFO - Load popular books to CSV performed successfully.
+2025-01-20 21:21:19,757 - INFO - Waiting list saved successfully to Files/waiting_list.csv.
+2025-01-20 21:21:19,757 - INFO - Load waiting list performed successfully.
+2025-01-20 21:21:32,005 - INFO - Book 'sdddf' by sdsd added successfully.
+2025-01-20 21:21:32,006 - INFO - Book added performed successfully.
+2025-01-20 21:21:32,008 - INFO - Notification Added performed successfully.
+2025-01-20 21:21:34,464 - INFO - Updated copies for 'sdddf' by sdsd.
+2025-01-20 21:21:34,465 - INFO - Book added performed successfully.
+2025-01-20 21:21:34,467 - INFO - Notification Added performed successfully.
+2025-01-20 21:21:43,256 - INFO - One copy of 'sdddf' by sdsd has been removed.
+2025-01-20 21:21:43,257 - INFO - Book removed performed successfully.
+2025-01-20 21:21:43,261 - INFO - Notification Added performed successfully.
+2025-01-20 21:21:48,316 - INFO - Updated copies for 'sdddf' by sdsd.
+2025-01-20 21:21:48,317 - INFO - Book added performed successfully.
+2025-01-20 21:21:48,319 - INFO - Notification Added performed successfully.
+2025-01-20 21:23:30,979 - INFO - Successfully loaded 35 books from the file.
+2025-01-20 21:23:30,979 - INFO - Load books to list performed successfully.
+2025-01-20 21:23:30,980 - INFO - Get Popular Books performed successfully.
+2025-01-20 21:23:30,985 - INFO - Popular books saved to Files/popular_books.csv.
+2025-01-20 21:23:30,985 - INFO - Load popular books to CSV performed successfully.
+2025-01-20 21:23:30,985 - INFO - Book 'sdddf' by sdsd has been successfully loaned.
+2025-01-20 21:23:30,985 - INFO - Book lent performed successfully.
+2025-01-20 21:23:30,988 - INFO - Notification Added performed successfully.
+2025-01-20 21:23:33,997 - INFO - Successfully loaded 35 books from the file.
+2025-01-20 21:23:33,997 - INFO - Load books to list performed successfully.
+2025-01-20 21:23:33,998 - INFO - Get Popular Books performed successfully.
+2025-01-20 21:23:34,002 - INFO - Popular books saved to Files/popular_books.csv.
+2025-01-20 21:23:34,003 - INFO - Load popular books to CSV performed successfully.
+2025-01-20 21:23:34,003 - INFO - Book 'sdddf' by sdsd has been successfully loaned.
+2025-01-20 21:23:34,003 - INFO - Book lent performed successfully.
+2025-01-20 21:23:34,007 - INFO - Notification Added performed successfully.
+2025-01-20 21:23:36,232 - INFO - Book 'sdddf' by sdsd has been successfully returned.
+2025-01-20 21:23:36,233 - INFO - Return book performed successfully.
+2025-01-20 21:23:36,236 - INFO - Notification Added performed successfully.
+2025-01-20 21:23:39,478 - INFO - Successfully loaded 35 books from the file.
+2025-01-20 21:23:39,478 - INFO - Load books to list performed successfully.
+2025-01-20 21:23:39,478 - INFO - Get Popular Books performed successfully.
+2025-01-20 21:23:39,482 - INFO - Popular books saved to Files/popular_books.csv.
+2025-01-20 21:23:39,482 - INFO - Load popular books to CSV performed successfully.
+2025-01-20 21:23:39,482 - INFO - Book 'sdddf' by sdsd has been successfully loaned.
+2025-01-20 21:23:39,482 - INFO - Book lent performed successfully.
+2025-01-20 21:23:39,484 - INFO - Notification Added performed successfully.
+2025-01-20 21:23:46,861 - WARNING - No available copies of 'sdddf' by sdsd to lend.
+2025-01-20 21:23:46,861 - INFO - Book lent performed successfully.
+2025-01-20 21:23:57,356 - INFO - Add to waiting list performed successfully.
+2025-01-20 21:23:57,360 - INFO - Notification Added performed successfully.
+2025-01-20 21:24:00,408 - WARNING - No available copies of 'sdddf' by sdsd to lend.
+2025-01-20 21:24:00,408 - INFO - Book lent performed successfully.
+2025-01-20 21:24:05,167 - INFO - Add to waiting list performed successfully.
+2025-01-20 21:24:05,171 - INFO - Notification Added performed successfully.
+2025-01-20 21:24:07,643 - INFO - Updated copies for 'sdddf' by sdsd.
+2025-01-20 21:24:07,644 - INFO - Book added performed successfully.
+2025-01-20 21:24:07,646 - INFO - Notification Added performed successfully.
+2025-01-20 21:24:09,985 - INFO - Book 'sdddf' by sdsd has been successfully returned.
+2025-01-20 21:24:09,986 - INFO - Return book performed successfully.
+2025-01-20 21:24:09,991 - INFO - Notification Added performed successfully.
+2025-01-20 21:24:16,766 - INFO - Added new entry for 'sdddf' in the waiting list.
+2025-01-20 21:24:16,767 - INFO - Added new entry for 'sdddf' in the waiting list.
+2025-01-20 21:24:16,768 - INFO - Waiting list saved successfully to Files/waiting_list.csv.
+2025-01-20 21:24:16,768 - INFO - Load waiting list performed successfully.
+2025-01-20 21:24:24,476 - INFO - Successfully loaded 35 books from the file.
+2025-01-20 21:24:24,476 - INFO - Load books to list performed successfully.
+2025-01-20 21:24:24,476 - INFO - Get Popular Books performed successfully.
+2025-01-20 21:24:24,481 - INFO - Popular books saved to Files/popular_books.csv.
+2025-01-20 21:24:24,481 - INFO - Load popular books to CSV performed successfully.
+2025-01-20 21:24:50,545 - INFO - Book 'sdddf' by sdsd has been successfully returned.
+2025-01-20 21:24:50,545 - INFO - Return book performed successfully.
+2025-01-20 21:24:50,550 - INFO - Notification Added performed successfully.
+2025-01-20 21:24:53,982 - WARNING - Cannot return a book that is not loaned.
+2025-01-20 21:24:53,982 - INFO - Return book performed successfully.
+2025-01-20 21:25:12,197 - INFO - Successfully loaded 35 books from the file.
+2025-01-20 21:25:12,197 - INFO - Load books to list performed successfully.
+2025-01-20 21:25:12,197 - INFO - Get Popular Books performed successfully.
+2025-01-20 21:25:12,200 - INFO - Popular books saved to Files/popular_books.csv.
+2025-01-20 21:25:12,200 - INFO - Load popular books to CSV performed successfully.
+2025-01-20 21:25:12,200 - INFO - Book 'sdddf' by sdsd has been successfully loaned.
+2025-01-20 21:25:12,200 - INFO - Book lent performed successfully.
+2025-01-20 21:25:12,202 - INFO - Notification Added performed successfully.
+2025-01-20 21:25:15,481 - INFO - Successfully loaded 35 books from the file.
+2025-01-20 21:25:15,482 - INFO - Load books to list performed successfully.
+2025-01-20 21:25:15,482 - INFO - Get Popular Books performed successfully.
+2025-01-20 21:25:15,486 - INFO - Popular books saved to Files/popular_books.csv.
+2025-01-20 21:25:15,486 - INFO - Load popular books to CSV performed successfully.
+2025-01-20 21:25:15,487 - INFO - Book 'sdddf' by sdsd has been successfully loaned.
+2025-01-20 21:25:15,487 - INFO - Book lent performed successfully.
+2025-01-20 21:25:15,490 - INFO - Notification Added performed successfully.
+2025-01-20 21:25:18,166 - INFO - Successfully loaded 35 books from the file.
+2025-01-20 21:25:18,167 - INFO - Load books to list performed successfully.
+2025-01-20 21:25:18,167 - INFO - Get Popular Books performed successfully.
+2025-01-20 21:25:18,170 - INFO - Popular books saved to Files/popular_books.csv.
+2025-01-20 21:25:18,170 - INFO - Load popular books to CSV performed successfully.
+2025-01-20 21:25:18,170 - INFO - Book 'sdddf' by sdsd has been successfully loaned.
+2025-01-20 21:25:18,170 - INFO - Book lent performed successfully.
+2025-01-20 21:25:18,174 - INFO - Notification Added performed successfully.
+2025-01-20 21:25:21,108 - INFO - Book 'sdddf' by sdsd has been successfully returned.
+2025-01-20 21:25:21,108 - INFO - Return book performed successfully.
+2025-01-20 21:25:21,113 - INFO - Notification Added performed successfully.
+2025-01-20 21:25:24,207 - INFO - Successfully loaded 35 books from the file.
+2025-01-20 21:25:24,207 - INFO - Load books to list performed successfully.
+2025-01-20 21:25:24,207 - INFO - Get Popular Books performed successfully.
+2025-01-20 21:25:24,211 - INFO - Popular books saved to Files/popular_books.csv.
+2025-01-20 21:25:24,211 - INFO - Load popular books to CSV performed successfully.
+2025-01-20 21:25:24,211 - INFO - Book 'sdddf' by sdsd has been successfully loaned.
+2025-01-20 21:25:24,211 - INFO - Book lent performed successfully.
+2025-01-20 21:25:24,215 - INFO - Notification Added performed successfully.
+2025-01-20 21:25:28,503 - WARNING - No available copies of 'sdddf' by sdsd to lend.
+2025-01-20 21:25:28,503 - INFO - Book lent performed successfully.
+2025-01-20 21:25:34,185 - INFO - Add to waiting list performed successfully.
+2025-01-20 21:25:34,190 - INFO - Notification Added performed successfully.
+2025-01-20 21:25:38,019 - INFO - Added new entry for 'sdddf' in the waiting list.
+2025-01-20 21:25:38,020 - INFO - Waiting list saved successfully to Files/waiting_list.csv.
+2025-01-20 21:25:38,020 - INFO - Load waiting list performed successfully.
+2025-01-20 21:25:40,273 - INFO - Successfully loaded 35 books from the file.
+2025-01-20 21:25:40,273 - INFO - Load books to list performed successfully.
+2025-01-20 21:25:40,273 - INFO - Get Popular Books performed successfully.
+2025-01-20 21:25:40,277 - INFO - Popular books saved to Files/popular_books.csv.
+2025-01-20 21:25:40,277 - INFO - Load popular books to CSV performed successfully.
+2025-01-20 21:25:44,331 - INFO - Updated copies for 'sdddf' by sdsd.
+2025-01-20 21:25:44,332 - INFO - Book added performed successfully.
+2025-01-20 21:25:44,334 - INFO - Notification Added performed successfully.
+2025-01-20 21:25:48,782 - INFO - log out successful
+2025-01-20 21:25:55,003 - INFO - User file read performed successfully.
+2025-01-20 21:25:56,844 - INFO - logged in successfully
+2025-01-20 21:25:56,848 - INFO - Successfully loaded 2 users from the file.
+2025-01-20 21:25:56,848 - INFO - Load users to list performed successfully.
+2025-01-20 21:25:56,848 - INFO - User file read performed successfully.
+2025-01-20 21:25:56,849 - ERROR - Failed to parse notifications for user: adi
+2025-01-20 21:25:56,849 - INFO - Got User Notification performed successfully.
+2025-01-20 21:25:56,849 - INFO - User file read performed successfully.
+2025-01-20 21:25:56,850 - INFO - Got User Notification performed successfully.
+2025-01-20 21:25:56,852 - INFO - Successfully loaded 35 books from the file.
+2025-01-20 21:25:56,852 - INFO - Load books to list performed successfully.
+2025-01-20 21:25:56,852 - INFO - Get Popular Books performed successfully.
+2025-01-20 21:25:56,854 - INFO - Popular books saved to Files/popular_books.csv.
+2025-01-20 21:25:56,854 - INFO - Load popular books to CSV performed successfully.
+2025-01-20 21:25:56,855 - INFO - Waiting list saved successfully to Files/waiting_list.csv.
+2025-01-20 21:25:56,855 - INFO - Load waiting list performed successfully.
+2025-01-20 21:25:59,475 - INFO - User file read performed successfully.
+2025-01-20 21:25:59,476 - INFO - Got User Notification performed successfully.

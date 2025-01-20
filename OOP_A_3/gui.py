@@ -200,6 +200,17 @@ class LibraryApp:
                 fg="#333333"
             ).pack(padx=20, side=tk.LEFT)
 
+        # Notifications Button
+        tk.Button(
+            top_frame,
+            text="View Notifications",
+            command=self.view_notifications,
+            bg="#ffc107",
+            fg="black",
+            font=("Arial", 14, "bold"),
+            width=15
+        ).pack(side=tk.RIGHT, padx=10)
+
         # Logout Button
         tk.Button(
             top_frame,
@@ -226,6 +237,9 @@ class LibraryApp:
         table_frame.pack(fill=tk.BOTH, expand=True)
 
         self.create_table(table_frame)
+
+        self.users = FileManagement.load_users_to_list()
+        self.load_notifications()
 
         FileManagement.load_populars_to_csv()
         FileManagement.load_waiting_list()
@@ -366,12 +380,14 @@ class LibraryApp:
             return
 
         book = self.factory.create_book(title, author, genre, year)
-        FileManagement.remove_book(book)
-
-        self.notify(f"Removed the Book {book.title}")
+        success = FileManagement.remove_book(book)
+        if not success:
+            messagebox.showinfo("Error", f"Cannot remove the Book {book.title}")
 
         self.load_csv("Files/books.csv")
-        messagebox.showinfo("Success", f"Removed the Book {book.title}")
+        if success:
+            self.notify(f"Removed the Book {book.title}")
+            messagebox.showinfo("Success", f"Removed the Book {book.title}")
 
     def search_book(self):
         title = self.entries["title"].get()
@@ -483,13 +499,16 @@ class LibraryApp:
 
         # Create a book object and add it to the CSV
         book = self.factory.create_book(title, author, genre, year)
-        FileManagement.return_book(book)
+        success = FileManagement.return_book(book)
+        if not success:
+            messagebox.showinfo("Error", f"Cannot return the Book {book.title}")
 
         # Reload the CSV into the Treeview
         self.load_csv("Files/books.csv")
-
-        # Success message
-        messagebox.showinfo("Success", f"Returned the Book {book.title}")
+        if success:
+            self.notify(f"Returned the Book {book.title}")
+            # Success message
+            messagebox.showinfo("Success", f"Returned the Book {book.title}")
 
     def view_populars(self):
         FileManagement.load_populars_to_csv()
@@ -517,16 +536,67 @@ class LibraryApp:
             self.setup_ui()
 
     def notify(self, message):
-        users = FileManagement.load_users_to_list()
-        for user in users:
-            user.update(self.logged_in_user,message)
-            FileManagement.write_message(user)
+        user_names = [user.user_name for user in self.users]
+        for user in self.users:
+            if user.user_name in user_names and user.user_name != self.logged_in_user:
+                user.update(self.logged_in_user,message)
+                FileManagement.write_message(user)
 
     def view_waiting_list(self):
         FileManagement.load_waiting_list()
         # Reload the CSV into the Treeview
         self.load_csv("Files/waiting_list.csv")
 
+    def load_notifications(self):
+        for user in self.users:
+            user.notifications = FileManagement.get_user_notifications(user.user_name)
+
+    def view_notifications(self):
+        """Open a window to display notifications."""
+        if not hasattr(self, 'logged_in_user') or not self.logged_in_user:
+            messagebox.showerror("Error", "No user is logged in!")
+            return
+
+        # Example: Retrieve notifications for the user
+        user_notifications = FileManagement.get_user_notifications(self.logged_in_user)
+
+        if not user_notifications:
+            messagebox.showinfo("Notifications", "You have no notifications.")
+            return
+
+        # Create a new window for notifications
+        notif_window = tk.Toplevel(self.root)
+        notif_window.title("Notifications")
+        notif_window.geometry("400x300")
+        notif_window.configure(bg="#f7f7f7")
+
+        tk.Label(
+            notif_window,
+            text="Your Notifications",
+            font=("Arial", 18, "bold"),
+            bg="#f7f7f7",
+            fg="#333333"
+        ).pack(pady=10)
+
+        # Listbox for notifications
+        notif_list = tk.Listbox(notif_window, font=("Arial", 14), width=50, height=10)
+        notif_list.pack(pady=10, padx=10)
+
+        # Populate the listbox with sender and messages
+        for sender, messages in user_notifications.items():
+            notif_list.insert(tk.END, f"{sender}:")  # Display the sender
+            for message in messages:
+                notif_list.insert(tk.END, f"  - {message}")  # Display each message with indentation
+
+        # Close button
+        tk.Button(
+            notif_window,
+            text="Close",
+            command=notif_window.destroy,
+            bg="#ff0000",
+            fg="black",
+            font=("Arial", 14, "bold")
+        ).pack(pady=10)
 
 if __name__ == "__main__":
     root = tk.Tk()

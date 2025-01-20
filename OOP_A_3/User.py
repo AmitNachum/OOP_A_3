@@ -27,7 +27,5 @@ class User(UserObserver):
 
     def update(self, sender, message):
         if sender not in self.notifications:
-            self.notifications[sender] = [message]
-
+            self.notifications[sender] = []
         self.notifications[sender].append(message)
-
