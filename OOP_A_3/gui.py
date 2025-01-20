@@ -550,11 +550,14 @@ class LibraryApp:
     def load_notifications(self):
         for user in self.users:
             user.notifications = FileManagement.get_user_notifications(user.user_name)
+        logging.info("load notifications successfully")
 
     def view_notifications(self):
         """Open a window to display notifications."""
         if not hasattr(self, 'logged_in_user') or not self.logged_in_user:
             messagebox.showerror("Error", "No user is logged in!")
+            logging.info("view notifications failed")
+
             return
 
         # Example: Retrieve notifications for the user
@@ -562,6 +565,7 @@ class LibraryApp:
 
         if not user_notifications:
             messagebox.showinfo("Notifications", "You have no notifications.")
+            logging.info("view notifications failed")
             return
 
         # Create a new window for notifications
@@ -597,6 +601,9 @@ class LibraryApp:
             fg="black",
             font=("Arial", 14, "bold")
         ).pack(pady=10)
+
+        logging.info("view notifications performed successfully")
+
 
 if __name__ == "__main__":
     root = tk.Tk()
