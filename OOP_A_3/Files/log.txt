@@ -3088,3 +3088,370 @@
 2025-01-20 21:25:56,855 - INFO - Load waiting list performed successfully.
 2025-01-20 21:25:59,475 - INFO - User file read performed successfully.
 2025-01-20 21:25:59,476 - INFO - Got User Notification performed successfully.
+2025-01-20 22:19:20,078 - INFO - User file read performed successfully.
+2025-01-20 22:19:21,774 - INFO - logged in successfully
+2025-01-20 22:19:21,779 - INFO - Successfully loaded 1 users from the file.
+2025-01-20 22:19:21,780 - INFO - Load users to list performed successfully.
+2025-01-20 22:19:21,780 - INFO - User file read performed successfully.
+2025-01-20 22:19:21,780 - ERROR - Failed to parse notifications for user: adi
+2025-01-20 22:19:21,780 - INFO - Got User Notification performed successfully.
+2025-01-20 22:19:21,781 - INFO - load notifications successfully
+2025-01-20 22:19:21,782 - WARNING - Created new DataFrame with columns: ['title', 'author', 'is_loaned', 'copies', 'genre', 'year', 'available_copies', 'loaned_copies', 'lend_count']
+2025-01-20 22:19:21,784 - INFO - Successfully loaded 34 books from the file.
+2025-01-20 22:19:21,784 - INFO - Load books to list performed successfully.
+2025-01-20 22:19:21,784 - INFO - Get Popular Books performed successfully.
+2025-01-20 22:19:21,787 - INFO - Popular books saved to Files/popular_books.csv.
+2025-01-20 22:19:21,787 - INFO - Load popular books to CSV performed successfully.
+2025-01-20 22:19:21,787 - WARNING - Created new DataFrame with columns: ['title', 'name', 'email']
+2025-01-20 22:19:21,787 - INFO - Waiting list saved successfully to Files/waiting_list.csv.
+2025-01-20 22:19:21,787 - INFO - Load waiting list performed successfully.
+2025-01-20 22:52:09,449 - INFO - User file read performed successfully.
+2025-01-20 22:52:11,023 - INFO - logged in successfully
+2025-01-20 22:52:11,028 - INFO - Successfully loaded 1 users from the file.
+2025-01-20 22:52:11,028 - INFO - Load users to list performed successfully.
+2025-01-20 22:52:11,029 - INFO - User file read performed successfully.
+2025-01-20 22:52:11,029 - ERROR - Failed to parse notifications for user: adi
+2025-01-20 22:52:11,029 - INFO - Got User Notification performed successfully.
+2025-01-20 22:52:11,029 - INFO - load notifications successfully
+2025-01-20 22:52:11,032 - INFO - Successfully loaded 34 books from the file.
+2025-01-20 22:52:11,032 - INFO - Load books to list performed successfully.
+2025-01-20 22:52:11,032 - INFO - Get Popular Books performed successfully.
+2025-01-20 22:52:11,035 - INFO - Popular books saved to Files/popular_books.csv.
+2025-01-20 22:52:11,035 - INFO - Load popular books to CSV performed successfully.
+2025-01-20 22:52:11,036 - INFO - Waiting list saved successfully to Files/waiting_list.csv.
+2025-01-20 22:52:11,036 - INFO - Load waiting list performed successfully.
+2025-01-20 22:52:53,501 - INFO - User file read performed successfully.
+2025-01-20 22:52:54,947 - INFO - logged in successfully
+2025-01-20 22:52:54,951 - INFO - Successfully loaded 1 users from the file.
+2025-01-20 22:52:54,951 - INFO - Load users to list performed successfully.
+2025-01-20 22:52:54,952 - INFO - User file read performed successfully.
+2025-01-20 22:52:54,952 - ERROR - Failed to parse notifications for user: adi
+2025-01-20 22:52:54,952 - INFO - Got User Notification performed successfully.
+2025-01-20 22:52:54,952 - INFO - load notifications successfully
+2025-01-20 22:52:54,954 - INFO - Successfully loaded 34 books from the file.
+2025-01-20 22:52:54,954 - INFO - Load books to list performed successfully.
+2025-01-20 22:52:54,955 - INFO - Get Popular Books performed successfully.
+2025-01-20 22:52:54,958 - INFO - Popular books saved to Files/popular_books.csv.
+2025-01-20 22:52:54,958 - INFO - Load popular books to CSV performed successfully.
+2025-01-20 22:52:54,959 - INFO - Waiting list saved successfully to Files/waiting_list.csv.
+2025-01-20 22:52:54,959 - INFO - Load waiting list performed successfully.
+2025-01-20 22:53:12,521 - INFO - User file read performed successfully.
+2025-01-20 22:53:13,898 - INFO - logged in successfully
+2025-01-20 22:53:13,903 - INFO - Successfully loaded 1 users from the file.
+2025-01-20 22:53:13,903 - INFO - Load users to list performed successfully.
+2025-01-20 22:53:13,904 - INFO - User file read performed successfully.
+2025-01-20 22:53:13,904 - ERROR - Failed to parse notifications for user: adi
+2025-01-20 22:53:13,904 - INFO - Got User Notification performed successfully.
+2025-01-20 22:53:13,904 - INFO - load notifications successfully
+2025-01-20 22:53:13,906 - INFO - Successfully loaded 34 books from the file.
+2025-01-20 22:53:13,906 - INFO - Load books to list performed successfully.
+2025-01-20 22:53:13,906 - INFO - Get Popular Books performed successfully.
+2025-01-20 22:53:13,909 - INFO - Popular books saved to Files/popular_books.csv.
+2025-01-20 22:53:13,909 - INFO - Load popular books to CSV performed successfully.
+2025-01-20 22:53:13,909 - INFO - Waiting list saved successfully to Files/waiting_list.csv.
+2025-01-20 22:53:13,909 - INFO - Load waiting list performed successfully.
+2025-01-20 23:11:49,427 - INFO - User file read performed successfully.
+2025-01-20 23:11:51,055 - INFO - logged in successfully
+2025-01-20 23:11:51,060 - INFO - Successfully loaded 1 users from the file.
+2025-01-20 23:11:51,060 - INFO - Load users to list performed successfully.
+2025-01-20 23:11:51,061 - INFO - User file read performed successfully.
+2025-01-20 23:11:51,061 - ERROR - Failed to parse notifications for user: adi
+2025-01-20 23:11:51,061 - INFO - Got User Notification performed successfully.
+2025-01-20 23:11:51,061 - INFO - load notifications successfully
+2025-01-20 23:11:51,063 - INFO - Successfully loaded 34 books from the file.
+2025-01-20 23:11:51,063 - INFO - Load books to list performed successfully.
+2025-01-20 23:11:51,064 - INFO - Get Popular Books performed successfully.
+2025-01-20 23:11:51,067 - INFO - Popular books saved to Files/popular_books.csv.
+2025-01-20 23:11:51,067 - INFO - Load popular books to CSV performed successfully.
+2025-01-20 23:11:51,068 - INFO - Waiting list saved successfully to Files/waiting_list.csv.
+2025-01-20 23:11:51,068 - INFO - Load waiting list performed successfully.
+2025-01-20 23:16:32,638 - INFO - User file read performed successfully.
+2025-01-20 23:16:34,112 - INFO - logged in successfully
+2025-01-20 23:16:34,117 - INFO - Successfully loaded 1 users from the file.
+2025-01-20 23:16:34,117 - INFO - Load users to list performed successfully.
+2025-01-20 23:16:34,117 - INFO - User file read performed successfully.
+2025-01-20 23:16:34,118 - ERROR - Failed to parse notifications for user: adi
+2025-01-20 23:16:34,118 - INFO - Got User Notification performed successfully.
+2025-01-20 23:16:34,118 - INFO - load notifications successfully
+2025-01-20 23:16:34,120 - INFO - Successfully loaded 34 books from the file.
+2025-01-20 23:16:34,120 - INFO - Load books to list performed successfully.
+2025-01-20 23:16:34,120 - INFO - Get Popular Books performed successfully.
+2025-01-20 23:16:34,123 - INFO - Popular books saved to Files/popular_books.csv.
+2025-01-20 23:16:34,123 - INFO - Load popular books to CSV performed successfully.
+2025-01-20 23:16:34,124 - INFO - Waiting list saved successfully to Files/waiting_list.csv.
+2025-01-20 23:16:34,124 - INFO - Load waiting list performed successfully.
+2025-01-20 23:23:10,863 - INFO - User file read performed successfully.
+2025-01-20 23:23:12,476 - INFO - logged in successfully
+2025-01-20 23:23:12,481 - INFO - Successfully loaded 1 users from the file.
+2025-01-20 23:23:12,481 - INFO - Load users to list performed successfully.
+2025-01-20 23:23:12,482 - INFO - User file read performed successfully.
+2025-01-20 23:23:12,482 - ERROR - Failed to parse notifications for user: adi
+2025-01-20 23:23:12,482 - INFO - Got User Notification performed successfully.
+2025-01-20 23:23:12,482 - INFO - load notifications successfully
+2025-01-20 23:23:12,485 - INFO - Successfully loaded 34 books from the file.
+2025-01-20 23:23:12,485 - INFO - Load books to list performed successfully.
+2025-01-20 23:23:12,485 - INFO - Get Popular Books performed successfully.
+2025-01-20 23:23:12,489 - INFO - Popular books saved to Files/popular_books.csv.
+2025-01-20 23:23:12,489 - INFO - Load popular books to CSV performed successfully.
+2025-01-20 23:23:12,489 - INFO - Waiting list saved successfully to Files/waiting_list.csv.
+2025-01-20 23:23:12,489 - INFO - Load waiting list performed successfully.
+2025-01-20 23:44:50,674 - WARNING - login failed, User not found
+2025-01-21 00:57:08,927 - INFO - Book 'Book2' by Author2 added successfully.
+2025-01-21 00:57:08,930 - INFO - Book added performed successfully.
+2025-01-21 00:57:08,932 - ERROR - Missing expected column in book data: 'is_loaned'
+2025-01-21 00:57:08,933 - ERROR - Missing expected column in book data: 'is_loaned'
+2025-01-21 00:57:08,933 - INFO - Successfully loaded 0 books from the file.
+2025-01-21 00:57:08,933 - INFO - Load books to list performed successfully.
+2025-01-21 00:57:08,933 - INFO - Get Popular Books performed successfully.
+2025-01-21 00:57:08,934 - INFO - User file read performed successfully.
+2025-01-21 00:57:08,934 - INFO - Got User Notification performed successfully.
+2025-01-21 00:57:08,936 - ERROR - Missing expected column in book data: 'genre'
+2025-01-21 00:57:08,936 - INFO - Successfully loaded 0 books from the file.
+2025-01-21 00:57:08,936 - INFO - Load books to list performed successfully.
+2025-01-21 00:57:08,936 - INFO - Get Popular Books performed successfully.
+2025-01-21 00:57:08,936 - INFO - No popular books found.
+2025-01-21 00:57:08,936 - INFO - Load popular books to CSV performed successfully.
+2025-01-21 00:57:08,936 - INFO - Book 'Book1' by Author1 has been successfully loaned.
+2025-01-21 00:57:08,936 - INFO - Book lent performed successfully.
+2025-01-21 00:57:08,936 - INFO - User file read performed successfully.
+2025-01-21 00:57:08,937 - INFO - User 'new_user' signed up successfully.
+2025-01-21 00:57:08,937 - INFO - User sign-up performed successfully.
+2025-01-21 01:02:11,226 - INFO - Book 'Book2' by Author2 added successfully.
+2025-01-21 01:02:11,227 - INFO - Book added performed successfully.
+2025-01-21 01:02:11,229 - ERROR - Missing expected column in book data: 'is_loaned'
+2025-01-21 01:02:11,229 - ERROR - Missing expected column in book data: 'is_loaned'
+2025-01-21 01:02:11,229 - INFO - Successfully loaded 0 books from the file.
+2025-01-21 01:02:11,229 - INFO - Load books to list performed successfully.
+2025-01-21 01:02:11,229 - INFO - Get Popular Books performed successfully.
+2025-01-21 01:02:11,230 - INFO - User file read performed successfully.
+2025-01-21 01:02:11,230 - INFO - Got User Notification performed successfully.
+2025-01-21 01:02:11,231 - ERROR - Missing expected column in book data: 'genre'
+2025-01-21 01:02:11,232 - INFO - Successfully loaded 0 books from the file.
+2025-01-21 01:02:11,232 - INFO - Load books to list performed successfully.
+2025-01-21 01:02:11,232 - INFO - Get Popular Books performed successfully.
+2025-01-21 01:02:11,232 - INFO - No popular books found.
+2025-01-21 01:02:11,232 - INFO - Load popular books to CSV performed successfully.
+2025-01-21 01:02:11,232 - INFO - Book 'Book1' by Author1 has been successfully loaned.
+2025-01-21 01:02:11,232 - INFO - Book lent performed successfully.
+2025-01-21 01:02:11,233 - INFO - One copy of 'Book1' by Author1 has been removed.
+2025-01-21 01:02:11,233 - INFO - Book removed performed successfully.
+2025-01-21 01:02:11,234 - INFO - Book 'Book1' by Author1 has been successfully returned.
+2025-01-21 01:02:11,234 - INFO - Return book performed successfully.
+2025-01-21 01:02:11,234 - INFO - User file read performed successfully.
+2025-01-21 01:02:11,234 - INFO - User 'new_user' signed up successfully.
+2025-01-21 01:02:11,235 - INFO - User sign-up performed successfully.
+2025-01-21 01:04:23,380 - INFO - Book 'Book2' by Author2 added successfully.
+2025-01-21 01:04:23,388 - INFO - Book added performed successfully.
+2025-01-21 01:04:23,389 - ERROR - Missing expected column in book data: 'year'
+2025-01-21 01:04:23,389 - ERROR - Missing expected column in book data: 'year'
+2025-01-21 01:04:23,389 - INFO - Successfully loaded 0 books from the file.
+2025-01-21 01:04:23,389 - INFO - Load books to list performed successfully.
+2025-01-21 01:04:23,389 - INFO - Get Popular Books performed successfully.
+2025-01-21 01:04:23,390 - INFO - User file read performed successfully.
+2025-01-21 01:04:23,390 - INFO - Got User Notification performed successfully.
+2025-01-21 01:04:23,392 - ERROR - Missing expected column in book data: 'genre'
+2025-01-21 01:04:23,392 - INFO - Successfully loaded 0 books from the file.
+2025-01-21 01:04:23,392 - INFO - Load books to list performed successfully.
+2025-01-21 01:04:23,392 - INFO - Get Popular Books performed successfully.
+2025-01-21 01:04:23,392 - INFO - No popular books found.
+2025-01-21 01:04:23,392 - INFO - Load popular books to CSV performed successfully.
+2025-01-21 01:04:23,392 - INFO - Book 'Book1' by Author1 has been successfully loaned.
+2025-01-21 01:04:23,392 - INFO - Book lent performed successfully.
+2025-01-21 01:04:23,393 - INFO - One copy of 'Book1' by Author1 has been removed.
+2025-01-21 01:04:23,393 - INFO - Book removed performed successfully.
+2025-01-21 01:04:23,394 - INFO - Book 'Book1' by Author1 has been successfully returned.
+2025-01-21 01:04:23,394 - INFO - Return book performed successfully.
+2025-01-21 01:04:23,394 - INFO - User file read performed successfully.
+2025-01-21 01:04:23,395 - INFO - User 'new_user' signed up successfully.
+2025-01-21 01:04:23,395 - INFO - User sign-up performed successfully.
+2025-01-21 01:06:05,123 - INFO - Book 'Book2' by Author2 added successfully.
+2025-01-21 01:06:05,123 - INFO - Book added performed successfully.
+2025-01-21 01:06:05,124 - INFO - Successfully loaded 2 books from the file.
+2025-01-21 01:06:05,124 - INFO - Load books to list performed successfully.
+2025-01-21 01:06:05,124 - INFO - Get Popular Books performed successfully.
+2025-01-21 01:06:05,125 - INFO - User file read performed successfully.
+2025-01-21 01:06:05,125 - INFO - Got User Notification performed successfully.
+2025-01-21 01:06:05,126 - ERROR - Missing expected column in book data: 'genre'
+2025-01-21 01:06:05,126 - INFO - Successfully loaded 0 books from the file.
+2025-01-21 01:06:05,126 - INFO - Load books to list performed successfully.
+2025-01-21 01:06:05,126 - INFO - Get Popular Books performed successfully.
+2025-01-21 01:06:05,126 - INFO - No popular books found.
+2025-01-21 01:06:05,126 - INFO - Load popular books to CSV performed successfully.
+2025-01-21 01:06:05,126 - INFO - Book 'Book1' by Author1 has been successfully loaned.
+2025-01-21 01:06:05,126 - INFO - Book lent performed successfully.
+2025-01-21 01:06:05,127 - INFO - One copy of 'Book1' by Author1 has been removed.
+2025-01-21 01:06:05,127 - INFO - Book removed performed successfully.
+2025-01-21 01:06:05,128 - INFO - Book 'Book1' by Author1 has been successfully returned.
+2025-01-21 01:06:05,128 - INFO - Return book performed successfully.
+2025-01-21 01:06:05,129 - INFO - User file read performed successfully.
+2025-01-21 01:06:05,129 - INFO - User 'new_user' signed up successfully.
+2025-01-21 01:06:05,129 - INFO - User sign-up performed successfully.
+2025-01-21 01:06:36,140 - INFO - Book 'Book2' by Author2 added successfully.
+2025-01-21 01:06:36,141 - INFO - Book added performed successfully.
+2025-01-21 01:06:36,142 - INFO - Successfully loaded 2 books from the file.
+2025-01-21 01:06:36,142 - INFO - Load books to list performed successfully.
+2025-01-21 01:06:36,142 - INFO - Get Popular Books performed successfully.
+2025-01-21 01:06:36,143 - INFO - User file read performed successfully.
+2025-01-21 01:06:36,143 - INFO - Got User Notification performed successfully.
+2025-01-21 01:06:36,144 - ERROR - Missing expected column in book data: 'genre'
+2025-01-21 01:06:36,144 - INFO - Successfully loaded 0 books from the file.
+2025-01-21 01:06:36,144 - INFO - Load books to list performed successfully.
+2025-01-21 01:06:36,144 - INFO - Get Popular Books performed successfully.
+2025-01-21 01:06:36,144 - INFO - No popular books found.
+2025-01-21 01:06:36,144 - INFO - Load popular books to CSV performed successfully.
+2025-01-21 01:06:36,144 - INFO - Book 'Book1' by Author1 has been successfully loaned.
+2025-01-21 01:06:36,144 - INFO - Book lent performed successfully.
+2025-01-21 01:06:36,145 - INFO - One copy of 'Book1' by Author1 has been removed.
+2025-01-21 01:06:36,145 - INFO - Book removed performed successfully.
+2025-01-21 01:06:36,146 - INFO - Book 'Book1' by Author1 has been successfully returned.
+2025-01-21 01:06:36,146 - INFO - Return book performed successfully.
+2025-01-21 01:06:36,146 - INFO - User file read performed successfully.
+2025-01-21 01:06:36,147 - INFO - User 'new_user' signed up successfully.
+2025-01-21 01:06:36,147 - INFO - User sign-up performed successfully.
+2025-01-21 01:06:57,019 - INFO - User file read performed successfully.
+2025-01-21 01:06:57,020 - INFO - Got User Notification performed successfully.
+2025-01-21 01:07:49,060 - INFO - User file read performed successfully.
+2025-01-21 01:07:49,061 - INFO - User 'new_user' signed up successfully.
+2025-01-21 01:07:49,061 - INFO - User sign-up performed successfully.
+2025-01-21 01:08:16,223 - INFO - Book 'Book2' by Author2 added successfully.
+2025-01-21 01:08:16,223 - INFO - Book added performed successfully.
+2025-01-21 01:14:37,048 - INFO - Book 'Book2' by Author2 added successfully.
+2025-01-21 01:14:37,049 - INFO - Book added performed successfully.
+2025-01-21 01:14:37,049 - INFO - Add to waiting list performed successfully.
+2025-01-21 01:14:37,050 - INFO - Successfully loaded 2 books from the file.
+2025-01-21 01:14:37,050 - INFO - Load books to list performed successfully.
+2025-01-21 01:14:37,050 - INFO - Get Popular Books performed successfully.
+2025-01-21 01:14:37,050 - INFO - User file read performed successfully.
+2025-01-21 01:14:37,050 - INFO - Got User Notification performed successfully.
+2025-01-21 01:14:37,051 - ERROR - Missing expected column in book data: 'genre'
+2025-01-21 01:14:37,051 - INFO - Successfully loaded 0 books from the file.
+2025-01-21 01:14:37,051 - INFO - Load books to list performed successfully.
+2025-01-21 01:14:37,051 - INFO - Get Popular Books performed successfully.
+2025-01-21 01:14:37,051 - INFO - No popular books found.
+2025-01-21 01:14:37,051 - INFO - Load popular books to CSV performed successfully.
+2025-01-21 01:14:37,051 - INFO - Book 'Book1' by Author1 has been successfully loaned.
+2025-01-21 01:14:37,051 - INFO - Book lent performed successfully.
+2025-01-21 01:14:37,052 - INFO - One copy of 'Book1' by Author1 has been removed.
+2025-01-21 01:14:37,052 - INFO - Book removed performed successfully.
+2025-01-21 01:14:37,053 - INFO - Book 'Book1' by Author1 has been successfully returned.
+2025-01-21 01:14:37,053 - INFO - Return book performed successfully.
+2025-01-21 01:14:37,054 - INFO - Books file loaded successfully from Files/books.csv.
+2025-01-21 01:14:37,054 - ERROR - Missing expected column in book data: 'lend_count'
+2025-01-21 01:14:37,054 - ERROR - Missing expected column in book data: 'lend_count'
+2025-01-21 01:14:37,054 - INFO - Successfully loaded 0 books from the file.
+2025-01-21 01:14:37,054 - INFO - Load books to list performed successfully.
+2025-01-21 01:14:37,054 - INFO - Loaded 0 books for searching.
+2025-01-21 01:14:37,054 - INFO - Search completed with 0 results.
+2025-01-21 01:14:37,055 - INFO - Search results saved to Files/books.csv.
+2025-01-21 01:14:37,055 - INFO - Search books performed successfully.
+2025-01-21 01:14:37,057 - INFO - User file read performed successfully.
+2025-01-21 01:14:37,058 - INFO - User 'new_user' signed up successfully.
+2025-01-21 01:14:37,058 - INFO - User sign-up performed successfully.
+2025-01-21 01:14:37,059 - INFO - Notification Added performed successfully.
+2025-01-21 01:16:50,626 - INFO - Book 'Book2' by Author2 added successfully.
+2025-01-21 01:16:50,626 - INFO - Book added performed successfully.
+2025-01-21 01:16:50,627 - INFO - Add to waiting list performed successfully.
+2025-01-21 01:16:50,627 - INFO - Successfully loaded 2 books from the file.
+2025-01-21 01:16:50,627 - INFO - Load books to list performed successfully.
+2025-01-21 01:16:50,627 - INFO - Get Popular Books performed successfully.
+2025-01-21 01:16:50,628 - INFO - User file read performed successfully.
+2025-01-21 01:16:50,628 - INFO - Got User Notification performed successfully.
+2025-01-21 01:16:50,630 - ERROR - Missing expected column in book data: 'genre'
+2025-01-21 01:16:50,630 - INFO - Successfully loaded 0 books from the file.
+2025-01-21 01:16:50,630 - INFO - Load books to list performed successfully.
+2025-01-21 01:16:50,630 - INFO - Get Popular Books performed successfully.
+2025-01-21 01:16:50,630 - INFO - No popular books found.
+2025-01-21 01:16:50,630 - INFO - Load popular books to CSV performed successfully.
+2025-01-21 01:16:50,630 - INFO - Book 'Book1' by Author1 has been successfully loaned.
+2025-01-21 01:16:50,630 - INFO - Book lent performed successfully.
+2025-01-21 01:16:50,631 - INFO - One copy of 'Book1' by Author1 has been removed.
+2025-01-21 01:16:50,631 - INFO - Book removed performed successfully.
+2025-01-21 01:16:50,632 - INFO - Book 'Book1' by Author1 has been successfully returned.
+2025-01-21 01:16:50,632 - INFO - Return book performed successfully.
+2025-01-21 01:16:50,632 - INFO - Books file loaded successfully from Files/books.csv.
+2025-01-21 01:16:50,632 - INFO - Successfully loaded 2 books from the file.
+2025-01-21 01:16:50,632 - INFO - Load books to list performed successfully.
+2025-01-21 01:16:50,632 - INFO - Loaded 2 books for searching.
+2025-01-21 01:16:50,632 - INFO - Search completed with 2 results.
+2025-01-21 01:16:50,633 - INFO - Search results saved to Files/books.csv.
+2025-01-21 01:16:50,633 - INFO - Search books performed successfully.
+2025-01-21 01:16:50,635 - INFO - User file read performed successfully.
+2025-01-21 01:16:50,636 - INFO - User 'new_user' signed up successfully.
+2025-01-21 01:16:50,636 - INFO - User sign-up performed successfully.
+2025-01-21 01:16:50,637 - INFO - Notification Added performed successfully.
+2025-01-21 01:19:53,917 - INFO - Book 'Book2' by Author2 added successfully.
+2025-01-21 01:19:53,918 - INFO - Book added performed successfully.
+2025-01-21 01:19:53,918 - INFO - Add to waiting list performed successfully.
+2025-01-21 01:19:53,919 - INFO - Successfully loaded 2 books from the file.
+2025-01-21 01:19:53,919 - INFO - Load books to list performed successfully.
+2025-01-21 01:19:53,919 - INFO - Get Popular Books performed successfully.
+2025-01-21 01:19:53,920 - INFO - User file read performed successfully.
+2025-01-21 01:19:53,920 - INFO - Got User Notification performed successfully.
+2025-01-21 01:19:53,921 - ERROR - Missing expected column in book data: 'genre'
+2025-01-21 01:19:53,921 - INFO - Successfully loaded 0 books from the file.
+2025-01-21 01:19:53,921 - INFO - Load books to list performed successfully.
+2025-01-21 01:19:53,921 - INFO - Get Popular Books performed successfully.
+2025-01-21 01:19:53,921 - INFO - No popular books found.
+2025-01-21 01:19:53,921 - INFO - Load popular books to CSV performed successfully.
+2025-01-21 01:19:53,921 - INFO - Book 'Book1' by Author1 has been successfully loaned.
+2025-01-21 01:19:53,921 - INFO - Book lent performed successfully.
+2025-01-21 01:19:53,922 - INFO - One copy of 'Book1' by Author1 has been removed.
+2025-01-21 01:19:53,922 - INFO - Book removed performed successfully.
+2025-01-21 01:19:53,923 - INFO - Book 'Book1' by Author1 has been successfully returned.
+2025-01-21 01:19:53,923 - INFO - Return book performed successfully.
+2025-01-21 01:19:53,924 - INFO - Books file loaded successfully from Files/books.csv.
+2025-01-21 01:19:53,924 - INFO - Successfully loaded 2 books from the file.
+2025-01-21 01:19:53,924 - INFO - Load books to list performed successfully.
+2025-01-21 01:19:53,924 - INFO - Loaded 2 books for searching.
+2025-01-21 01:19:53,924 - INFO - Search completed with 2 results.
+2025-01-21 01:19:53,925 - INFO - Search results saved to Files/books.csv.
+2025-01-21 01:19:53,926 - INFO - Search books performed successfully.
+2025-01-21 01:19:53,926 - INFO - User file read performed successfully.
+2025-01-21 01:19:53,927 - INFO - User 'new_user' signed up successfully.
+2025-01-21 01:19:53,927 - INFO - User sign-up performed successfully.
+2025-01-21 01:19:53,927 - INFO - Notification Added performed successfully.
+2025-01-21 01:20:04,360 - INFO - Books file loaded successfully from Files/books.csv.
+2025-01-21 01:20:04,361 - INFO - Successfully loaded 2 books from the file.
+2025-01-21 01:20:04,361 - INFO - Load books to list performed successfully.
+2025-01-21 01:20:04,361 - INFO - Loaded 2 books for searching.
+2025-01-21 01:20:04,361 - INFO - Search completed with 2 results.
+2025-01-21 01:20:04,362 - INFO - Search results saved to Files/books.csv.
+2025-01-21 01:20:04,362 - INFO - Search books performed successfully.
+2025-01-21 01:21:59,284 - INFO - Books file loaded successfully from Files/books.csv.
+2025-01-21 01:21:59,285 - INFO - Successfully loaded 2 books from the file.
+2025-01-21 01:21:59,285 - INFO - Load books to list performed successfully.
+2025-01-21 01:21:59,285 - INFO - Loaded 2 books for searching.
+2025-01-21 01:21:59,285 - INFO - Search completed with 2 results.
+2025-01-21 01:21:59,286 - INFO - Search results saved to Files/books.csv.
+2025-01-21 01:21:59,286 - INFO - Search books performed successfully.
+2025-01-21 01:22:37,147 - INFO - Book 'Book2' by Author2 added successfully.
+2025-01-21 01:22:37,147 - INFO - Book added performed successfully.
+2025-01-21 01:22:37,148 - INFO - Add to waiting list performed successfully.
+2025-01-21 01:22:37,148 - INFO - Successfully loaded 2 books from the file.
+2025-01-21 01:22:37,148 - INFO - Load books to list performed successfully.
+2025-01-21 01:22:37,148 - INFO - Get Popular Books performed successfully.
+2025-01-21 01:22:37,149 - INFO - User file read performed successfully.
+2025-01-21 01:22:37,149 - INFO - Got User Notification performed successfully.
+2025-01-21 01:22:37,151 - ERROR - Missing expected column in book data: 'genre'
+2025-01-21 01:22:37,151 - INFO - Successfully loaded 0 books from the file.
+2025-01-21 01:22:37,151 - INFO - Load books to list performed successfully.
+2025-01-21 01:22:37,151 - INFO - Get Popular Books performed successfully.
+2025-01-21 01:22:37,151 - INFO - No popular books found.
+2025-01-21 01:22:37,151 - INFO - Load popular books to CSV performed successfully.
+2025-01-21 01:22:37,151 - INFO - Book 'Book1' by Author1 has been successfully loaned.
+2025-01-21 01:22:37,151 - INFO - Book lent performed successfully.
+2025-01-21 01:22:37,152 - INFO - One copy of 'Book1' by Author1 has been removed.
+2025-01-21 01:22:37,152 - INFO - Book removed performed successfully.
+2025-01-21 01:22:37,153 - INFO - Book 'Book1' by Author1 has been successfully returned.
+2025-01-21 01:22:37,153 - INFO - Return book performed successfully.
+2025-01-21 01:22:37,154 - INFO - Books file loaded successfully from Files/books.csv.
+2025-01-21 01:22:37,154 - INFO - Successfully loaded 2 books from the file.
+2025-01-21 01:22:37,154 - INFO - Load books to list performed successfully.
+2025-01-21 01:22:37,154 - INFO - Loaded 2 books for searching.
+2025-01-21 01:22:37,154 - INFO - Search completed with 2 results.
+2025-01-21 01:22:37,155 - INFO - Search results saved to Files/books.csv.
+2025-01-21 01:22:37,155 - INFO - Search books performed successfully.
+2025-01-21 01:22:37,156 - INFO - User file read performed successfully.
+2025-01-21 01:22:37,156 - INFO - User 'new_user' signed up successfully.
+2025-01-21 01:22:37,156 - INFO - User sign-up performed successfully.
+2025-01-21 01:22:37,157 - INFO - Notification Added performed successfully.

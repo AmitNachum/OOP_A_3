@@ -3,7 +3,7 @@ import tkinter as tk
 from tkinter import ttk, messagebox
 import pandas as pd
 from FileManagement import FileManagement
-from BookFactroy import BookFactory
+from BookFactory import BookFactory
 from User import User
 from SearchStrategy import *
 
