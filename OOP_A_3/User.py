@@ -10,9 +10,6 @@ class UserObserver(ABC):
 
 
 class User(UserObserver):
-
-    USERS = []
-
     def __init__(self, user_name, password):
         self.user_name = user_name
         self.password = self.encrypt_password(password)

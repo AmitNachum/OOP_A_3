@@ -112,6 +112,7 @@ class LoginWindow(tk.Toplevel):
         tk.Button(self, text="Register", command=self.sign_up, bg="#6d9e69", fg="black", font=("Arial", 14, "bold"), width=15).pack(pady=10)
         tk.Button(self, text="Login", command=self.log_in, bg="#5a7dab", fg="black", font=("Arial", 14, "bold"), width=15).pack(pady=5)
 
+
     def sign_up(self):
         user_name = self.username_entry.get()
         password = self.password_entry.get()
@@ -124,7 +125,6 @@ class LoginWindow(tk.Toplevel):
         if not FileManagement.sign_up_user(user):
             messagebox.showerror("Error", f"User {user.user_name} already signed up")
         else:
-            User.USERS.append(user)
             messagebox.showinfo("Success", f"Signed up as {user.user_name}")
 
     def log_in(self):
@@ -517,8 +517,10 @@ class LibraryApp:
             self.setup_ui()
 
     def notify(self, message):
-        for user in User.USERS:
+        users = FileManagement.load_users_to_list()
+        for user in users:
             user.update(self.logged_in_user,message)
+            FileManagement.write_message(user)
 
     def view_waiting_list(self):
         FileManagement.load_waiting_list()

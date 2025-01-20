@@ -101,10 +101,45 @@ class FileManagement:
     waiting_list = {}
 
     @staticmethod
+    @log_action("Load users to list")
+    @handle_exceptions
+    @ensure_csv_columns(["user_name", "password", "notifications"])
+    def load_users_to_list(file_path="Files/users.csv",df=None):
+        users = []
+        for _, row in df.iterrows():
+            try:
+                user = User(
+                    user_name= row["user_name"],
+                    password= row["password"]
+                )
+                users.append(user)
+            except KeyError as e:
+                logging.error(f"Missing expected column in user data: {e}")
+
+        logging.info(f"Successfully loaded {len(users)} users from the file.")
+        return users
+
+    @staticmethod
+    @log_action("Notification Added")
+    @handle_exceptions
+    @check_file_exists
+    @ensure_csv_columns(["user_name", "password", "notifications"])
+    def write_message(user, file_path="Files/users.csv",df=None):
+        """A function that displays the newly messages for the user"""
+        user_mask = (df["user_name"] == user.user_name)
+        # Ensure the "notifications" column can store objects
+        df["notifications"] = df["notifications"].astype(object)
+
+        if user_mask.any():
+            index = df[user_mask].index[0]
+            df.at[index, "notifications"] = user.notifications
+            df.to_csv(file_path, index=False)
+
+    @staticmethod
     @handle_exceptions
     @check_file_exists
     @log_action("User file read")
-    @ensure_csv_columns(["user_name", "password"])
+    @ensure_csv_columns(["user_name", "password", "notifications"])
     def read_users(file_path="Files/users.csv",  df=None):
         users = pd.read_csv(file_path)
         return users
