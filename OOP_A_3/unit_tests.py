@@ -10,6 +10,7 @@ from Book import Book
 class TestFileManagement(unittest.TestCase):
     @patch("pandas.read_csv")
     def test_get_user_notifications(self, mock_read_csv):
+        # This test verifies if user notifications are correctly fetched from the mock data.
         # Mocking the data returned by pandas.read_csv
         mock_data = pd.DataFrame({
             'user_name': ['test_user'],
@@ -24,6 +25,7 @@ class TestFileManagement(unittest.TestCase):
     @patch("pandas.read_csv")
     @patch("pandas.DataFrame.to_csv")
     def test_sign_up_user(self, mock_to_csv, mock_read_csv):
+        # This test ensures that new users are added to the mock data and that the DataFrame reflects this addition.
         # Mocking the data returned by pandas.read_csv
         mock_data = pd.DataFrame({
             'user_name': ['existing_user'],
@@ -51,6 +53,7 @@ class TestFileManagement(unittest.TestCase):
     @patch("pandas.read_csv")
     @patch("pandas.DataFrame.to_csv")
     def test_add_book(self, mock_to_csv, mock_read_csv):
+        # This test checks if a new book is added to the mock dataset and ensures data integrity.
         # Mocking the data returned by pandas.read_csv
         mock_data = pd.DataFrame({
             'title': ['Book1'],
@@ -83,6 +86,7 @@ class TestFileManagement(unittest.TestCase):
     @patch("pandas.read_csv")
     @patch("pandas.DataFrame.to_csv")
     def test_remove_book(self, mock_to_csv, mock_read_csv):
+        # This test verifies the behavior of the function when removing a book and adjusting copies.
         # Mocking the data returned by pandas.read_csv
         mock_data = pd.DataFrame({
             'title': ['Book1'],
@@ -103,6 +107,7 @@ class TestFileManagement(unittest.TestCase):
     @patch("pandas.read_csv")
     @patch("pandas.DataFrame.to_csv")
     def test_return_book(self, mock_to_csv, mock_read_csv):
+        # This test checks if returning a book updates the available and loaned copies correctly.
         # Mocking the data returned by pandas.read_csv
         mock_data = pd.DataFrame({
             'title': ['Book1'],
@@ -124,6 +129,7 @@ class TestFileManagement(unittest.TestCase):
     @patch("pandas.read_csv")
     @patch("pandas.DataFrame.to_csv")
     def test_lend_book(self, mock_to_csv, mock_read_csv):
+        # This test validates that lending a book updates the relevant fields in the dataset correctly.
         # Mocking the data returned by pandas.read_csv
         mock_data = pd.DataFrame({
             'title': ['Book1'],
@@ -146,6 +152,7 @@ class TestFileManagement(unittest.TestCase):
 
     @patch("pandas.read_csv")
     def test_get_popular_books(self, mock_read_csv):
+        # This test ensures that the function retrieves popular books based on lend counts from the mock data.
         # Mocking the data returned by pandas.read_csv
         mock_data = pd.DataFrame({
             'title': ['Book1', 'Book2'],
@@ -166,6 +173,7 @@ class TestFileManagement(unittest.TestCase):
     @patch("pandas.read_csv")
     @patch("pandas.DataFrame.to_csv")
     def test_write_message(self, mock_to_csv, mock_read_csv):
+        # This test checks whether notifications for a user are correctly written to the dataset.
         # Mocking the data returned by pandas.read_csv
         mock_data = pd.DataFrame({
             'user_name': ['test_user'],
@@ -189,6 +197,7 @@ class TestFileManagement(unittest.TestCase):
     @patch("pandas.read_csv")
     @patch("pandas.DataFrame.to_csv")
     def test_search_book(self, mock_to_csv, mock_read_csv):
+        # This test ensures the search functionality works and that results are written to the correct file.
         # Mocking the data returned by pandas.read_csv
         mock_data = pd.DataFrame({
             'title': ['Book1', 'Book2'],
@@ -216,6 +225,7 @@ class TestFileManagement(unittest.TestCase):
 
     @patch("pandas.read_csv")
     def test_ask_info(self, mock_read_csv):
+        # This test validates if the function properly updates the waiting list with user details.
         FileManagement.waiting_list = {}
         book = Book(title="Book1", author="Author1", genre="Fiction", year=2023, copies=1, is_loaned="No")
         FileManagement.ask_info(book, {"name": "Test User", "email": "test@example.com"})
