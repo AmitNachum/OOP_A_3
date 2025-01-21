@@ -18,7 +18,20 @@ logging.basicConfig(
 )
 
 class AskInfoWindow(tk.Toplevel):
+    """
+    A pop-up window that collects user information when additional details
+    are required (e.g., lending a book).
+    """
+
     def __init__(self, parent, book, callback):
+        """
+        Initializes the AskInfoWindow.
+
+        Args:
+            parent (tk.Tk): The parent window.
+            book (Book): The book associated with this window.
+            callback (function): A callback function to handle the submitted information.
+        """
         super().__init__(parent)
         self.title("Enter User Information")
         self.geometry("300x250")
@@ -76,6 +89,10 @@ class AskInfoWindow(tk.Toplevel):
         ).pack(pady=20)
 
     def submit_info(self):
+        """
+        Validates and submits the user information.
+        If fields are empty, shows an error. If valid, calls the callback with the information.
+        """
         name = self.name_entry.get()
         email = self.email_entry.get()
 
@@ -87,7 +104,17 @@ class AskInfoWindow(tk.Toplevel):
         self.destroy()
 
 class LoginWindow(tk.Toplevel):
+    """
+    A login window for user authentication, allowing registration or login.
+    """
+
     def __init__(self, app):
+        """
+        Initializes the LoginWindow.
+
+        Args:
+            app (LibraryApp): The main application instance.
+        """
         super().__init__()
         self.app = app
         self.title("Login Window")
@@ -112,8 +139,10 @@ class LoginWindow(tk.Toplevel):
         tk.Button(self, text="Register", command=self.sign_up, bg="#6d9e69", fg="black", font=("Arial", 14, "bold"), width=15).pack(pady=10)
         tk.Button(self, text="Login", command=self.log_in, bg="#5a7dab", fg="black", font=("Arial", 14, "bold"), width=15).pack(pady=5)
 
-
     def sign_up(self):
+        """
+        Registers a new user. If the username already exists, shows an error.
+        """
         user_name = self.username_entry.get()
         password = self.password_entry.get()
 
@@ -128,6 +157,9 @@ class LoginWindow(tk.Toplevel):
             messagebox.showinfo("Success", f"Signed up as {user.user_name}")
 
     def log_in(self):
+        """
+        Logs in an existing user. Validates credentials and updates the main app state.
+        """
         user_name = self.username_entry.get()
         password = self.password_entry.get()
 
@@ -157,7 +189,18 @@ class LoginWindow(tk.Toplevel):
             logging.warning("login failed, User not found")
 
 class LibraryApp:
+    """
+    The main library management application that manages the GUI and integrates
+    various library management functionalities.
+    """
+
     def __init__(self, root):
+        """
+        Initializes the LibraryApp instance and sets up the user interface.
+
+        Args:
+            root (tk.Tk): The root window of the tkinter application.
+        """
         self.logged_in_user = None
         self.logged_in = False
         self.root = root
@@ -172,6 +215,10 @@ class LibraryApp:
             self.setup_ui()
 
     def setup_ui(self):
+        """
+        Sets up the user interface based on the login state of the user.
+        Displays either the login window or the main library management interface.
+        """
         if hasattr(self, 'tree'):
             return
 
@@ -246,6 +293,12 @@ class LibraryApp:
         self.load_csv("Files/books.csv")
 
     def create_form(self, frame):
+        """
+        Creates a form for entering book details.
+
+        Args:
+            frame (tk.Frame): The parent frame where the form will be added.
+        """
         labels = ["Title", "Author", "Is Loaned?", "Copies", "Genre", "Year", "Available Copies", "Loaned Copies", "Lend Count"]
         self.entries = {}
 
@@ -283,6 +336,12 @@ class LibraryApp:
             form_frame.grid_rowconfigure(i, weight=1, minsize=50)  # Increase vertical spacing between rows
 
     def create_buttons(self, frame):
+        """
+        Creates buttons for various library operations.
+
+        Args:
+            frame (tk.Frame): The parent frame where the buttons will be added.
+        """
         buttons = [
             ("Add Book", self.add_book, "#5d7f71"),
             ("Remove Book", self.remove_book, "#9b4a4a"),
@@ -310,6 +369,12 @@ class LibraryApp:
             ).grid(row=row, column=col, padx=10, pady=5)
 
     def create_table(self, frame):
+        """
+        Creates a table for displaying book details.
+
+        Args:
+            frame (tk.Frame): The parent frame where the table will be added.
+        """
         self.tree = ttk.Treeview(frame, show="headings", selectmode="browse")
         self.tree.pack(fill=tk.BOTH, expand=True, side=tk.LEFT)
 
@@ -318,6 +383,12 @@ class LibraryApp:
         self.tree.configure(yscroll=scrollbar.set)
 
     def load_csv(self, file_path):
+        """
+        Loads a CSV file into the table for display.
+
+        Args:
+            file_path (str): The path to the CSV file to load.
+        """
         try:
             df = pd.read_csv(file_path)
             self.tree.delete(*self.tree.get_children())
@@ -340,6 +411,10 @@ class LibraryApp:
             messagebox.showerror("Error", f"An unexpected error occurred: {e}")
 
     def add_book(self):
+        """
+        Adds a book to the library based on form inputs.
+        Prompts an error if any required field is missing or invalid.
+        """
         title = self.entries["title"].get()
         author = self.entries["author"].get()
         genre = self.entries["genre"].get()
@@ -364,6 +439,10 @@ class LibraryApp:
         messagebox.showinfo("Success", f"Added the Book {book.title}")
 
     def remove_book(self):
+        """
+        Removes a book from the library based on form inputs.
+        Prompts an error if any required field is missing or invalid.
+        """
         title = self.entries["title"].get()
         author = self.entries["author"].get()
         genre = self.entries["genre"].get()
@@ -390,6 +469,25 @@ class LibraryApp:
             messagebox.showinfo("Success", f"Removed the Book {book.title}")
 
     def search_book(self):
+        """
+        Search for books based on user-provided criteria and load the results into the Treeview.
+
+        The criteria include:
+        - title
+        - author
+        - genre
+        - year
+        - is_loaned
+        - copies
+        - available copies
+        - loaned copies
+        - lend count
+
+        Validates numeric fields and constructs search strategies for FileManagement.
+
+        Raises:
+            ValueError: If invalid numeric input is provided for certain fields.
+        """
         title = self.entries["title"].get()
         author = self.entries["author"].get()
         genre = self.entries["genre"].get()
@@ -439,10 +537,19 @@ class LibraryApp:
         self.load_csv("Files/search.csv")
 
     def view_books(self):
+        """
+        View all books by reloading the books.csv file into the Treeview.
+        """
         # Reload the CSV into the Treeview
         self.load_csv("Files/books.csv")
 
     def lend_book(self):
+        """
+        Lend a book to a user by title, author, genre, and year.
+
+        If the book is unavailable, prompts the user to add their information
+        to the waiting list using a pop-up window.
+        """
         title = self.entries["title"].get()
         author = self.entries["author"].get()
         genre = self.entries["genre"].get()
@@ -475,6 +582,13 @@ class LibraryApp:
             messagebox.showinfo("Success", f"Loaned the Book {book.title}")
 
     def handle_info_submission(self, info, book):
+        """
+        Handle the submission of user information when adding to the waiting list.
+
+        Args:
+            info (dict): User information such as name and contact details.
+            book (Book): The book object the user wants to borrow.
+        """
         FileManagement.ask_info(book, info)
         name = info.get("name")
         self.notify(f"Added {name} to the Book {book.title} waiting list")
@@ -482,6 +596,11 @@ class LibraryApp:
         messagebox.showinfo("Info", "Your details have been added to the waiting list.")
 
     def return_book(self):
+        """
+        Return a book by title, author, genre, and year.
+
+        Updates the system to reflect the return and reloads the Treeview.
+        """
         title = self.entries["title"].get()
         author = self.entries["author"].get()
         genre = self.entries["genre"].get()
@@ -511,11 +630,26 @@ class LibraryApp:
             messagebox.showinfo("Success", f"Returned the Book {book.title}")
 
     def view_populars(self):
+        """
+        Display the most popular books by loading them into the Treeview.
+
+        This method calls FileManagement to process the popular books
+        and reloads the "popular_books.csv" file into the Treeview.
+        """
         FileManagement.load_populars_to_csv()
         # Reload the CSV into the Treeview
         self.load_csv("Files/popular_books.csv")
 
     def logout(self):
+        """
+        Log out the currently logged-in user.
+
+        This method clears the main window, resets necessary attributes,
+        and displays the login window for the next user. It ensures that
+        any previous user session details are properly cleared.
+
+        Logs the logout event and resets the application UI if re-logged in.
+        """
         self.logged_in = False
 
         # Clear the main window
@@ -536,6 +670,15 @@ class LibraryApp:
             self.setup_ui()
 
     def notify(self, message):
+        """
+        Notify users of a new message.
+
+        Sends a message to all users except the currently logged-in user
+        and logs the message in the FileManagement system.
+
+        Args:
+            message (str): The message to notify other users.
+        """
         user_names = [user.user_name for user in self.users]
         for user in self.users:
             if user.user_name in user_names and user.user_name != self.logged_in_user:
@@ -543,17 +686,37 @@ class LibraryApp:
                 FileManagement.write_message(user)
 
     def view_waiting_list(self):
+        """
+        Display the waiting list for books by loading it into the Treeview.
+
+        This method calls FileManagement to process the waiting list
+        and reloads the "waiting_list.csv" file into the Treeview.
+        """
         FileManagement.load_waiting_list()
         # Reload the CSV into the Treeview
         self.load_csv("Files/waiting_list.csv")
 
     def load_notifications(self):
+        """
+        Load notifications for all users from the FileManagement system.
+
+        This method retrieves and updates the notifications for each user
+        and logs the successful loading of notifications.
+        """
         for user in self.users:
             user.notifications = FileManagement.get_user_notifications(user.user_name)
         logging.info("load notifications successfully")
 
     def view_notifications(self):
-        """Open a window to display notifications."""
+        """
+        Display notifications for the currently logged-in user.
+
+        Opens a new window to display the notifications, categorized by sender.
+        If there are no notifications or the user is not logged in, an error
+        or info message is displayed instead.
+
+        The notifications are shown in a Listbox for easy reading.
+        """
         if not hasattr(self, 'logged_in_user') or not self.logged_in_user:
             messagebox.showerror("Error", "No user is logged in!")
             logging.info("view notifications failed")
@@ -603,7 +766,6 @@ class LibraryApp:
         ).pack(pady=10)
 
         logging.info("view notifications performed successfully")
-
 
 if __name__ == "__main__":
     root = tk.Tk()
