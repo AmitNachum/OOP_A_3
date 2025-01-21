@@ -8,7 +8,9 @@ from User import User
 from SearchStrategy import *
 import pandas as pd
 import logging
-
+"""
+Handles file-related operations such as reading, writing, and modifying library data stored in CSV files.
+"""
 # Configure the logging
 logging.basicConfig(
     level=logging.DEBUG,
@@ -99,6 +101,9 @@ def ensure_csv_columns(required_columns):
     return decorator
 
 class FileManagement:
+    """
+   Provides static methods to manage books, users, notifications, and waiting lists in the library system.
+   """
     waiting_list = {}
 
     @staticmethod
@@ -130,6 +135,16 @@ class FileManagement:
     @handle_exceptions
     @ensure_csv_columns(["user_name", "password", "notifications"])
     def load_users_to_list(file_path="Files/users.csv",df=None):
+        """
+       Loads user data from a CSV file and creates User objects.
+
+       Args:
+           file_path (str): Path to the users CSV file. Default is 'Files/users.csv'.
+           df (pandas.DataFrame): DataFrame containing user data.
+
+       Returns:
+           list: List of User objects.
+       """
         users = []
         for _, row in df.iterrows():
             try:
@@ -150,7 +165,14 @@ class FileManagement:
     @check_file_exists
     @ensure_csv_columns(["user_name", "password", "notifications"])
     def write_message(user, file_path="Files/users.csv",df=None):
-        """A function that displays the newly messages for the user"""
+        """
+        Updates user notifications in the CSV file.
+
+        Args:
+            user (User): The user to update notifications for.
+            file_path (str): Path to the users CSV file.
+            df (pandas.DataFrame): DataFrame containing user data.
+        """
         user_mask = (df["user_name"] == user.user_name)
         # Ensure the "notifications" column can store objects
         df["notifications"] = df["notifications"].astype(object)
@@ -166,6 +188,15 @@ class FileManagement:
     @log_action("User file read")
     @ensure_csv_columns(["user_name", "password", "notifications"])
     def read_users(file_path="Files/users.csv",  df=None):
+        """
+        Reads user data from a CSV file.
+
+        Args:
+            file_path (str): Path to the users CSV file.
+
+        Returns:
+            pandas.DataFrame: DataFrame containing user data.
+        """
         users = pd.read_csv(file_path)
         return users
 
@@ -173,6 +204,15 @@ class FileManagement:
     @handle_exceptions
     @log_action(f"User sign-up")
     def sign_up_user(user: User):
+        """
+        Signs up a new user and adds them to the CSV file.
+
+        Args:
+            user (User): The user to sign up.
+
+        Returns:
+            bool: True if sign-up is successful, False otherwise.
+        """
         users = FileManagement.read_users()
 
         # Check if the user_name already exists in the DataFrame
@@ -198,6 +238,12 @@ class FileManagement:
     @log_action("Get Popular Books")
     @handle_exceptions
     def get_popular_books():
+        """
+        Fetches the top 10 most popular books by lend count.
+
+        Returns:
+            list: List of popular Book objects.
+        """
         books_df = pd.read_csv("Files/books.csv")
         books_df = books_df.sort_values(by="lend_count", ascending=False)
         top_books = books_df.head(10)
@@ -213,6 +259,13 @@ class FileManagement:
     @handle_exceptions
     @ensure_csv_columns(["title", "author", "is_loaned", "copies", "genre", "year", "available_copies", "loaned_copies", "lend_count"])
     def load_populars_to_csv(file_path="Files/popular_books.csv", df=None):
+        """
+        Saves the top 10 most popular books to a CSV file.
+
+        Args:
+            file_path (str): Path to the popular books CSV file.
+            df (pandas.DataFrame): DataFrame containing popular books data.
+        """
         popular_books = FileManagement.get_popular_books()
         books_df = pd.read_csv("Files/books.csv")
 
@@ -253,6 +306,17 @@ class FileManagement:
     @check_file_exists
     @ensure_csv_columns(["title", "author", "is_loaned", "copies", "genre", "year", "available_copies", "loaned_copies", "lend_count"])
     def add_book(book: Book, file_path="Files/books.csv", df=None):
+        """
+        Adds a book to the library.
+
+        Args:
+        book (Book): The Book object to add.
+        file_path (str): Path to the books CSV file. Default is 'Files/books.csv'.
+        df (pandas.DataFrame): DataFrame containing book data.
+
+        Returns:
+             None
+        """
         book_mask = (df["title"] == book.title) & (df["author"] == book.author)
         if book_mask.any():
             index = df[book_mask].index[0]
@@ -286,6 +350,17 @@ class FileManagement:
     @check_file_exists
     @ensure_csv_columns(["title", "author", "is_loaned", "copies", "genre", "year", "available_copies", "loaned_copies", "lend_count"])
     def remove_book(book: Book, file_path = "Files/books.csv",  df=None):
+        """
+        Removes a copy of a book from the library or deletes it entirely if no copies remain.
+
+        Args:
+            book (Book): The Book object to remove.
+            file_path (str): Path to the books CSV file.
+            df (pandas.DataFrame): DataFrame containing book data.
+
+        Returns:
+            bool: True if the book was removed, False otherwise.
+        """
         match = (df["title"] == book.title) & (df["author"] == book.author)
         if match.any():
             book_index = df[match].index[0]
@@ -312,6 +387,17 @@ class FileManagement:
     @check_file_exists
     @ensure_csv_columns(["title", "author", "is_loaned", "copies", "genre", "year", "available_copies", "loaned_copies", "lend_count"])
     def lend_book(book: Book, file_path="Files/books.csv", df=None):
+        """
+        Lends a book to a user by decrementing available copies and incrementing loaned copies.
+
+        Args:
+            book (Book): The Book object to lend.
+            file_path (str): Path to the books CSV file.
+            df (pandas.DataFrame): DataFrame containing book data.
+
+        Returns:
+            bool: True if the book was successfully lent, False otherwise.
+        """
         book_mask = (df["title"] == book.title) & (df["author"] == book.author)
         if not book_mask.any():
             logging.warning(f"Book '{book.title}' by {book.author} was not found.")
@@ -341,6 +427,13 @@ class FileManagement:
     @log_action("Add to waiting list")
     @handle_exceptions
     def ask_info(book: Book, info):
+        """
+        Adds user information to a waiting list for a specific book.
+
+        Args:
+            book (Book): The book to add to the waiting list.
+            info (dict): User information such as name and email.
+        """
         if book not in FileManagement.waiting_list:
             FileManagement.waiting_list[book] = []
         FileManagement.waiting_list[book].append(info)
@@ -352,6 +445,10 @@ class FileManagement:
     def load_waiting_list(file_path="Files/waiting_list.csv", df=None):
         """
         Loads and updates the waiting list from a CSV file, avoiding duplicates.
+
+        Args:
+            file_path (str): Path to the waiting list CSV file.
+            df (pandas.DataFrame): DataFrame containing waiting list data.
         """
         # Process each book's waiting list
         for title, entries in FileManagement.waiting_list.items():
@@ -372,6 +469,16 @@ class FileManagement:
     @handle_exceptions
     @check_file_exists
     def load_books_to_list(file_path = "Files/books.csv",  df=None):
+        """
+        Loads all books from the specified CSV file into a list of Book objects with additional data.
+
+        Args:
+            file_path (str): Path to the books CSV file.
+            df (pandas.DataFrame): Optional DataFrame containing book data.
+
+        Returns:
+            list: A list of tuples containing Book objects and additional data.
+        """
         books = []
         df = pd.read_csv(file_path)
         for _, row in df.iterrows():
@@ -401,7 +508,14 @@ class FileManagement:
     @handle_exceptions
     def search_book(*search_strategies, **search_vals):
         """
-        Searches for books using search strategies and writes the results to a CSV file.
+        Searches for books using specified strategies and writes the results to a CSV file.
+
+        Args:
+            *search_strategies: Strategies to filter the books.
+            **search_vals: Parameters for the search strategies.
+
+        Writes:
+            CSV file containing the search results.
         """
         file_path = "Files/books.csv"
         try:
@@ -454,6 +568,17 @@ class FileManagement:
     @check_file_exists
     @ensure_csv_columns(["title", "author", "is_loaned", "copies", "genre", "year", "available_copies", "loaned_copies", "lend_count"])
     def return_book(book: Book, file_path = "Files/books.csv",  df=None):
+        """
+        Handles the return of a loaned book by updating the book's data in the library.
+
+        Args:
+            book (Book): The Book object to be returned.
+            file_path (str): Path to the books CSV file.
+            df (pandas.DataFrame): Optional DataFrame containing book data.
+
+        Returns:
+            bool: True if the book was successfully returned, False otherwise.
+        """
         book_mask = (df["title"] == book.title) & (df["author"] == book.author)
 
         if not book_mask.any():
@@ -470,6 +595,7 @@ class FileManagement:
         df.to_csv(file_path, index=False)
         logging.info(f"Book '{book.title}' by {book.author} has been successfully returned.")
         return True
+
 
 
 if __name__ == '__main__':
